@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f3">
+  <meta name="description" content="AI, labor markets, supply chains, drug trials and math breakthroughs, with source data and time series.">
+  <title>AI: A Macro View</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f8f7f3'/%3E%3Cpath d='M5 26 12 7h3l7 19h-3l-2-6h-7l-2 6zm6-9h5l-2.5-7zM25 7h3v19h-3z' fill='%2320211f'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="activity.css">
+  <link rel="stylesheet" href="euv-machine.css">
+  <script src="vendor/d3-array.min.js" defer></script>
+  <script src="vendor/d3-geo.min.js" defer></script>
+  <script src="vendor/topojson-client.min.js" defer></script>
+  <script src="globe.js" defer></script>
+  <script src="euv-machine.js" defer></script>
+  <script src="activity.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main-content">Skip to the data</a>
+  <div class="app">
+    <header class="app-header">
+      <h1>AI: A Macro View</h1>
+      <label class="month-picker">Through <select id="month-select" aria-label="Data through month"><option value="2026-08">August 2026</option></select></label>
+    </header>
+    <nav class="tabs" role="tablist" aria-label="Dashboard sections">
+      <button id="tab-overview" role="tab" aria-controls="panel-overview" aria-selected="true" data-tab="overview">Overview</button>
+      <button id="tab-jobs" role="tab" aria-controls="panel-jobs" aria-selected="false" tabindex="-1" data-tab="jobs">Jobs</button>
+      <button id="tab-supply-chain" role="tab" aria-controls="panel-supply-chain" aria-selected="false" tabindex="-1" data-tab="supply-chain">Supply chain</button>
+      <button id="tab-devices" role="tab" aria-controls="panel-devices" aria-selected="false" tabindex="-1" data-tab="devices">Medical devices</button>
+      <button id="tab-trials" role="tab" aria-controls="panel-trials" aria-selected="false" tabindex="-1" data-tab="trials">Drug trials</button>
+      <button id="tab-theorems" role="tab" aria-controls="panel-theorems" aria-selected="false" tabindex="-1" data-tab="theorems">Math breakthroughs</button>
+      <button id="tab-sources" role="tab" aria-controls="panel-sources" aria-selected="false" tabindex="-1" data-tab="sources">Sources</button>
+    </nav>
+    <main id="main-content" tabindex="-1">
+      <div id="load-error" role="alert" hidden><h2>Data unavailable</h2><p>Prepare the dashboard data, then reload.</p><button id="reload-button">Try again</button></div>
+      <div id="content" aria-busy="true">
+        <section id="panel-overview" class="tab-panel" role="tabpanel" aria-labelledby="tab-overview">
+          <div class="section-heading"><h2>Overview</h2><span id="overview-period" class="meta"></span></div>
+          <div class="overview-metrics">
+            <button class="metric-card" data-open-tab="jobs"><span class="metric-label">U.S. job postings mentioning AI</span><strong id="overview-jobs">—</strong><span id="overview-jobs-detail" class="meta"></span><span class="metric-link">Jobs <span aria-hidden="true">↗</span></span></button>
+            <button class="metric-card" data-open-tab="devices"><span class="metric-label">FDA AI-device authorizations</span><strong id="overview-devices">—</strong><span id="overview-devices-detail" class="meta"></span><span class="metric-link">Medical devices <span aria-hidden="true">↗</span></span></button>
+            <button class="metric-card" data-open-tab="trials"><span class="metric-label">Drug programs with AI involvement</span><strong id="overview-trials">—</strong><span id="overview-trials-detail" class="meta"></span><span class="metric-link">Drug trials <span aria-hidden="true">↗</span></span></button>
+            <button class="metric-card" data-open-tab="theorems"><span class="metric-label">Major math breakthrough reports</span><strong id="overview-theorems">—</strong><span id="overview-theorems-detail" class="meta"></span><span class="metric-link">Math breakthroughs <span aria-hidden="true">↗</span></span></button>
+          </div>
+          <div class="overview-grid"><div><h3>Change this month</h3><div id="monthly-changes" class="changes-list"></div></div><div><h3>Coverage</h3><div id="coverage-list" class="coverage-list"></div></div></div>
+        </section>
+
+        <section id="panel-jobs" class="tab-panel" role="tabpanel" aria-labelledby="tab-jobs" hidden>
+          <div class="section-heading"><h2>Jobs &amp; the labor market</h2><div class="range-buttons" role="group" aria-label="Jobs chart view"><button data-job-view="macro" aria-pressed="true">AI &amp; macro trends</button><button data-job-view="share" aria-pressed="false">AI share</button></div></div>
+          <div class="jobs-layout"><div class="jobs-main">
+            <div class="chart-toolbar"><label>Country <select id="country-select" aria-label="Country for job-posting chart"><option value="US">United States</option></select></label><div class="range-buttons" role="group" aria-label="Chart time range"><button data-range="1" aria-pressed="false">1Y</button><button data-range="3" aria-pressed="false">3Y</button><button data-range="all" aria-pressed="true">All time</button></div></div>
+            <div class="chart-summary"><div><strong class="big-value" id="job-value">—</strong><span class="meta">of job postings</span></div><div class="delta-summary"><strong id="job-delta">—</strong><span id="job-delta-label" class="meta"></span></div></div>
+            <div id="macro-options" class="series-options" role="group" aria-label="Indicators to overlay"></div>
+            <label id="jobs-scale-control" class="chart-scale">Scale <select id="jobs-scale"><option value="indexed">Start = 100</option><option value="normalized">Normalize to 0–100</option></select></label>
+            <figure><div id="jobs-chart" class="chart-container"></div><figcaption><span id="job-period"></span><span id="chart-country"></span></figcaption></figure>
+            <p id="jobs-method" class="data-note"></p>
+          </div><aside class="country-comparison"><div class="subheading"><h3>AI share by country</h3><span id="country-asof" class="meta"></span></div><div id="country-grid"></div><p class="data-note">Share of postings mentioning AI. Coverage differs by market; these countries are not an OECD aggregate.</p></aside></div>
+          <div class="subheading table-heading"><h3>Labor-market indicators</h3><span id="macro-coverage" class="meta"></span></div><div id="macro-cards" class="macro-cards"></div>
+        </section>
+
+        <section id="panel-supply-chain" class="tab-panel" role="tabpanel" aria-labelledby="tab-supply-chain" hidden>
+          <div class="section-heading"><h2>Supply chain</h2><div class="range-buttons supply-view-switch" role="group" aria-label="Supply-chain view"><button data-supply-view="overview" aria-pressed="true">Overview</button><button data-supply-view="trade" aria-pressed="false">Trade flows</button><button data-supply-view="euv" aria-pressed="false">EUV equipment</button><button data-supply-view="infrastructure" aria-pressed="false">AI infrastructure</button><button data-supply-view="adoption" aria-pressed="false">AI adoption</button></div></div>
+          <div id="supply-view-overview" class="supply-overview"></div>
+          <div id="supply-layout" class="supply-layout" hidden><div class="supply-map">
+            <div id="supply-view-trade" hidden>
+              <div class="subheading"><h3>Trade flows</h3><button id="trade-motion" class="motion-button">Pause rotation</button></div>
+              <div class="activity-filters"><label>Product<select id="trade-product"></select></label><label>Exporting area<select id="trade-origin"></select></label></div>
+              <div class="globe-wrap"><div class="globe-controls" role="group" aria-label="Globe zoom"><button id="trade-zoom-out" aria-label="Zoom out" disabled>−</button><button id="trade-zoom-reset" aria-label="Reset zoom to 1×">1.0×</button><button id="trade-zoom-in" aria-label="Zoom in">+</button></div><canvas id="trade-globe" width="600" height="400" tabindex="0" role="img" aria-label="Reported bilateral exports. Lines connect reporting areas, not ports or factories. Drag or use arrow keys to rotate. Scroll, pinch or use plus and minus to zoom."></canvas><p id="trade-error" class="data-note" hidden>Map unavailable. Routes remain available below.</p></div>
+              <div class="period-control"><label for="trade-period">Year <strong id="trade-period-label"></strong></label><input id="trade-period" type="range" min="0" max="0" value="0"></div>
+              <label class="series-picker">Route<select id="trade-route"></select></label>
+              <details class="trade-edge-list"><summary id="trade-edge-summary">Visible route annotations</summary><div id="trade-edges"></div></details>
+              <p id="trade-coverage" class="data-note"></p><p id="trade-area-note" class="data-note"></p>
+            </div>
+            <div id="supply-view-euv" hidden>
+              <div class="subheading"><h3>EUV scanner</h3><span class="meta">Select a component</span></div>
+              <p class="data-note">An EUV scanner uses extreme ultraviolet light to pattern advanced chips; it is a key bottleneck because ASML is the sole commercial supplier and its precision components are difficult to produce at scale.</p>
+              <figure class="machine-figure"><div id="euv-components"></div><figcaption>Functional cutaway · not to scale · representative optical path</figcaption></figure>
+              <label class="series-picker machine-mobile-picker">Component<select id="euv-component"></select></label>
+              <div class="machine-controls"><label class="series-picker">Supplier location<select id="euv-location"></select></label>
+              <label class="series-picker">Reported activity<select id="euv-series"></select></label></div>
+              <p class="machine-references"><a href="https://www.asml.com/en/products/euv-lithography-systems" target="_blank" rel="noopener noreferrer">ASML scanner</a> · <a href="https://www.zeiss.com/semiconductor-manufacturing-technology/smt-magazine/so-does-euv-lithography-work.html" target="_blank" rel="noopener noreferrer">ZEISS optical path</a> · <a href="https://www.sec.gov/Archives/edgar/data/937966/000162828026011377/asml-2025xannualxreportx.htm" target="_blank" rel="noopener noreferrer">Supply constraints</a></p>
+            </div>
+            <div id="supply-view-infrastructure" hidden><h3>AI infrastructure</h3><div id="chain-infrastructure" class="chain-grid"></div></div>
+            <div id="supply-view-adoption" hidden>
+              <div class="subheading"><h3>AI adoption across industries</h3><span class="meta">EU · Annual survey</span></div>
+              <figure><div id="adoption-chart" class="chart-container"></div><figcaption>Enterprises using AI, % · 10+ persons employed</figcaption></figure>
+              <div id="chain-adoption" class="adoption-series"></div>
+              <p class="data-note">2022 is unavailable. The survey’s AI definition expanded in 2025.</p>
+            </div>
+          </div><div class="supply-detail" aria-live="polite">
+            <div class="subheading"><span id="supply-stage" class="record-tag"></span><span id="supply-geography" class="meta"></span></div>
+            <h3 id="supply-name" tabindex="-1"></h3><div class="supply-value"><strong id="supply-value" class="big-value">—</strong><span id="supply-period" class="meta"></span></div>
+            <figure><div id="supply-chart" class="chart-container"></div><figcaption id="supply-unit"></figcaption></figure>
+            <p id="supply-note" class="data-note"></p><div id="supply-source" class="source-links"></div>
+            <div id="supply-related" class="supply-related"></div>
+            <div id="supply-context"></div>
+          </div></div>
+          <div class="panel-note"><p>Industry output, orders, trade and electricity include non-AI activity. Spending indicators overlap and cannot be added into an AI total. Adoption measures AI use, not its causal effect on output.</p><p>Individual EUV component shipment counts remain partly undisclosed. Company histories use reviewed filings; official feeds refresh independently.</p></div>
+        </section>
+
+        <section id="panel-devices" class="tab-panel" role="tabpanel" aria-labelledby="tab-devices" hidden>
+          <div class="section-heading"><h2>AI-enabled medical devices</h2><a class="source-link" href="https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices" target="_blank" rel="noopener noreferrer">FDA data ↗</a></div>
+          <div class="health-summary"><strong class="big-value" id="health-count">—</strong><div><span>Listed marketing authorizations</span><span id="health-count-period" class="meta"></span></div></div>
+          <div class="health-grid"><figure><div class="subheading"><h3>Authorizations by year</h3><span id="health-chart-period" class="meta"></span></div><div id="health-chart" class="chart-container"></div><figcaption id="health-caption"></figcaption></figure><aside class="specialties"><h3>By specialty</h3><p class="data-note">Share of listed authorizations</p><div id="specialty-chart"></div></aside></div>
+          <div class="panel-note"><span id="health-lag"></span><p>Authorizations are not necessarily unique products and do not establish clinical benefit. The FDA list is not exhaustive.</p></div>
+        </section>
+
+        <section id="panel-trials" class="tab-panel" role="tabpanel" aria-labelledby="tab-trials" hidden>
+          <div class="section-heading"><h2>AI in drug trials</h2><a class="source-link" href="https://clinicaltrials.gov/" target="_blank" rel="noopener noreferrer">ClinicalTrials.gov ↗</a></div>
+          <div class="trial-controls"><label class="inline-control">AI involvement <select id="trial-category" aria-label="AI involvement category"><option value="all">All categories</option><option value="molecular_design">Molecular design</option><option value="target_selection">Target selection</option><option value="repurposing">Repurposing</option><option value="recruitment">Recruitment</option><option value="trial_analysis">Trial analysis</option></select></label><div class="range-buttons" aria-label="Drug trial view"><button type="button" data-trial-chart="starts" aria-pressed="true">Trial activity</button><button type="button" data-trial-chart="outcomes" aria-pressed="false">Trial results</button></div></div>
+          <div class="metric-row trial-metrics"><div><span>Drug programs</span><strong id="trial-program-count">—</strong></div><div><span>Trials with documented AI use</span><strong id="trial-count">—</strong></div><div><span>Trials meeting primary efficacy endpoints</span><strong id="trial-efficacy-count">—</strong></div><div><span>Trials with positive safety readouts</span><strong id="trial-safety-count">—</strong></div></div>
+          <p id="trial-coverage" class="data-note"></p>
+          <div class="trial-chart-row"><figure><div class="subheading"><h3 id="trial-chart-title">Cumulative trials with AI use</h3></div><div id="trial-chart-legend" class="trial-legend" hidden><span><i></i>Efficacy endpoints met</span><span><i></i>Positive safety readouts</span></div><div id="trials-chart" class="chart-container"></div><figcaption id="trial-chart-note"></figcaption></figure><div class="definition"><h3>What counts</h3><p>Registered human drug trials with a documented AI role in design, target selection, repurposing, recruitment or analysis. Roles can overlap; each registry ID counts once.</p><p>Results require a cited readout. A completed trial is not automatically a success, and a safety result does not establish efficacy.</p><p id="trial-category-note"></p></div></div>
+          <div id="trial-program-view"><div class="subheading table-heading"><h3>Drug programs</h3><span class="meta">Expand for AI’s role and trial records</span></div><div id="trial-programs"></div></div>
+          <div id="trial-outcome-view" hidden><div class="subheading table-heading"><h3>Reported trial results</h3><span id="trial-outcome-coverage" class="meta"></span></div><div id="trial-outcomes"></div></div>
+        </section>
+
+        <section id="panel-theorems" class="tab-panel" role="tabpanel" aria-labelledby="tab-theorems" hidden>
+          <div class="section-heading"><h2>Math breakthroughs</h2><label class="inline-control">Show <select id="math-filter" aria-label="Mathematical result type"><option value="all">All reports</option><option value="resolution">Solutions &amp; disproofs</option><option value="advance">Partial advances</option></select></label></div>
+          <div class="metric-row"><div><span>Reported results</span><strong id="math-count">—</strong></div><div><span>Solution &amp; disproof reports</span><strong id="math-resolution-count">—</strong></div><div><span>Partial advances</span><strong id="math-advance-count">—</strong></div></div>
+          <p id="math-coverage" class="data-note"></p>
+          <figure class="math-timeline"><div class="subheading"><h3>Reported breakthroughs over time</h3><span class="meta">One entry per result</span></div><div id="math-chart" class="chart-container"></div></figure>
+          <div id="math-records" class="math-records"></div>
+        </section>
+
+        <section id="panel-sources" class="tab-panel" role="tabpanel" aria-labelledby="tab-sources" hidden>
+          <div class="section-heading"><h2>Sources &amp; definitions</h2></div>
+          <div class="source-grid">
+            <article><h3>Jobs</h3><p>Indeed’s share of postings mentioning AI-related terms, reported as a seven-day trailing average. Monthly changes compare the last observation in adjacent months, in percentage points.</p><a href="https://github.com/hiring-lab/ai-tracker" target="_blank" rel="noopener noreferrer">Indeed methodology ↗</a></article>
+            <article><h3>Labor-market context</h3><p>The overlay offers a common starting index of 100 or normalization to each series’ own 0–100 range over the same time window. Flat series normalize to 50; original values remain available on hover. Indeed daily series use their last observation in each completed month; BLS and OECD series use their reference month. Gaps are preserved. The chart compares relative changes in different quantities, not job counts attributable to AI.</p><p>U.S. payrolls, unemployment, participation, openings, earnings, quits and layoffs come from BLS via FRED. Other countries include Indeed total postings and OECD harmonized unemployment via FRED. Age definitions and reporting lags differ.</p><a href="https://github.com/hiring-lab/job_postings_tracker" target="_blank" rel="noopener noreferrer">Indeed total postings ↗</a> · <a href="https://fred.stlouisfed.org/" target="_blank" rel="noopener noreferrer">FRED ↗</a></article>
+            <article><h3>Supply chain</h3><p>Federal Reserve, BLS and IMF series track chip output, transformer prices and copper. The Fed’s July 2026 compilation supplies memory prices, equipment investment, construction and selected cloud-firm capex. Ireland’s CSO supplies metered data-center power; Eurostat supplies EU enterprise AI adoption.</p><p>Geographies, units and frequencies stay separate. The Fed workbook is a dated compilation; other feeds refresh from their source. Annual adoption surveys have no 2022 observation, and the 2025 AI definition expanded. There is no additive total or estimate of AI’s causal contribution.</p><a href="https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html" target="_blank" rel="noopener noreferrer">Fed data &amp; definitions ↗</a></article>
+            <article><h3>Medical devices</h3><p>FDA-listed AI-enabled device submissions grouped by decision date and lead panel. Partial years are marked. Missing observations are not filled with zero.</p><a href="https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices" target="_blank" rel="noopener noreferrer">FDA definitions ↗</a></article>
+            <article><h3>AI in drug trials</h3><p>Primary papers and sponsor disclosures document molecular design, target selection, repurposing, recruitment or trial analysis. Non-design entries are limited to individually verified trials; other trials of the same drug are not automatically included. Counts cover a reviewed catalogue, not the entire industry.</p><p>Actual trial starts anchor the activity series. Later AI analyses enter on their first documented report date; platform trials use the relevant drug-comparison start. Success counts require sourced primary efficacy results, with safety readouts counted separately. Mixed results and discontinuations remain visible. Outcomes do not establish that AI caused success. Registry status reflects the latest refresh.</p><a href="https://clinicaltrials.gov/data-api/api" target="_blank" rel="noopener noreferrer">ClinicalTrials.gov API ↗</a></article>
+            <article><h3>Mathematical breakthroughs</h3><p>News searches identify new results on famous conjectures and longstanding open problems. Each displayed result links to news or public expert coverage and the underlying research or announcement. Several articles about the same result count once; related bound families in one paper share an entry.</p><p>Counts describe reported breakthroughs, including claims under review and partial advances. Re-proving or formalizing known mathematics and olympiad scores are excluded. Formal verification of a new discovery remains eligible. Dates refer to public announcements; status reflects the latest source review. Coverage is curated, not exhaustive.</p></article>
+            <article><h3>Value-chain activity &amp; EUV</h3><p>Taiwan MOEA supplies monthly production indexes and shipment/inventory values. U.S. Census via FRED supplies manufacturing orders, shipments, inventory and backlog; EIA supplies electricity generation and sales. UN Comtrade supplies annual gross exports for 11 selected product and material categories across 12 reporting economies and areas.</p><p>Trade coverage varies by product and year. Material categories include non-semiconductor uses and do not identify shipments to chipmakers or EUV suppliers. Prices, revenue, investment, physical shipments and stocks have distinct units. EUV relationships and company histories are curated from primary filings; new company disclosures require review before inclusion. Plans are separate from completed events. Location markers do not measure factory output.</p><a href="https://data.gov.tw/dataset/6607" target="_blank" rel="noopener noreferrer">Taiwan MOEA ↗</a> · <a href="https://uncomtrade.org/docs/un-comtrade-api/" target="_blank" rel="noopener noreferrer">UN Comtrade ↗</a></article>
+            <article><h3>Dates and revisions</h3><p>The month selector limits observations and documented events by date. Sources update on different schedules. Historical values use the latest ingested source versions and may be revised. No observation means unavailable, not no progress.</p><p id="source-freshness" class="meta"></p></article>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer><span id="update-date"></span></footer>
+  </div>
+</body>
+</html>

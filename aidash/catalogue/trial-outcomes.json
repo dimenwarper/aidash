@@ -1,0 +1,255 @@
+{
+  "version": 1,
+  "reviewed_at": "2026-09-12",
+  "scope": "Curated trial-level outcome evidence. Dates are cited public result/discontinuation dates, not study-completion dates. Safety readouts and efficacy successes are separate; completed registry status never implies success. Not a complete census or success-rate denominator.",
+  "outcomes": [
+    {
+      "trial_id": "NCT04401579",
+      "program_id": "baricitinib_covid",
+      "date": "2020-12-11",
+      "date_basis": "Peer-reviewed publication date",
+      "endpoint": "Primary: time to recovery within 29 days after enrollment, baricitinib plus remdesivir versus remdesivir alone.",
+      "outcome": "primary_efficacy_met",
+      "label": "Primary efficacy endpoint met",
+      "summary": "ACTT-2 randomized 1,033 hospitalized adults. Median recovery was 7 versus 8 days; recovery rate ratio 1.16 (95% CI 1.01–1.32; P=0.03). The mortality comparison was not statistically conclusive. This tests the drug combination after AI-supported repurposing, not the causal benefit of using AI.",
+      "sources": [
+        {
+          "title": "NEJM: ACTT-2 randomized trial",
+          "url": "https://www.nejm.org/doi/abs/10.1056/NEJMoa2031994"
+        },
+        {
+          "title": "NIH: peer-reviewed ACTT-2 results",
+          "url": "https://www.nih.gov/news-events/news-releases/baricitinib-plus-remdesivir-shows-promise-treating-covid-19"
+        },
+        {
+          "title": "ClinicalTrials.gov: NCT04401579",
+          "url": "https://clinicaltrials.gov/study/NCT04401579"
+        }
+      ],
+      "evidence_level": "Peer-reviewed randomized placebo-controlled efficacy trial",
+      "publication_type": "peer_reviewed",
+      "endpoint_type": "efficacy"
+    },
+    {
+      "trial_id": "NCT04421027",
+      "program_id": "baricitinib_covid",
+      "date": "2021-09-01",
+      "date_basis": "Peer-reviewed online publication date recorded in PubMed",
+      "endpoint": "Primary: progression to high-flow oxygen, noninvasive or invasive ventilation, or death by day 28.",
+      "outcome": "mixed",
+      "label": "Primary endpoint not met; secondary mortality benefit",
+      "summary": "In COV-BARRIER's main 1,525-patient cohort, progression occurred in 27.8% versus 30.5% (odds ratio 0.85; 95% CI 0.67–1.08; P=0.18). Secondary 28-day mortality was lower, 62/764 versus 100/761 (HR 0.57; nominal P=0.0018, unadjusted for multiplicity). It is not counted as a primary efficacy success.",
+      "sources": [
+        {
+          "title": "Lancet Respiratory Medicine trial report via PubMed",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34480861/"
+        },
+        {
+          "title": "Full COV-BARRIER report",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8409066/"
+        },
+        {
+          "title": "ClinicalTrials.gov: NCT04421027",
+          "url": "https://clinicaltrials.gov/study/NCT04421027"
+        }
+      ],
+      "evidence_level": "Peer-reviewed randomized placebo-controlled phase 3 study",
+      "publication_type": "peer_reviewed",
+      "endpoint_type": "efficacy"
+    },
+    {
+      "trial_id": "NCT04381936",
+      "program_id": "baricitinib_covid",
+      "date": "2022-07-29",
+      "date_basis": "Peer-reviewed publication date; initial trial-group result disclosure was 2022-03-03",
+      "endpoint": "Primary: all-cause mortality at 28 days for the baricitinib comparison within the RECOVERY platform trial.",
+      "outcome": "primary_efficacy_met",
+      "label": "Primary efficacy endpoint met",
+      "summary": "The baricitinib comparison randomized 8,156 hospitalized patients. Deaths were 514/4,148 versus 546/4,008 with usual care (age-adjusted rate ratio 0.87; 95% CI 0.77–0.99; P=0.028). Count this comparison only, not successes of other drugs sharing the RECOVERY registration. The final publication differs slightly from the initial announcement.",
+      "sources": [
+        {
+          "title": "Lancet: RECOVERY baricitinib results",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9333998/"
+        },
+        {
+          "title": "RECOVERY trial: publication date and results links",
+          "url": "https://www.recoverytrial.net/results/baricitinib-results"
+        },
+        {
+          "title": "ClinicalTrials.gov: RECOVERY platform NCT04381936",
+          "url": "https://clinicaltrials.gov/study/NCT04381936"
+        }
+      ],
+      "evidence_level": "Peer-reviewed randomized open-label platform trial comparison",
+      "publication_type": "peer_reviewed",
+      "endpoint_type": "efficacy"
+    },
+    {
+      "trial_id": "NCT03900429",
+      "program_id": "resmetirom",
+      "date": "2022-12-19",
+      "date_basis": "Sponsor result disclosure",
+      "endpoint_type": "efficacy",
+      "endpoint": "NASH resolution with no fibrosis worsening; fibrosis improvement of at least one stage with no worsening of NAS.",
+      "outcome": "primary_efficacy_met",
+      "label": "Phase 3: 52-week primary endpoints met",
+      "summary": "Both resmetirom doses met both primary histology endpoints at week 52 versus placebo. These are surrogate biopsy endpoints; the longer clinical-outcomes portion remained ongoing.",
+      "attribution_note": "The initial outcome report predates the documented AI reanalysis. It is a clinical result for a trial later analyzed with AI, not evidence that AI caused the success.",
+      "sources": [
+        {
+          "title": "Sponsor topline report",
+          "url": "https://ir.madrigalpharma.com/news-releases/news-release-details/madrigal-announces-positive-topline-results-pivotal-phase-3"
+        },
+        {
+          "title": "Peer-reviewed randomized trial",
+          "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2309000"
+        }
+      ],
+      "evidence_level": "Sponsor topline report"
+    },
+    {
+      "trial_id": "NCT05920408",
+      "program_id": "exs21546",
+      "date": "2023-10-03",
+      "date_basis": "Pipeline-discontinuation announcement date confirmed in SEC annual report",
+      "endpoint": "Phase 1/2 IGNITE safety, pharmacokinetics and antitumor development; no demonstrated primary efficacy success.",
+      "outcome": "discontinued",
+      "label": "Discontinued: therapeutic-index concern",
+      "summary": "Exscientia ended internal development and wound down IGNITE. The registry attributes termination to emerging data indicating difficulty achieving an acceptable therapeutic index. SEC filings say the candidate was insufficiently promising for further development. This is a discontinuation outcome, not an inferred statistical endpoint failure.",
+      "sources": [
+        {
+          "title": "ClinicalTrials.gov: termination reason for NCT05920408",
+          "url": "https://clinicaltrials.gov/study/NCT05920408"
+        },
+        {
+          "title": "Exscientia 2023 annual report: October 3 pipeline decision",
+          "url": "https://www.sec.gov/Archives/edgar/data/1865408/000186540824000018/exai-20231231.htm"
+        }
+      ],
+      "evidence_level": "Sponsor registry disclosure and SEC filing",
+      "publication_type": "registry_and_filing",
+      "endpoint_type": "development"
+    },
+    {
+      "trial_id": "NCT05154240",
+      "program_id": "rentosertib",
+      "date": "2024-03-08",
+      "date_basis": "Peer-reviewed publication date",
+      "endpoint": "Primary objective: safety and tolerability of single and multiple ascending oral doses in healthy volunteers.",
+      "outcome": "primary_safety_met",
+      "label": "Positive safety readout",
+      "summary": "The phase 1 study enrolled 78 healthy participants. Authors reported a favorable safety and tolerability profile; pharmacokinetics were a secondary objective. This is an early safety result, not evidence of efficacy in patients with pulmonary fibrosis.",
+      "sources": [
+        {
+          "title": "Nature Biotechnology: phase 1 and preclinical results",
+          "url": "https://www.nature.com/articles/s41587-024-02143-0"
+        },
+        {
+          "title": "ClinicalTrials.gov: NCT05154240",
+          "url": "https://clinicaltrials.gov/study/NCT05154240"
+        }
+      ],
+      "evidence_level": "Peer-reviewed randomized placebo-controlled phase 1 study",
+      "publication_type": "peer_reviewed",
+      "endpoint_type": "safety"
+    },
+    {
+      "trial_id": "NCT06118385",
+      "program_id": "ben8744",
+      "date": "2024-03-25",
+      "date_basis": "Sponsor result disclosure",
+      "endpoint_type": "safety",
+      "endpoint": "Primary safety and tolerability objective in healthy volunteers.",
+      "outcome": "primary_safety_met",
+      "label": "BEN-8744 met its Phase Ia safety objective",
+      "summary": "The sponsor reported that the first-in-human study met its safety and tolerability objective, with no serious adverse events across dose cohorts. The study enrolled healthy volunteers and did not establish efficacy in ulcerative colitis.",
+      "sources": [
+        {
+          "title": "Sponsor Phase Ia readout",
+          "url": "https://www.benevolent.com/news-and-media/press-releases-and-in-media/benevolentai-announces-positive-topline-safety-and-pharmacokinetic-data-phase-ia-clinical-study-ben-8744-healthy-volunteers/"
+        }
+      ],
+      "evidence_level": "Sponsor disclosure"
+    },
+    {
+      "trial_id": "NCT06012578",
+      "program_id": "garutadustat",
+      "date": "2025-01-07",
+      "date_basis": "Sponsor topline result disclosure; detailed conference abstract described on 2026-01-22",
+      "endpoint": "Primary objective: safety and tolerability of single and multiple ascending oral doses in healthy volunteers.",
+      "outcome": "primary_safety_met",
+      "label": "Sponsor-reported positive safety readout",
+      "summary": "The Australian phase 1 trial dosed 76 healthy participants. The sponsor reported acceptable tolerability and no serious adverse events or deaths. Its later congress disclosure reported only grade 1 adverse events in active-drug cohorts. Low systemic exposure supported gut restriction; efficacy in IBD patients was not tested.",
+      "sources": [
+        {
+          "title": "Insilico Medicine: January 2025 topline results",
+          "url": "https://www.prnewswire.com/news-releases/insilico-received-positive-topline-results-from-two-phase-1-trials-of-ism5411-new-drug-designed-using-generative-ai-for-the-treatment-of-inflammatory-bowel-disease-302344176.html"
+        },
+        {
+          "title": "Insilico Medicine: 2026 phase 1 abstract details and NCT linkage",
+          "url": "https://insilico.com/news/28ohjfj6u1-insilico-medicine-to-present-3-abstracts"
+        },
+        {
+          "title": "ClinicalTrials.gov: NCT06012578",
+          "url": "https://clinicaltrials.gov/study/NCT06012578"
+        }
+      ],
+      "evidence_level": "Sponsor disclosure with subsequent conference abstract; not a peer-reviewed full trial report",
+      "publication_type": "sponsor_disclosure",
+      "endpoint_type": "safety"
+    },
+    {
+      "trial_id": "NCT05938920",
+      "program_id": "rentosertib",
+      "date": "2025-06-03",
+      "date_basis": "Peer-reviewed publication date",
+      "endpoint": "Primary: percentage of patients with at least one treatment-emergent adverse event over 12 weeks.",
+      "outcome": "primary_safety_met",
+      "label": "Positive safety readout; secondary efficacy signal",
+      "summary": "In 71 IPF patients, adverse-event incidence was similar across arms and authors judged tolerability acceptable. Liver toxicity and diarrhea caused treatment withdrawals. FVC was secondary: the 60 mg daily arm changed +98.4 mL versus -20.3 mL with placebo. This small, 12-week trial did not establish a primary efficacy endpoint success.",
+      "sources": [
+        {
+          "title": "Nature Medicine: randomized phase 2a trial",
+          "url": "https://www.nature.com/articles/s41591-025-03743-2"
+        },
+        {
+          "title": "ClinicalTrials.gov: NCT05938920",
+          "url": "https://clinicaltrials.gov/study/NCT05938920"
+        }
+      ],
+      "evidence_level": "Peer-reviewed randomized placebo-controlled phase 2a study",
+      "publication_type": "peer_reviewed",
+      "endpoint_type": "safety"
+    },
+    {
+      "trial_id": "NCT05989711",
+      "program_id": "pemvidutide",
+      "date": "2025-06-26",
+      "date_basis": "Sponsor result disclosure",
+      "endpoint_type": "efficacy",
+      "endpoint": "MASH resolution without worsening of fibrosis; fibrosis improvement without worsening of MASH at 24 weeks.",
+      "outcome": "mixed",
+      "label": "Phase 2b: mixed primary endpoint results",
+      "summary": "MASH resolution met significance at both doses. Fibrosis improvement did not differ significantly from placebo in conventional primary assessment. Supplemental AI fibrosis results were favorable but do not change the primary endpoint classification.",
+      "attribution_note": "AI results concern a separate supplemental pathology measurement, not the conventional primary fibrosis endpoint.",
+      "sources": [
+        {
+          "title": "Sponsor SEC filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1326190/000132619025000037/alt-20250626x8k.htm"
+        },
+        {
+          "title": "Peer-reviewed randomized trial",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0140673625021142"
+        }
+      ],
+      "evidence_level": "Sponsor SEC filing"
+    }
+  ],
+  "coverage_notes": [
+    "REC-617 has reported interim phase 1 safety/PK and MTD selection; an MTD is not a trial-level primary efficacy success. No completed-trial success is assigned here.",
+    "XL309 NCT05932862 remained in ongoing phase 1 development in reviewed company disclosures; no demonstrated primary endpoint success was found.",
+    "Baricitinib's AI contribution must be documented separately as repurposing; efficacy results cannot establish that AI improved trial performance.",
+    "RECOVERY is a platform study: link outcome to the baricitinib comparison, not the whole platform.",
+    "COV-BARRIER extension cohorts should not be double counted as separate registry trials or mixed into the main-cohort result."
+  ]
+}

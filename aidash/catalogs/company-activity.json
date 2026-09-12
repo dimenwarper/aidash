@@ -1,0 +1,1221 @@
+{
+  "reviewed_at": "2026-09-12",
+  "sources": {
+    "trumpf25": {
+      "title": "TRUMPF Annual Report 2024/25",
+      "url": "https://www.trumpf.com/filestorage/TRUMPF_Master/Corporate/Annual_report/Current/TRUMPF-Annual-Report-2024-2025.pdf",
+      "locator": "Printed pages 75–76 (PDF pages 40–41): EUV orders and sales",
+      "published_date": "2025-10-22"
+    },
+    "trumpf24": {
+      "title": "TRUMPF Annual Report 2023/24",
+      "url": "https://www.trumpf.com/filestorage/TRUMPF_Master/Corporate/Annual_report/Current/TRUMPF-Annual-Report-2023-24.pdf",
+      "locator": "Printed pages 70–71: EUV orders; sales by cooperation table",
+      "published_date": "2024-10-17"
+    },
+    "trumpf23": {
+      "title": "TRUMPF Annual Report 2022/23",
+      "url": "https://www.trumpf.cn/filestorage/TRUMPF_Master/Corporate/Annual_report/Current/TRUMPF-Annual-Report-2022-2023.pdf",
+      "locator": "EUV business order intake: 809m, previous-year 1,057m"
+    },
+    "asml25": {
+      "title": "ASML Annual Report 2025, IFRS filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011377/asml-2025xannualxreportx.htm",
+      "locator": "Financial KPIs: EUV systems recognized; Note 26 Related parties, printed p321: purchases from Carl Zeiss SMT",
+      "published_date": "2026-02-25"
+    },
+    "asml23": {
+      "title": "ASML Annual Report 2023",
+      "url": "https://www.asml.com/en/investors/annual-report/2023",
+      "locator": "Sales: EUV systems for which revenue was recognized, 2023 and 2022",
+      "published_date": "2024-02-14"
+    },
+    "zeiss25": {
+      "title": "ZEISS Annual Report 2024/25",
+      "url": "https://asset-downloads.zeiss.com/catalogs/download/cco2/c026d158-e8ca-4cbe-ac7f-8ef3541ed925/ZEISS_Gruppe_Gescha_ftsbericht_2024-25_EN_826455_0.pdf",
+      "locator": "Segment results, printed p30–31: revenue and year-end FTE"
+    },
+    "zeiss24": {
+      "title": "ZEISS Annual Report 2023/24",
+      "url": "https://asset-downloads.zeiss.com/catalogs/download/cco/a7c94156-9a38-48a8-9678-16b7174aa806/zeiss-group-annual-report-2023-24.pdf.pdf",
+      "locator": "Printed p31–32: SMT revenue and year-end FTE",
+      "published_date": "2024-12-17"
+    },
+    "vat25": {
+      "title": "VAT Summary Sustainability Report 2025",
+      "url": "https://www.vatgroup.com/uploads/sustainability/summary-reports/vat-summary-sustainability-report-2025-english.pdf",
+      "locator": "Net sales and order intake, 2025/2024/2023"
+    },
+    "tsmc24q1": {
+      "title": "TSMC 1Q24 Management Report",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/qr/phase4_reports/2024-04/189b2f2a681ff9ae7eb066bd81bcadf45e7200c7/1Q24ManagementReport.pdf",
+      "locator": "Page 1: Wafer Shipment, kpcs 12 inch equivalent",
+      "published_date": "2024-04-18"
+    },
+    "tsmc24q4": {
+      "title": "TSMC 4Q24 Management Report",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-01/2d8b2bb6fc3b5887d24ae0635f639c1cdca834f3/4Q24ManagementReport.pdf",
+      "locator": "Page 1: Wafer Shipment; page 6: quarterly CapEx",
+      "published_date": "2025-01-16"
+    },
+    "tsmc25q2": {
+      "title": "TSMC 2Q25 Management Report",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-07/1fec9df3de99e6e9f190e1eda7179449381ce6d8/2Q25ManagementReport.pdf",
+      "locator": "Page 1: Wafer Shipment, kpcs 12 inch equivalent",
+      "published_date": "2025-07-17"
+    },
+    "tsmc25q4": {
+      "title": "TSMC 4Q25 Management Report",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/00fe50f72b38d74e6b9b066398f020f337cd4e9d/4Q25%20Management%20Report.pdf",
+      "locator": "Page 1: Wafer Shipment; page 6: quarterly CapEx",
+      "published_date": "2026-01-15"
+    },
+    "tsmc26q2": {
+      "title": "TSMC 2Q26 presentation filed with SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000451/a2q26presentatione.htm",
+      "locator": "Slide 4: Shipment in thousands of 12-inch-equivalent wafers",
+      "published_date": "2026-07-16"
+    },
+    "tsmc26q2capex": {
+      "title": "TSMC 2Q26 Management Report",
+      "url": "https://investor.tsmc.com/chinese/encrypt/files/encrypt_file/reports/2026-07/6f49632674bd2d0fd48cb65aaf89ec6ab510b559/2Q26%20ManagementReport.pdf",
+      "locator": "Page 5: consolidated CapEx USD billions for 2Q26, 1Q26, YTD",
+      "published_date": "2026-07-16"
+    },
+    "trumpf_ditzingen": {
+      "title": "TRUMPF Ditzingen production site",
+      "url": "https://www.trumpf.com/de_DE/unternehmen/profil/standorte/standort/ditzingen/",
+      "locator": "Site description identifies production of EUV systems and CO2 lasers."
+    },
+    "trumpf_first_light": {
+      "title": "TRUMPF: ASML award for new EUV laser",
+      "url": "https://www.trumpf.com/filestorage/TRUMPF_Master/Corporate/Newsroom/Press_releases/2025_26/Corporate/20251024-PM-TRUMPF-Supplier-Award/20251024-PR-TRUMPF-Supplier-Award-EN.pdf",
+      "locator": "October 24, 2025; successful first test; production and first deliveries scheduled for 2026."
+    },
+    "asml_sandiego": {
+      "title": "ASML San Diego",
+      "url": "https://www.asml.com/company/about-asml/locations/san-diego",
+      "locator": "EUV source development and droplet-generator manufacture."
+    },
+    "asml_berlin": {
+      "title": "ASML Berlin component manufacturing",
+      "url": "https://www.asml.com/de-de/berlin",
+      "locator": "Technology section: EUV clamps, wafer-stage mirror blocks, and DUV wafer tables."
+    },
+    "asml_euv_chain": {
+      "title": "ASML: Making EUV, from lab to fab",
+      "url": "https://www.asml.com/en/company/stories/2022/making-euv-lab-to-fab",
+      "locator": "US droplet generator and other modules; German ZEISS optics and TRUMPF lasers."
+    },
+    "asml_customers": {
+      "title": "ASML: Busting ASML myths",
+      "url": "https://www.asml.com/en/en/news/stories/2022/busting-asml-myths",
+      "locator": "Identifies Intel, Samsung and TSMC as customers using ASML DUV and EUV lithography systems."
+    },
+    "zeiss_expansion": {
+      "title": "ZEISS SMT capacity expansion",
+      "url": "https://www.zeiss.com/semiconductor-manufacturing-technology/news-and-events/smt-press-releases/2026/smt-capacity-expansion.html",
+      "locator": "July 24, 2026; office move-in, phased 25,000 square meter project, Wetzlar construction, Rossdorf expansion."
+    },
+    "vat_euv": {
+      "title": "VAT ultra-high-vacuum gate valve",
+      "url": "https://www.vatgroup.com/series/ultra-high-vacuum-control-gate-valve",
+      "locator": "Series 64.8 lists EUV as an application, without identifying ASML as customer."
+    },
+    "vat_locations": {
+      "title": "VAT Annual Report 2023",
+      "url": "https://www.vatgroup.com/uploads/financial_reports/2024/VAT-Group-Complete-Annual-Report-2023.pdf",
+      "locator": "Haag primary production facility; Penang manufacturing and engineering."
+    },
+    "hoya23": {
+      "title": "HOYA 2023 information technology review",
+      "url": "https://www.hoya.com/ir/2023/en/review/it.html",
+      "locator": "EUV mask-blank plant in Singapore; capacity increased at the beginning of 2023."
+    },
+    "hoya26": {
+      "title": "HOYA 2026 information technology review",
+      "url": "https://www.hoya.com/ir/2026/en/review/it.html",
+      "locator": "New plant planned adjacent to existing Singapore facility; EUV mask blanks."
+    },
+    "mitsui21": {
+      "title": "Mitsui commercial EUV pellicle production",
+      "url": "https://us.mitsuichemicals.com/mci/mci-news/2021/2021_0526/index.htm",
+      "locator": "May 26, 2021; Iwakuni-Ohtake commercial production based on ASML license."
+    },
+    "mitsui24": {
+      "title": "Mitsui CNT pellicle production facility plan",
+      "url": "https://jp.mitsuichemicals.com/en/release/2024/2024_0528_1/index.htm",
+      "locator": "May 28, 2024; planned Iwakuni-Ohtake 5,000 sheets/year; tentative construction completion December 2025."
+    },
+    "micron26q1": {
+      "title": "Micron FY2026 Q1 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000046/mu-20251127.htm",
+      "locator": "Management Discussion, Total Revenue: quarter-on-quarter bit shipments and average selling prices."
+    },
+    "micron26q2": {
+      "title": "Micron FY2026 Q2 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000006/mu-20260226.htm",
+      "locator": "Management Discussion, Total Revenue: quarter-on-quarter bit shipments and average selling prices."
+    },
+    "micron26q3": {
+      "title": "Micron FY2026 Q3 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000015/mu-20260528.htm",
+      "locator": "Management Discussion, Total Revenue: quarter-on-quarter bit shipments and average selling prices."
+    }
+  },
+  "series": [
+    {
+      "id": "trumpf_euv_revenue",
+      "title": "TRUMPF EUV revenue",
+      "company": "TRUMPF",
+      "component": "Drive lasers",
+      "unit": "EUR million",
+      "frequency": "annual, fiscal year ending June",
+      "geography": "Company operations worldwide",
+      "measurement": "reported activity",
+      "scope": "EUV business field only. Nominal revenue, not laser shipment count; includes demand unrelated to AI.",
+      "refresh": "Review new company annual/quarterly report; archive source and approve exact table values before publishing. No interpolation.",
+      "points": [
+        {
+          "date": "2023-06-30",
+          "value": 971,
+          "source_id": "trumpf24",
+          "source_url": "https://www.trumpf.com/filestorage/TRUMPF_Master/Corporate/Annual_report/Current/TRUMPF-Annual-Report-2023-24.pdf"
+        },
+        {
+          "date": "2024-06-30",
+          "value": 943,
+          "source_id": "trumpf25",
+          "source_url": "https://www.trumpf.com/filestorage/TRUMPF_Master/Corporate/Annual_report/Current/TRUMPF-Annual-Report-2024-2025.pdf"
+        },
+        {
+          "date": "2025-06-30",
+          "value": 724,
+          "source_id": "trumpf25",
+          "source_url": "https://www.trumpf.com/filestorage/TRUMPF_Master/Corporate/Annual_report/Current/TRUMPF-Annual-Report-2024-2025.pdf"
+        }
+      ]
+    },
+    {
+      "id": "trumpf_euv_orders",
+      "title": "TRUMPF EUV orders",
+      "company": "TRUMPF",
+      "component": "Drive lasers",
+      "unit": "EUR million",
+      "frequency": "annual, fiscal year ending June",
+      "geography": "Company operations worldwide",
+      "measurement": "reported activity",
+      "scope": "EUV business order intake, not realized sales or output. Nominal euros; no AI allocation.",
+      "refresh": "Review new company annual/quarterly report; archive source and approve exact table values before publishing. No interpolation.",
+      "points": [
+        {
+          "date": "2022-06-30",
+          "value": 1057,
+          "source_id": "trumpf23",
+          "source_url": "https://www.trumpf.cn/filestorage/TRUMPF_Master/Corporate/Annual_report/Current/TRUMPF-Annual-Report-2022-2023.pdf"
+        },
+        {
+          "date": "2023-06-30",
+          "value": 809,
+          "source_id": "trumpf23",
+          "source_url": "https://www.trumpf.cn/filestorage/TRUMPF_Master/Corporate/Annual_report/Current/TRUMPF-Annual-Report-2022-2023.pdf"
+        },
+        {
+          "date": "2024-06-30",
+          "value": 830,
+          "source_id": "trumpf24",
+          "source_url": "https://www.trumpf.com/filestorage/TRUMPF_Master/Corporate/Annual_report/Current/TRUMPF-Annual-Report-2023-24.pdf"
+        },
+        {
+          "date": "2025-06-30",
+          "value": 794,
+          "source_id": "trumpf25",
+          "source_url": "https://www.trumpf.com/filestorage/TRUMPF_Master/Corporate/Annual_report/Current/TRUMPF-Annual-Report-2024-2025.pdf"
+        }
+      ]
+    },
+    {
+      "id": "asml_zeiss_purchases",
+      "title": "ASML purchases from ZEISS SMT",
+      "company": "ASML / ZEISS",
+      "component": "Precision optics",
+      "unit": "EUR million",
+      "frequency": "annual, calendar year",
+      "geography": "Company operations worldwide",
+      "measurement": "reported activity",
+      "scope": "Related-party purchases from Carl Zeiss SMT Holding and subsidiaries. Covers broader lithography optics, including DUV; not an EUV-only series. Do not add to ZEISS revenue as separate value added.",
+      "refresh": "Review new company annual/quarterly report; archive source and approve exact table values before publishing. No interpolation.",
+      "points": [
+        {
+          "date": "2023-12-31",
+          "value": 3325.9,
+          "source_id": "asml25",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011377/asml-2025xannualxreportx.htm"
+        },
+        {
+          "date": "2024-12-31",
+          "value": 3946.5,
+          "source_id": "asml25",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011377/asml-2025xannualxreportx.htm"
+        },
+        {
+          "date": "2025-12-31",
+          "value": 4406.9,
+          "source_id": "asml25",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011377/asml-2025xannualxreportx.htm"
+        }
+      ]
+    },
+    {
+      "id": "zeiss_smt_revenue",
+      "title": "ZEISS SMT revenue",
+      "company": "ZEISS",
+      "component": "Precision optics / metrology",
+      "unit": "EUR million",
+      "frequency": "annual, fiscal year ending September",
+      "geography": "Company operations worldwide",
+      "measurement": "reported activity",
+      "scope": "Whole Semiconductor Manufacturing Technology segment: DUV/EUV optics, mask solutions and process control. Broader than EUV; nominal revenue.",
+      "refresh": "Review new company annual/quarterly report; archive source and approve exact table values before publishing. No interpolation.",
+      "points": [
+        {
+          "date": "2023-09-30",
+          "value": 3555,
+          "source_id": "zeiss24",
+          "source_url": "https://asset-downloads.zeiss.com/catalogs/download/cco/a7c94156-9a38-48a8-9678-16b7174aa806/zeiss-group-annual-report-2023-24.pdf.pdf"
+        },
+        {
+          "date": "2024-09-30",
+          "value": 4122,
+          "source_id": "zeiss24",
+          "source_url": "https://asset-downloads.zeiss.com/catalogs/download/cco/a7c94156-9a38-48a8-9678-16b7174aa806/zeiss-group-annual-report-2023-24.pdf.pdf"
+        },
+        {
+          "date": "2025-09-30",
+          "value": 5055,
+          "source_id": "zeiss25",
+          "source_url": "https://asset-downloads.zeiss.com/catalogs/download/cco2/c026d158-e8ca-4cbe-ac7f-8ef3541ed925/ZEISS_Gruppe_Gescha_ftsbericht_2024-25_EN_826455_0.pdf"
+        }
+      ]
+    },
+    {
+      "id": "zeiss_smt_fte",
+      "title": "ZEISS SMT employment",
+      "company": "ZEISS",
+      "component": "Precision optics / metrology",
+      "unit": "FTE",
+      "frequency": "annual, September-end stock",
+      "geography": "Company operations worldwide",
+      "measurement": "reported activity",
+      "scope": "Worldwide year-end full-time equivalents in the whole SMT segment, covering DUV/EUV and other semiconductor technologies.",
+      "refresh": "Review new company annual/quarterly report; archive source and approve exact table values before publishing. No interpolation.",
+      "points": [
+        {
+          "date": "2023-09-30",
+          "value": 7591,
+          "source_id": "zeiss24",
+          "source_url": "https://asset-downloads.zeiss.com/catalogs/download/cco/a7c94156-9a38-48a8-9678-16b7174aa806/zeiss-group-annual-report-2023-24.pdf.pdf"
+        },
+        {
+          "date": "2024-09-30",
+          "value": 8586,
+          "source_id": "zeiss24",
+          "source_url": "https://asset-downloads.zeiss.com/catalogs/download/cco/a7c94156-9a38-48a8-9678-16b7174aa806/zeiss-group-annual-report-2023-24.pdf.pdf"
+        },
+        {
+          "date": "2025-09-30",
+          "value": 9349,
+          "source_id": "zeiss25",
+          "source_url": "https://asset-downloads.zeiss.com/catalogs/download/cco2/c026d158-e8ca-4cbe-ac7f-8ef3541ed925/ZEISS_Gruppe_Gescha_ftsbericht_2024-25_EN_826455_0.pdf"
+        }
+      ]
+    },
+    {
+      "id": "asml_euv_recognized",
+      "title": "ASML EUV systems recognized",
+      "company": "ASML",
+      "component": "Lithography systems",
+      "unit": "systems",
+      "frequency": "annual, calendar year",
+      "geography": "Company operations worldwide",
+      "measurement": "reported activity",
+      "scope": "Number of EUV systems for which revenue was recognized. Accounting timing differs from physical shipment timing; not units manufactured or installed in the year.",
+      "refresh": "Review new company annual/quarterly report; archive source and approve exact table values before publishing. No interpolation.",
+      "points": [
+        {
+          "date": "2022-12-31",
+          "value": 40,
+          "source_id": "asml23",
+          "source_url": "https://www.asml.com/en/investors/annual-report/2023"
+        },
+        {
+          "date": "2023-12-31",
+          "value": 53,
+          "source_id": "asml23",
+          "source_url": "https://www.asml.com/en/investors/annual-report/2023"
+        },
+        {
+          "date": "2024-12-31",
+          "value": 44,
+          "source_id": "asml25",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011377/asml-2025xannualxreportx.htm"
+        },
+        {
+          "date": "2025-12-31",
+          "value": 48,
+          "source_id": "asml25",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011377/asml-2025xannualxreportx.htm"
+        }
+      ]
+    },
+    {
+      "id": "vat_sales",
+      "title": "VAT group sales",
+      "company": "VAT",
+      "component": "Vacuum valves",
+      "unit": "CHF million",
+      "frequency": "annual, calendar year",
+      "geography": "Company operations worldwide",
+      "measurement": "reported activity",
+      "scope": "Whole company, including semiconductor valves, adjacent industrial applications and services. No verified EUV-only split or named ASML supply edge.",
+      "refresh": "Review new company annual/quarterly report; archive source and approve exact table values before publishing. No interpolation.",
+      "points": [
+        {
+          "date": "2023-12-31",
+          "value": 885.3,
+          "source_id": "vat25",
+          "source_url": "https://www.vatgroup.com/uploads/sustainability/summary-reports/vat-summary-sustainability-report-2025-english.pdf"
+        },
+        {
+          "date": "2024-12-31",
+          "value": 942.2,
+          "source_id": "vat25",
+          "source_url": "https://www.vatgroup.com/uploads/sustainability/summary-reports/vat-summary-sustainability-report-2025-english.pdf"
+        },
+        {
+          "date": "2025-12-31",
+          "value": 1073.5,
+          "source_id": "vat25",
+          "source_url": "https://www.vatgroup.com/uploads/sustainability/summary-reports/vat-summary-sustainability-report-2025-english.pdf"
+        }
+      ]
+    },
+    {
+      "id": "vat_orders",
+      "title": "VAT group orders",
+      "company": "VAT",
+      "component": "Vacuum valves",
+      "unit": "CHF million",
+      "frequency": "annual, calendar year",
+      "geography": "Company operations worldwide",
+      "measurement": "reported activity",
+      "scope": "Whole-company order intake. Broader semiconductor equipment proxy, not physical valve shipments or EUV-specific orders.",
+      "refresh": "Review new company annual/quarterly report; archive source and approve exact table values before publishing. No interpolation.",
+      "points": [
+        {
+          "date": "2023-12-31",
+          "value": 691.9,
+          "source_id": "vat25",
+          "source_url": "https://www.vatgroup.com/uploads/sustainability/summary-reports/vat-summary-sustainability-report-2025-english.pdf"
+        },
+        {
+          "date": "2024-12-31",
+          "value": 1033.3,
+          "source_id": "vat25",
+          "source_url": "https://www.vatgroup.com/uploads/sustainability/summary-reports/vat-summary-sustainability-report-2025-english.pdf"
+        },
+        {
+          "date": "2025-12-31",
+          "value": 1033.0,
+          "source_id": "vat25",
+          "source_url": "https://www.vatgroup.com/uploads/sustainability/summary-reports/vat-summary-sustainability-report-2025-english.pdf"
+        }
+      ]
+    },
+    {
+      "id": "tsmc_wafers",
+      "title": "TSMC wafer shipments",
+      "company": "TSMC",
+      "component": "Foundry output",
+      "unit": "thousand 12-inch-equivalent wafers",
+      "frequency": "quarterly",
+      "geography": "Company operations worldwide",
+      "measurement": "reported activity",
+      "scope": "Consolidated physical wafer shipments normalized by wafer area. All technology nodes and end markets; not AI-only, not wafer capacity, and not chip counts.",
+      "refresh": "Review new company annual/quarterly report; archive source and approve exact table values before publishing. No interpolation.",
+      "points": [
+        {
+          "date": "2024-03-31",
+          "value": 3030,
+          "source_id": "tsmc24q1",
+          "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/qr/phase4_reports/2024-04/189b2f2a681ff9ae7eb066bd81bcadf45e7200c7/1Q24ManagementReport.pdf"
+        },
+        {
+          "date": "2024-06-30",
+          "value": 3125,
+          "source_id": "tsmc25q2",
+          "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-07/1fec9df3de99e6e9f190e1eda7179449381ce6d8/2Q25ManagementReport.pdf"
+        },
+        {
+          "date": "2024-09-30",
+          "value": 3338,
+          "source_id": "tsmc24q4",
+          "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-01/2d8b2bb6fc3b5887d24ae0635f639c1cdca834f3/4Q24ManagementReport.pdf"
+        },
+        {
+          "date": "2024-12-31",
+          "value": 3418,
+          "source_id": "tsmc24q4",
+          "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-01/2d8b2bb6fc3b5887d24ae0635f639c1cdca834f3/4Q24ManagementReport.pdf"
+        },
+        {
+          "date": "2025-03-31",
+          "value": 3259,
+          "source_id": "tsmc25q2",
+          "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-07/1fec9df3de99e6e9f190e1eda7179449381ce6d8/2Q25ManagementReport.pdf"
+        },
+        {
+          "date": "2025-06-30",
+          "value": 3718,
+          "source_id": "tsmc25q2",
+          "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-07/1fec9df3de99e6e9f190e1eda7179449381ce6d8/2Q25ManagementReport.pdf"
+        },
+        {
+          "date": "2025-09-30",
+          "value": 4085,
+          "source_id": "tsmc25q4",
+          "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/00fe50f72b38d74e6b9b066398f020f337cd4e9d/4Q25%20Management%20Report.pdf"
+        },
+        {
+          "date": "2025-12-31",
+          "value": 3961,
+          "source_id": "tsmc25q4",
+          "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/00fe50f72b38d74e6b9b066398f020f337cd4e9d/4Q25%20Management%20Report.pdf"
+        },
+        {
+          "date": "2026-03-31",
+          "value": 4174,
+          "source_id": "tsmc26q2",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000451/a2q26presentatione.htm"
+        },
+        {
+          "date": "2026-06-30",
+          "value": 4336,
+          "source_id": "tsmc26q2",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000451/a2q26presentatione.htm"
+        }
+      ]
+    },
+    {
+      "id": "tsmc_capex",
+      "title": "TSMC capital expenditures",
+      "company": "TSMC",
+      "component": "Foundry investment",
+      "unit": "USD billion",
+      "frequency": "quarterly",
+      "geography": "Company operations worldwide",
+      "measurement": "reported activity",
+      "scope": "Reported consolidated quarterly capital expenditures. Nominal USD, actual investment, all processes/end markets; not annualized or a forecast.",
+      "refresh": "Review new company annual/quarterly report; archive source and approve exact table values before publishing. No interpolation.",
+      "points": [
+        {
+          "date": "2024-03-31",
+          "value": 5.77,
+          "source_id": "tsmc24q4",
+          "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-01/2d8b2bb6fc3b5887d24ae0635f639c1cdca834f3/4Q24ManagementReport.pdf"
+        },
+        {
+          "date": "2024-06-30",
+          "value": 6.36,
+          "source_id": "tsmc24q4",
+          "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-01/2d8b2bb6fc3b5887d24ae0635f639c1cdca834f3/4Q24ManagementReport.pdf"
+        },
+        {
+          "date": "2024-09-30",
+          "value": 6.4,
+          "source_id": "tsmc24q4",
+          "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-01/2d8b2bb6fc3b5887d24ae0635f639c1cdca834f3/4Q24ManagementReport.pdf"
+        },
+        {
+          "date": "2024-12-31",
+          "value": 11.23,
+          "source_id": "tsmc24q4",
+          "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-01/2d8b2bb6fc3b5887d24ae0635f639c1cdca834f3/4Q24ManagementReport.pdf"
+        },
+        {
+          "date": "2025-03-31",
+          "value": 10.06,
+          "source_id": "tsmc25q4",
+          "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/00fe50f72b38d74e6b9b066398f020f337cd4e9d/4Q25%20Management%20Report.pdf"
+        },
+        {
+          "date": "2025-06-30",
+          "value": 9.63,
+          "source_id": "tsmc25q4",
+          "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/00fe50f72b38d74e6b9b066398f020f337cd4e9d/4Q25%20Management%20Report.pdf"
+        },
+        {
+          "date": "2025-09-30",
+          "value": 9.7,
+          "source_id": "tsmc25q4",
+          "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/00fe50f72b38d74e6b9b066398f020f337cd4e9d/4Q25%20Management%20Report.pdf"
+        },
+        {
+          "date": "2025-12-31",
+          "value": 11.51,
+          "source_id": "tsmc25q4",
+          "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/00fe50f72b38d74e6b9b066398f020f337cd4e9d/4Q25%20Management%20Report.pdf"
+        },
+        {
+          "date": "2026-03-31",
+          "value": 11.1,
+          "source_id": "tsmc26q2capex",
+          "source_url": "https://investor.tsmc.com/chinese/encrypt/files/encrypt_file/reports/2026-07/6f49632674bd2d0fd48cb65aaf89ec6ab510b559/2Q26%20ManagementReport.pdf"
+        },
+        {
+          "date": "2026-06-30",
+          "value": 15.7,
+          "source_id": "tsmc26q2capex",
+          "source_url": "https://investor.tsmc.com/chinese/encrypt/files/encrypt_file/reports/2026-07/6f49632674bd2d0fd48cb65aaf89ec6ab510b559/2Q26%20ManagementReport.pdf"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "zeiss_oberkochen",
+      "name": "ZEISS optics · Oberkochen",
+      "company": "ZEISS SMT",
+      "component": "EUV/DUV optics",
+      "city": "Oberkochen",
+      "country": "DE",
+      "lat": 48.783,
+      "lon": 10.105,
+      "location_precision": "Approximate city marker; not a geocoded factory boundary",
+      "source_ids": [
+        "asml25"
+      ],
+      "sources": [
+        {
+          "title": "ASML Annual Report 2025, IFRS filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011377/asml-2025xannualxreportx.htm",
+          "locator": "Financial KPIs: EUV systems recognized; Note 26 Related parties, printed p321: purchases from Carl Zeiss SMT",
+          "published_date": "2026-02-25"
+        }
+      ],
+      "series_ids": [
+        "asml_zeiss_purchases",
+        "zeiss_smt_revenue",
+        "zeiss_smt_fte"
+      ],
+      "scope": "Documented optics manufacturing/testing site. Metrics cover companywide activity and cannot be allocated to this site."
+    },
+    {
+      "id": "zeiss_wetzlar",
+      "name": "ZEISS optics · Wetzlar",
+      "company": "ZEISS SMT",
+      "component": "EUV/DUV optics",
+      "city": "Wetzlar",
+      "country": "DE",
+      "lat": 50.558,
+      "lon": 8.504,
+      "location_precision": "Approximate city marker; not a geocoded factory boundary",
+      "source_ids": [
+        "asml25",
+        "zeiss_expansion"
+      ],
+      "sources": [
+        {
+          "title": "ASML Annual Report 2025, IFRS filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011377/asml-2025xannualxreportx.htm",
+          "locator": "Financial KPIs: EUV systems recognized; Note 26 Related parties, printed p321: purchases from Carl Zeiss SMT",
+          "published_date": "2026-02-25"
+        },
+        {
+          "title": "ZEISS SMT capacity expansion",
+          "url": "https://www.zeiss.com/semiconductor-manufacturing-technology/news-and-events/smt-press-releases/2026/smt-capacity-expansion.html",
+          "locator": "July 24, 2026; office move-in, phased 25,000 square meter project, Wetzlar construction, Rossdorf expansion."
+        }
+      ],
+      "series_ids": [
+        "asml_zeiss_purchases",
+        "zeiss_smt_revenue",
+        "zeiss_smt_fte"
+      ],
+      "scope": "Documented optical-column manufacturing/testing location. Same company metrics as Oberkochen; do not double-count."
+    },
+    {
+      "id": "trumpf_ditzingen",
+      "name": "TRUMPF drive lasers",
+      "company": "TRUMPF",
+      "component": "High-power CO2 laser",
+      "city": "Ditzingen",
+      "country": "DE",
+      "lat": 48.825,
+      "lon": 9.067,
+      "location_precision": "Approximate city marker; not a geocoded factory boundary",
+      "source_ids": [
+        "trumpf_ditzingen",
+        "asml_euv_chain"
+      ],
+      "sources": [
+        {
+          "title": "TRUMPF Ditzingen production site",
+          "url": "https://www.trumpf.com/de_DE/unternehmen/profil/standorte/standort/ditzingen/",
+          "locator": "Site description identifies production of EUV systems and CO2 lasers."
+        },
+        {
+          "title": "ASML: Making EUV, from lab to fab",
+          "url": "https://www.asml.com/en/company/stories/2022/making-euv-lab-to-fab",
+          "locator": "US droplet generator and other modules; German ZEISS optics and TRUMPF lasers."
+        }
+      ],
+      "series_ids": [
+        "trumpf_euv_revenue",
+        "trumpf_euv_orders"
+      ],
+      "scope": "Ditzingen develops and produces EUV laser systems; fiscal EUV business figures are not site-specific output counts."
+    },
+    {
+      "id": "asml_sandiego",
+      "name": "ASML light-source components",
+      "company": "ASML",
+      "component": "Droplet generator / EUV source",
+      "city": "San Diego",
+      "country": "US",
+      "lat": 32.715,
+      "lon": -117.161,
+      "location_precision": "Approximate city marker; not a geocoded factory boundary",
+      "source_ids": [
+        "asml_sandiego"
+      ],
+      "sources": [
+        {
+          "title": "ASML San Diego",
+          "url": "https://www.asml.com/company/about-asml/locations/san-diego",
+          "locator": "EUV source development and droplet-generator manufacture."
+        }
+      ],
+      "series_ids": [],
+      "scope": "Site develops and qualifies the EUV source and manufactures droplet generators. No recurring public unit series established."
+    },
+    {
+      "id": "asml_berlin",
+      "name": "ASML clamps and mirror blocks",
+      "company": "ASML",
+      "component": "Wafer positioning",
+      "city": "Berlin",
+      "country": "DE",
+      "lat": 52.52,
+      "lon": 13.405,
+      "location_precision": "Approximate city marker; not a geocoded factory boundary",
+      "source_ids": [
+        "asml_berlin"
+      ],
+      "sources": [
+        {
+          "title": "ASML Berlin component manufacturing",
+          "url": "https://www.asml.com/de-de/berlin",
+          "locator": "Technology section: EUV clamps, wafer-stage mirror blocks, and DUV wafer tables."
+        }
+      ],
+      "series_ids": [],
+      "scope": "EUV clamps and wafer-stage mirror blocks are confirmed. Mirror blocks are positioning structures, distinct from ZEISS projection mirrors. No public recurring component unit series established."
+    },
+    {
+      "id": "asml_veldhoven",
+      "name": "ASML lithography systems",
+      "company": "ASML",
+      "component": "System integration",
+      "city": "Veldhoven",
+      "country": "NL",
+      "lat": 51.418,
+      "lon": 5.406,
+      "location_precision": "Approximate city marker; not a geocoded factory boundary",
+      "source_ids": [
+        "asml25",
+        "asml_euv_chain"
+      ],
+      "sources": [
+        {
+          "title": "ASML Annual Report 2025, IFRS filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011377/asml-2025xannualxreportx.htm",
+          "locator": "Financial KPIs: EUV systems recognized; Note 26 Related parties, printed p321: purchases from Carl Zeiss SMT",
+          "published_date": "2026-02-25"
+        },
+        {
+          "title": "ASML: Making EUV, from lab to fab",
+          "url": "https://www.asml.com/en/company/stories/2022/making-euv-lab-to-fab",
+          "locator": "US droplet generator and other modules; German ZEISS optics and TRUMPF lasers."
+        }
+      ],
+      "series_ids": [
+        "asml_euv_recognized"
+      ],
+      "scope": "ASML manufacturing/integration hub. Annual EUV systems recognized is a companywide accounting count, not a Veldhoven shipment tally."
+    },
+    {
+      "id": "vat_haag",
+      "name": "VAT vacuum components",
+      "company": "VAT",
+      "component": "Vacuum valves / subsystems",
+      "city": "Haag",
+      "country": "CH",
+      "lat": 47.208,
+      "lon": 9.489,
+      "location_precision": "Approximate city marker; not a geocoded factory boundary",
+      "source_ids": [
+        "vat_locations",
+        "vat_euv"
+      ],
+      "sources": [
+        {
+          "title": "VAT Annual Report 2023",
+          "url": "https://www.vatgroup.com/uploads/financial_reports/2024/VAT-Group-Complete-Annual-Report-2023.pdf",
+          "locator": "Haag primary production facility; Penang manufacturing and engineering."
+        },
+        {
+          "title": "VAT ultra-high-vacuum gate valve",
+          "url": "https://www.vatgroup.com/series/ultra-high-vacuum-control-gate-valve",
+          "locator": "Series 64.8 lists EUV as an application, without identifying ASML as customer."
+        }
+      ],
+      "series_ids": [
+        "vat_sales",
+        "vat_orders"
+      ],
+      "scope": "EUV application is documented, but the source does not establish a named ASML supplier link. Whole-group revenue includes other processes and markets."
+    },
+    {
+      "id": "vat_penang",
+      "name": "VAT manufacturing · Penang",
+      "company": "VAT",
+      "component": "Vacuum valves / subsystems",
+      "city": "Penang",
+      "country": "MY",
+      "lat": 5.416,
+      "lon": 100.332,
+      "location_precision": "Approximate city marker; not a geocoded factory boundary",
+      "source_ids": [
+        "vat_locations"
+      ],
+      "sources": [
+        {
+          "title": "VAT Annual Report 2023",
+          "url": "https://www.vatgroup.com/uploads/financial_reports/2024/VAT-Group-Complete-Annual-Report-2023.pdf",
+          "locator": "Haag primary production facility; Penang manufacturing and engineering."
+        }
+      ],
+      "series_ids": [
+        "vat_sales",
+        "vat_orders"
+      ],
+      "scope": "Manufacturing location for broader VAT business. No EUV-only allocation. Same group metrics as Haag; do not double-count."
+    },
+    {
+      "id": "hoya_singapore",
+      "name": "HOYA EUV mask blanks",
+      "company": "HOYA",
+      "component": "Fab consumables: mask blanks",
+      "city": "Singapore",
+      "country": "SG",
+      "lat": 1.352,
+      "lon": 103.82,
+      "location_precision": "Approximate city marker; not a geocoded factory boundary",
+      "source_ids": [
+        "hoya23",
+        "hoya26"
+      ],
+      "sources": [
+        {
+          "title": "HOYA 2023 information technology review",
+          "url": "https://www.hoya.com/ir/2023/en/review/it.html",
+          "locator": "EUV mask-blank plant in Singapore; capacity increased at the beginning of 2023."
+        },
+        {
+          "title": "HOYA 2026 information technology review",
+          "url": "https://www.hoya.com/ir/2026/en/review/it.html",
+          "locator": "New plant planned adjacent to existing Singapore facility; EUV mask blanks."
+        }
+      ],
+      "series_ids": [],
+      "scope": "EUV mask-blank manufacturing location. Fab consumable, not a built-in machine component. No numerical production time series disclosed here."
+    },
+    {
+      "id": "mitsui_iwakuni",
+      "name": "Mitsui EUV pellicles",
+      "company": "Mitsui Chemicals",
+      "component": "Fab consumables: pellicles",
+      "city": "Iwakuni-Ohtake",
+      "country": "JP",
+      "lat": 34.219,
+      "lon": 132.22,
+      "location_precision": "Approximate city marker; not a geocoded factory boundary",
+      "source_ids": [
+        "mitsui21",
+        "mitsui24"
+      ],
+      "sources": [
+        {
+          "title": "Mitsui commercial EUV pellicle production",
+          "url": "https://us.mitsuichemicals.com/mci/mci-news/2021/2021_0526/index.htm",
+          "locator": "May 26, 2021; Iwakuni-Ohtake commercial production based on ASML license."
+        },
+        {
+          "title": "Mitsui CNT pellicle production facility plan",
+          "url": "https://jp.mitsuichemicals.com/en/release/2024/2024_0528_1/index.htm",
+          "locator": "May 28, 2024; planned Iwakuni-Ohtake 5,000 sheets/year; tentative construction completion December 2025."
+        }
+      ],
+      "series_ids": [],
+      "scope": "Commercial EUV pellicle production site and planned CNT line. Licensing relationship with ASML is documented. Planned capacity is not measured output."
+    },
+    {
+      "id": "tsmc_taiwan",
+      "name": "TSMC foundry output",
+      "company": "TSMC",
+      "component": "Wafer fabrication",
+      "city": "Hsinchu",
+      "country": "TW",
+      "lat": 24.804,
+      "lon": 120.971,
+      "location_precision": "Approximate city marker; not a geocoded factory boundary",
+      "source_ids": [
+        "asml_customers"
+      ],
+      "sources": [
+        {
+          "title": "ASML: Busting ASML myths",
+          "url": "https://www.asml.com/en/en/news/stories/2022/busting-asml-myths",
+          "locator": "Identifies Intel, Samsung and TSMC as customers using ASML DUV and EUV lithography systems."
+        }
+      ],
+      "series_ids": [
+        "tsmc_wafers",
+        "tsmc_capex"
+      ],
+      "scope": "Headquarters-region marker for worldwide consolidated company output; does not allocate output to Hsinchu or imply a specific shipping route."
+    }
+  ],
+  "edges": [
+    {
+      "from": "zeiss_oberkochen",
+      "to": "asml_veldhoven",
+      "label": "Optics",
+      "kind": "documented_supplier",
+      "source_ids": [
+        "asml25"
+      ],
+      "sources": [
+        {
+          "title": "ASML Annual Report 2025, IFRS filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011377/asml-2025xannualxreportx.htm",
+          "locator": "Financial KPIs: EUV systems recognized; Note 26 Related parties, printed p321: purchases from Carl Zeiss SMT",
+          "published_date": "2026-02-25"
+        }
+      ],
+      "scope": "Documented company relationship. Geographic arc is schematic and carries no shipment volume."
+    },
+    {
+      "from": "zeiss_wetzlar",
+      "to": "asml_veldhoven",
+      "label": "Optics",
+      "kind": "documented_supplier",
+      "source_ids": [
+        "asml25"
+      ],
+      "sources": [
+        {
+          "title": "ASML Annual Report 2025, IFRS filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011377/asml-2025xannualxreportx.htm",
+          "locator": "Financial KPIs: EUV systems recognized; Note 26 Related parties, printed p321: purchases from Carl Zeiss SMT",
+          "published_date": "2026-02-25"
+        }
+      ],
+      "scope": "Second production location within the same supplier relationship; no independently measured trade flow."
+    },
+    {
+      "from": "trumpf_ditzingen",
+      "to": "asml_veldhoven",
+      "label": "Drive lasers",
+      "kind": "documented_supplier",
+      "source_ids": [
+        "asml_euv_chain",
+        "trumpf_first_light"
+      ],
+      "sources": [
+        {
+          "title": "ASML: Making EUV, from lab to fab",
+          "url": "https://www.asml.com/en/company/stories/2022/making-euv-lab-to-fab",
+          "locator": "US droplet generator and other modules; German ZEISS optics and TRUMPF lasers."
+        },
+        {
+          "title": "TRUMPF: ASML award for new EUV laser",
+          "url": "https://www.trumpf.com/filestorage/TRUMPF_Master/Corporate/Newsroom/Press_releases/2025_26/Corporate/20251024-PM-TRUMPF-Supplier-Award/20251024-PR-TRUMPF-Supplier-Award-EN.pdf",
+          "locator": "October 24, 2025; successful first test; production and first deliveries scheduled for 2026."
+        }
+      ],
+      "scope": "Reported TRUMPF–ASML supply relationship; not a trade-volume series."
+    },
+    {
+      "from": "asml_sandiego",
+      "to": "asml_veldhoven",
+      "label": "Source components",
+      "kind": "internal_component",
+      "source_ids": [
+        "asml_sandiego",
+        "asml_euv_chain"
+      ],
+      "sources": [
+        {
+          "title": "ASML San Diego",
+          "url": "https://www.asml.com/company/about-asml/locations/san-diego",
+          "locator": "EUV source development and droplet-generator manufacture."
+        },
+        {
+          "title": "ASML: Making EUV, from lab to fab",
+          "url": "https://www.asml.com/en/company/stories/2022/making-euv-lab-to-fab",
+          "locator": "US droplet generator and other modules; German ZEISS optics and TRUMPF lasers."
+        }
+      ],
+      "scope": "Within ASML manufacturing network; schematic component dependency, not actual transport route."
+    },
+    {
+      "from": "asml_berlin",
+      "to": "asml_veldhoven",
+      "label": "Clamps / mirror blocks",
+      "kind": "internal_component",
+      "source_ids": [
+        "asml_berlin"
+      ],
+      "sources": [
+        {
+          "title": "ASML Berlin component manufacturing",
+          "url": "https://www.asml.com/de-de/berlin",
+          "locator": "Technology section: EUV clamps, wafer-stage mirror blocks, and DUV wafer tables."
+        }
+      ],
+      "scope": "Within ASML manufacturing network; component use confirmed, volumes unavailable."
+    },
+    {
+      "from": "asml_veldhoven",
+      "to": "tsmc_taiwan",
+      "label": "Lithography equipment",
+      "kind": "documented_customer",
+      "source_ids": [
+        "asml_customers"
+      ],
+      "sources": [
+        {
+          "title": "ASML: Busting ASML myths",
+          "url": "https://www.asml.com/en/en/news/stories/2022/busting-asml-myths",
+          "locator": "Identifies Intel, Samsung and TSMC as customers using ASML DUV and EUV lithography systems."
+        }
+      ],
+      "scope": "TSMC is a documented user of ASML DUV/EUV systems; geography is schematic, not a specified fab delivery."
+    },
+    {
+      "from": "asml_veldhoven",
+      "to": "mitsui_iwakuni",
+      "label": "EUV pellicle license",
+      "kind": "license",
+      "source_ids": [
+        "mitsui21"
+      ],
+      "sources": [
+        {
+          "title": "Mitsui commercial EUV pellicle production",
+          "url": "https://us.mitsuichemicals.com/mci/mci-news/2021/2021_0526/index.htm",
+          "locator": "May 26, 2021; Iwakuni-Ohtake commercial production based on ASML license."
+        }
+      ],
+      "scope": "Technology license, not physical material flow. Pellicles belong to the fab-consumables branch."
+    }
+  ],
+  "milestones": [
+    {
+      "id": "mitsui_commercial_euv",
+      "date": "2021-05-26",
+      "status": "actual",
+      "title": "EUV pellicle commercial production began",
+      "node_ids": [
+        "mitsui_iwakuni"
+      ],
+      "source_id": "mitsui21",
+      "source_url": "https://us.mitsuichemicals.com/mci/mci-news/2021/2021_0526/index.htm",
+      "detail": "Mitsui announced commercial production at Iwakuni-Ohtake under its ASML license."
+    },
+    {
+      "id": "hoya_singapore_expanded",
+      "date": "2023",
+      "status": "actual",
+      "title": "Singapore EUV mask-blank capacity expanded",
+      "node_ids": [
+        "hoya_singapore"
+      ],
+      "source_id": "hoya23",
+      "source_url": "https://www.hoya.com/ir/2023/en/review/it.html",
+      "detail": "HOYA reports an increase at the beginning of 2023; no numerical output or capacity provided.",
+      "date_precision": "year"
+    },
+    {
+      "id": "mitsui_cnt_plan",
+      "date": "2024-05-28",
+      "status": "planned",
+      "title": "CNT pellicle line announced",
+      "node_ids": [
+        "mitsui_iwakuni"
+      ],
+      "source_id": "mitsui24",
+      "source_url": "https://jp.mitsuichemicals.com/en/release/2024/2024_0528_1/index.htm",
+      "detail": "Announced nameplate capacity of 5,000 sheets per year with tentative construction completion in December 2025; this source does not verify completion.",
+      "planned_capacity": 5000,
+      "planned_capacity_unit": "sheets per year",
+      "planned_completion": "2025-12"
+    },
+    {
+      "id": "trumpf_new_laser_first_light",
+      "date": "2025-10-24",
+      "status": "actual",
+      "title": "New EUV laser successfully tested",
+      "node_ids": [
+        "trumpf_ditzingen"
+      ],
+      "source_id": "trumpf_first_light",
+      "source_url": "https://www.trumpf.com/filestorage/TRUMPF_Master/Corporate/Newsroom/Press_releases/2025_26/Corporate/20251024-PM-TRUMPF-Supplier-Award/20251024-PR-TRUMPF-Supplier-Award-EN.pdf",
+      "detail": "TRUMPF reported the first successful test. This is a development milestone, not volume production."
+    },
+    {
+      "id": "trumpf_new_laser_series_plan",
+      "date": "2025-10-24",
+      "status": "planned",
+      "title": "New laser production and deliveries scheduled",
+      "node_ids": [
+        "trumpf_ditzingen"
+      ],
+      "source_id": "trumpf_first_light",
+      "source_url": "https://www.trumpf.com/filestorage/TRUMPF_Master/Corporate/Newsroom/Press_releases/2025_26/Corporate/20251024-PM-TRUMPF-Supplier-Award/20251024-PR-TRUMPF-Supplier-Award-EN.pdf",
+      "detail": "Company scheduled series production and initial ASML deliveries for 2026; this announcement alone does not establish that production has started.",
+      "planned_completion": "2026"
+    },
+    {
+      "id": "zeiss_oberkochen_move",
+      "date": "2026-07-24",
+      "status": "actual",
+      "title": "First new Oberkochen offices occupied",
+      "node_ids": [
+        "zeiss_oberkochen"
+      ],
+      "source_id": "zeiss_expansion",
+      "source_url": "https://www.zeiss.com/semiconductor-manufacturing-technology/news-and-events/smt-press-releases/2026/smt-capacity-expansion.html",
+      "detail": "Office move-in occurred in July 2026 within a phased expansion. The full roughly 25,000-square-meter production/support-space project is not reported complete."
+    },
+    {
+      "id": "zeiss_expansion_plan",
+      "date": "2026-07-24",
+      "status": "in_progress",
+      "title": "Oberkochen and Wetzlar capacity expansion",
+      "node_ids": [
+        "zeiss_oberkochen",
+        "zeiss_wetzlar"
+      ],
+      "source_id": "zeiss_expansion",
+      "source_url": "https://www.zeiss.com/semiconductor-manufacturing-technology/news-and-events/smt-press-releases/2026/smt-capacity-expansion.html",
+      "detail": "Additional Oberkochen buildings are to open in stages; a multifunctional Wetzlar factory is under construction. These are plans and construction activity, not optical-system output."
+    },
+    {
+      "id": "hoya_new_singapore_plant",
+      "date": "2026",
+      "status": "planned",
+      "title": "Additional Singapore mask-blank plant decided",
+      "node_ids": [
+        "hoya_singapore"
+      ],
+      "source_id": "hoya26",
+      "source_url": "https://www.hoya.com/ir/2026/en/review/it.html",
+      "detail": "HOYA reports deciding to build adjacent to its existing Singapore plant; no completed production or numerical capacity is disclosed.",
+      "date_precision": "year"
+    }
+  ],
+  "qualitative_observations": [
+    {
+      "company": "Micron",
+      "period": "FY2026 Q1",
+      "date": "2025-11-27",
+      "comparison": "quarter on quarter",
+      "product": "DRAM",
+      "bit_shipments": null,
+      "average_selling_price": "about 20% higher",
+      "precision": "company-described approximate range; no numeric midpoint inferred",
+      "scope": "Whole DRAM or NAND product category, not AI-only or HBM-only. Missing bit-shipment description means not separately quantified, not zero.",
+      "source_id": "micron26q1",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000046/mu-20251127.htm"
+    },
+    {
+      "company": "Micron",
+      "period": "FY2026 Q1",
+      "date": "2025-11-27",
+      "comparison": "quarter on quarter",
+      "product": "NAND",
+      "bit_shipments": "mid-to-high single digits higher",
+      "average_selling_price": "mid-teens higher",
+      "precision": "company-described approximate range; no numeric midpoint inferred",
+      "scope": "Whole DRAM or NAND product category, not AI-only or HBM-only. Missing bit-shipment description means not separately quantified, not zero.",
+      "source_id": "micron26q1",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000046/mu-20251127.htm"
+    },
+    {
+      "company": "Micron",
+      "period": "FY2026 Q2",
+      "date": "2026-02-26",
+      "comparison": "quarter on quarter",
+      "product": "DRAM",
+      "bit_shipments": "mid-single digits higher",
+      "average_selling_price": "mid-60% range higher",
+      "precision": "company-described approximate range; no numeric midpoint inferred",
+      "scope": "Whole DRAM or NAND product category, not AI-only or HBM-only. Missing bit-shipment description means not separately quantified, not zero.",
+      "source_id": "micron26q2",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000006/mu-20260226.htm"
+    },
+    {
+      "company": "Micron",
+      "period": "FY2026 Q2",
+      "date": "2026-02-26",
+      "comparison": "quarter on quarter",
+      "product": "NAND",
+      "bit_shipments": "low-single digits higher",
+      "average_selling_price": "high-70% range higher",
+      "precision": "company-described approximate range; no numeric midpoint inferred",
+      "scope": "Whole DRAM or NAND product category, not AI-only or HBM-only. Missing bit-shipment description means not separately quantified, not zero.",
+      "source_id": "micron26q2",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000006/mu-20260226.htm"
+    },
+    {
+      "company": "Micron",
+      "period": "FY2026 Q3",
+      "date": "2026-05-28",
+      "comparison": "quarter on quarter",
+      "product": "DRAM",
+      "bit_shipments": "low-single digits higher",
+      "average_selling_price": "low-60% range higher",
+      "precision": "company-described approximate range; no numeric midpoint inferred",
+      "scope": "Whole DRAM or NAND product category, not AI-only or HBM-only. Missing bit-shipment description means not separately quantified, not zero.",
+      "source_id": "micron26q3",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000015/mu-20260528.htm"
+    },
+    {
+      "company": "Micron",
+      "period": "FY2026 Q3",
+      "date": "2026-05-28",
+      "comparison": "quarter on quarter",
+      "product": "NAND",
+      "bit_shipments": "mid-single digits higher",
+      "average_selling_price": "mid-80% range higher",
+      "precision": "company-described approximate range; no numeric midpoint inferred",
+      "scope": "Whole DRAM or NAND product category, not AI-only or HBM-only. Missing bit-shipment description means not separately quantified, not zero.",
+      "source_id": "micron26q3",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000015/mu-20260528.htm"
+    }
+  ],
+  "methodology": "Selected company disclosures measure supplier business activity and physical output. Values cannot be summed across adjacent stages because transactions overlap. Fiscal periods vary. No AI-attributable fraction is inferred. Supplier connections are documented relationships, not measured shipment routes."
+}

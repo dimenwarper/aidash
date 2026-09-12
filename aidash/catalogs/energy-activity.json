@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "retrieved_at": "2026-09-12T03:03:16.644807+00:00",
+  "metrics": [
+    {
+      "id": "us_electricity_generation",
+      "series_id": "ELETPUS",
+      "name": "U.S. utility-scale net electricity generation",
+      "geography": "US",
+      "geography_name": "United States (50 states and District of Columbia)",
+      "frequency": "monthly",
+      "unit": "TWh",
+      "source_unit": "Billion Kilowatthours",
+      "unit_conversion": "1 billion kWh = 1 TWh; numeric value unchanged",
+      "adjustment": "not seasonally adjusted",
+      "source": "U.S. Energy Information Administration, Monthly Energy Review, Table 7.1",
+      "source_url": "https://www.eia.gov/totalenergy/data/browser/?tbl=T07.01",
+      "data_url": "https://www.eia.gov/totalenergy/data/browser/csv.php?tbl=T07.01",
+      "methodology_url": "https://www.eia.gov/totalenergy/data/monthly/pdf/sec7.pdf",
+      "attribution": "Economy-wide electricity activity; includes non-AI use and is not a data-center or AI electricity estimate.",
+      "evidence_notes": "Includes utility-scale generation across the electric power, commercial and industrial sectors. Excludes small-scale solar PV, which EIA reports separately in Table10.6. No attribution to AI; seasonality and weather influence activity.",
+      "date_convention": "Month-end denotes the reporting month, not publication date; amounts are monthly energy flows, not power capacity."
+    },
+    {
+      "id": "us_electricity_sales",
+      "series_id": "ESTCPUS",
+      "name": "U.S. electricity sales to ultimate customers",
+      "geography": "US",
+      "geography_name": "United States (50 states and District of Columbia)",
+      "frequency": "monthly",
+      "unit": "TWh",
+      "source_unit": "Billion Kilowatthours",
+      "unit_conversion": "1 billion kWh = 1 TWh; numeric value unchanged",
+      "adjustment": "not seasonally adjusted",
+      "source": "U.S. Energy Information Administration, Monthly Energy Review, Table 7.1",
+      "source_url": "https://www.eia.gov/totalenergy/data/browser/?tbl=T07.01",
+      "data_url": "https://www.eia.gov/totalenergy/data/browser/csv.php?tbl=T07.01",
+      "methodology_url": "https://www.eia.gov/totalenergy/data/monthly/pdf/sec7.pdf",
+      "attribution": "Economy-wide electricity activity; includes non-AI use and is not a data-center or AI electricity estimate.",
+      "evidence_notes": "Electricity sold by utilities and other energy service providers to end customers across sectors. Excludes self-generated direct use. This is electricity volume, not revenue. No attribution to AI; seasonality and weather influence activity.",
+      "date_convention": "Month-end denotes the reporting month, not publication date; amounts are monthly energy flows, not power capacity."
+    }
+  ],
+  "source_url": "https://www.eia.gov/totalenergy/data/browser/?tbl=T07.01",
+  "data_url": "https://www.eia.gov/totalenergy/data/browser/csv.php?tbl=T07.01",
+  "local_file": "/tmp/aidash-eia-power.csv",
+  "sha256": "adf56fbddb912525644f2e4ffdfdeb3a3ee039a34d0dd1fe5d6c73884c79e87f",
+  "bytes": 748141,
+  "parser_instructions": [
+    "GET the public CSV URL; no API key needed. Decode UTF-8 and use csv.DictReader with exact header MSN,YYYYMM,Value,Column_Order,Description,Unit.",
+    "Select ELETPUS for total utility-scale net generation and ESTCPUS for electricity sales to ultimate customers. These are distinct physical flows and should not be summed.",
+    "YYYYMM rows ending13 are annual totals; exclude them from the monthly series. Retain months01 through12, year2019 onward. Convert observation month to month-end if the dashboard expects YYYY-MM-DD.",
+    "Require unit Billion Kilowatthours. Values already equal TWh numerically, so no conversion factor is needed.",
+    "Not Available is a missing value, never zero. Reject nonfinite values and duplicate monthly dates. Preserve gaps and sort dates.",
+    "Archive full source and replace the selected-series snapshot on successful refresh to capture official revisions. The CSV currently ends May2026; do not forward-fill.",
+    "The CSV omits PDF estimate/forecast markers. Table7.1 includes estimates and forecasts in certain other series; avoid indiscriminately importing all series as actual observations. Total generation and sales were confirmed against the current August2026 PDF table. Neither has a forecast marker at the latest month.",
+    "ELTCPUS total end-use includes estimated direct use in recent months; omitted from this actual-activity asset. ELI5PUS measures industrial-sector generation, not industrial electricity demand, and must not be mislabeled."
+  ]
+}

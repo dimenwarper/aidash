@@ -1,0 +1,940 @@
+{
+  "version": 1,
+  "reviewed_at": "2026-09-12",
+  "scope": "Curated public reports of major new AI-assisted mathematical results and advances on longstanding problems. Distinct results or closely related bound families, not articles or formalizations of already-known proofs. Dates track public announcements; status reflects the latest source review. Coverage is not exhaustive.",
+  "records": [
+    {
+      "id": "unforced-euler-blowup-2026",
+      "name": "Three-dimensional Euler: unforced finite-time blowup",
+      "date": "2026-09-08",
+      "category": "resolution",
+      "status": "Claim under review",
+      "system": "OpenAI research model",
+      "summary": "OpenAI reports smooth, compactly supported initial velocities whose three-dimensional incompressible Euler solution develops a singularity in finite time without external forcing.",
+      "ai_role": "An unreleased model developed the argument with parallel agents; OpenAI released a manuscript and formal proof repository. The construction builds on earlier human work on oscillating flows.",
+      "caveat": "This is a newly released proof claim, without asserted journal acceptance or complete independent verification. Euler has no viscosity; this result is distinct from forced Euler and from the separately counted Navier–Stokes claim.",
+      "news_sources": [
+        {
+          "name": "Quanta Magazine",
+          "url": "https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Euler manuscript",
+          "url": "https://cdn.openai.com/pdf/315b36cd-ec98-4023-8342-93345194ece1/euler.pdf"
+        },
+        {
+          "name": "Research announcement and provenance update",
+          "url": "https://openai.com/index/navier-stokes-solution/"
+        },
+        {
+          "name": "Formal proof repository",
+          "url": "https://github.com/openai/NavierStokesAndEuler"
+        }
+      ]
+    },
+    {
+      "id": "navier-stokes-2026",
+      "name": "Navier–Stokes existence and smoothness",
+      "date": "2026-09-08",
+      "category": "resolution",
+      "status": "Claim under review",
+      "system": "OpenAI research model",
+      "summary": "OpenAI reports a finite-time singularity construction for three-dimensional fluid equations with smooth external forcing, claiming a resolution of the corresponding Millennium Prize formulation.",
+      "ai_role": "An unreleased model developed the argument; GPT-6 Astra subsequently assisted with its formal verification.",
+      "caveat": "A reported claim, not an awarded Millennium Prize. It concerns the forced formulation; it does not establish a singularity for the unforced equations.",
+      "news_sources": [
+        {
+          "name": "Nature",
+          "url": "https://www.nature.com/articles/d41586-026-02842-5"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "OpenAI announcement and research",
+          "url": "https://openai.com/index/navier-stokes-solution/"
+        },
+        {
+          "name": "Navier–Stokes manuscript",
+          "url": "https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf"
+        },
+        {
+          "name": "Formal proof repository",
+          "url": "https://github.com/openai/NavierStokesAndEuler"
+        }
+      ]
+    },
+    {
+      "id": "forced-euler-blowup-2026",
+      "name": "3D Euler equations: blowup with smooth forcing",
+      "date": "2026-09-07",
+      "category": "advance",
+      "status": "Preprint; Lean verification reported",
+      "system": "Claude and Codex + Levent Alpöge and Tristan Buckmaster",
+      "summary": "Alpöge and Buckmaster construct smooth initial data and smooth external forcing for the three-dimensional incompressible Euler equations, with finite-time divergence of the vorticity norm.",
+      "ai_role": "The authors used Claude and Codex to develop and refine a construction based on Córdoba and Martínez-Zoroa’s program. Claude wrote the Lean formalization under Alpöge’s direction.",
+      "caveat": "This is the forced Euler problem, distinct from unforced Euler and from Navier–Stokes. The preliminary preprint and public Lean artifact have not been presented here as journal acceptance or independently rebuilt verification.",
+      "news_sources": [
+        {
+          "name": "Terence Tao’s first-hand research account",
+          "url": "https://terrytao.wordpress.com/2026/09/07/finite-time-blowup-with-smooth-forcing-term-for-the-incompressible-porous-medium-boussinesq-and-incompressible-euler-equations/"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Author manuscript",
+          "url": "https://cims.nyu.edu/~tristanb/euler.pdf"
+        },
+        {
+          "name": "Author statement on results and AI use",
+          "url": "https://cims.nyu.edu/~tristanb/statement.pdf"
+        },
+        {
+          "name": "Euler theorem and formalization",
+          "url": "https://github.com/tristanbuckmaster/fluid_lean/tree/main/euler-blowup"
+        }
+      ]
+    },
+    {
+      "id": "forced-boussinesq-blowup-2026",
+      "name": "2D Boussinesq equations: blowup with smooth forcing",
+      "date": "2026-09-07",
+      "category": "advance",
+      "status": "Preprint; Lean verification reported",
+      "system": "Claude and Codex + Levent Alpöge and Tristan Buckmaster",
+      "summary": "A construction for the inviscid Boussinesq equations on the plane starts with smooth temperature and zero velocity, with smooth forcing in both equations. Temperature stays bounded while its gradient diverges and vorticity becomes unbounded.",
+      "ai_role": "The authors iterated on earlier fluid-blowup ideas with Claude and Codex, then simplified and edited the proofs. They report an initial result on August 15 and Lean verification on August 22.",
+      "caveat": "Both the temperature and momentum equations have external forcing, smooth through the blowup time. This does not prove unforced Boussinesq blowup. The temperature-gradient norm tends to infinity; the vorticity statement is an infinite limsup.",
+      "news_sources": [
+        {
+          "name": "Terence Tao’s first-hand research account",
+          "url": "https://terrytao.wordpress.com/2026/09/07/finite-time-blowup-with-smooth-forcing-term-for-the-incompressible-porous-medium-boussinesq-and-incompressible-euler-equations/"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Boussinesq manuscript, theorem 1.1 and AI statement",
+          "url": "https://cims.nyu.edu/~tristanb/boussinesq.pdf"
+        },
+        {
+          "name": "Author statement on results and AI use",
+          "url": "https://cims.nyu.edu/~tristanb/statement.pdf"
+        },
+        {
+          "name": "Author formalization repository",
+          "url": "https://github.com/tristanbuckmaster/fluid_lean"
+        }
+      ]
+    },
+    {
+      "id": "critical-bond-percolation-2026",
+      "name": "No infinite cluster at critical bond percolation",
+      "date": "2026-09-03",
+      "category": "resolution",
+      "status": "Machine-checked claim; human review pending",
+      "system": "Anthropic Claude + Justin Leder",
+      "summary": "A released proof claims there is no infinite cluster at the critical probability for nearest-neighbor bond percolation on the integer lattice in every dimension at least two, including the previously open dimensions three through ten.",
+      "ai_role": "Claude wrote the new proof and its Lean implementation under Justin Leder's direction, establishing an inequality that completes the Kozma–Nitzan approach.",
+      "caveat": "The repository reports mechanical verification but explicitly says independent human refereeing is pending. Checking that the formal statement matches the intended mathematics remains necessary. The result concerns bond percolation, not every percolation model.",
+      "news_sources": [
+        {
+          "name": "Gil Kalai's expert report",
+          "url": "https://gilkalai.wordpress.com/2026/09/03/amazing-there-is-no-percolation-at-the-critical-probability-in-all-dimensions-solved-by-ai-via-a-conjecture-of-gady-kozma-and-shahaf-nitzan/"
+        },
+        {
+          "name": "Olle Häggström's account",
+          "url": "https://haggstrom.substack.com/p/what-a-crazy-time-to-be-alive"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Pinned research artifact and review status",
+          "url": "https://github.com/anthropics/formal-math/tree/795efb86f191735c5481675763537cfb4ff37e55/percolation"
+        }
+      ]
+    },
+    {
+      "id": "yau-tian-donaldson-csck-2026",
+      "name": "Yau–Tian–Donaldson conjecture: general cscK form",
+      "date": "2026-08-19",
+      "category": "resolution",
+      "status": "Counterexample claim under review",
+      "system": "GPT-5.6 Sol, Claude Fable 5 and Danus + Jihao Liu",
+      "summary": "Jihao Liu reports a smooth polarized projective fivefold that is K-polystable but has no constant-scalar-curvature Kähler metric, contradicting the general cscK formulation.",
+      "ai_role": "The paper credits three collaborating AI systems with producing the counterexample and proof, with a crucial human intervention directing which conjecture to test.",
+      "caveat": "A preprint claim, without located independent proof review. Established Fano Kähler–Einstein theorems and uniform or completed versions of the cscK correspondence are unaffected.",
+      "news_sources": [
+        {
+          "name": "Author's public scope clarification",
+          "url": "https://jihaoliu.org/publications.html"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Preprint and detailed AI-use appendix",
+          "url": "https://arxiv.org/html/2608.19301v1"
+        }
+      ]
+    },
+    {
+      "id": "matrix-multiplication-exponent-2026",
+      "name": "Matrix-multiplication exponent: tighter upper bound",
+      "date": "2026-08-17",
+      "category": "advance",
+      "status": "Certified numerical bound in preprint",
+      "system": "Google DeepMind AlphaEvolve + human researchers",
+      "summary": "Researchers improved the upper bound on the matrix-multiplication exponent from 2.371339 to 2.371177 using a larger optimization formulation and AlphaEvolve-refined optimization.",
+      "ai_role": "Human researchers developed the reformulation and initial optimizer; AlphaEvolve modified its code to further improve the bound. The final certificate was checked in exact rational arithmetic.",
+      "caveat": "This is a small asymptotic-bound improvement, not proof that the exponent equals two or a practical matrix-kernel speedup. It is distinct from the 2025 small-matrix construction.",
+      "news_sources": [
+        {
+          "name": "Coauthor's public announcement",
+          "url": "https://www.linkedin.com/posts/pushmeet-kohli-4838994_improving-the-matrix-multiplication-exponent-activity-7495483046163472385-cw9b"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Research preprint",
+          "url": "https://arxiv.org/html/2608.16884v1"
+        }
+      ]
+    },
+    {
+      "id": "riemann-critical-line-2026",
+      "name": "Riemann hypothesis: a stronger bound",
+      "date": "2026-08-10",
+      "category": "advance",
+      "status": "Expert-checked partial advance",
+      "system": "Claude research model",
+      "summary": "A Claude-discovered argument raises the proven asymptotic lower bound for simple zeta zeros on the critical line from about 41.6% to 67.25%.",
+      "ai_role": "An unreleased Claude research model developed the argument. Levent Alpöge and Ralph Furman checked it and take responsibility for the author preprint; a Lean formalization is also public.",
+      "caveat": "The Riemann hypothesis remains unsolved. This is a lower bound on a proportion of zeros, not a proof that every zero lies on the line. No journal acceptance is asserted.",
+      "news_sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/11/an-unreleased-anthropic-model-made-progress-on-one-of-maths-biggest-unsolved-problems/"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Anthropic research account",
+          "url": "https://www.anthropic.com/research/riemann-zeta"
+        },
+        {
+          "name": "Alpöge–Furman preprint (revised August 19)",
+          "url": "https://arxiv.org/abs/2608.13637"
+        },
+        {
+          "name": "Formal proof repository",
+          "url": "https://github.com/anthropics/formal-math"
+        }
+      ]
+    },
+    {
+      "id": "sphere-packing-upper-bound-2026",
+      "name": "High-dimensional sphere packing",
+      "date": "2026-08-01",
+      "category": "advance",
+      "status": "New upper bound; Lean certificate",
+      "system": "OpenAI Astra (internal)",
+      "summary": "Determines the asymptotic strength of the Cohn–Elkies method and improves the general upper bound on sphere-packing density in high dimensions.",
+      "ai_role": "Astra generated the argument; humans helped prepare it before model-led Lean formalization.",
+      "caveat": "An upper bound on density does not determine the optimal packing in every dimension. Human review has not reconstructed every analytic estimate.",
+      "news_sources": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Original proof, Chapter 1",
+          "url": "https://cdn.openai.com/pdf/ten-proofs-oai.pdf#page=5"
+        },
+        {
+          "name": "Lean certificate",
+          "url": "https://github.com/openai/ten-proofs/blob/main/SpherePacking.lean"
+        },
+        {
+          "name": "Human review audit, September 9",
+          "url": "https://arxiv.org/abs/2608.14673v3"
+        }
+      ]
+    },
+    {
+      "id": "quantum-parallel-repetition-2026",
+      "name": "Quantum parallel repetition",
+      "date": "2026-08-01",
+      "category": "resolution",
+      "status": "Reported theorem; Lean certificate",
+      "system": "OpenAI Astra (internal)",
+      "summary": "Extends exponential parallel repetition to general finite two-player entangled games: repeated play makes winning every round exponentially harder when single-round success is imperfect.",
+      "ai_role": "Astra generated the theorem and proof, followed by manuscript preparation and Lean formalization.",
+      "caveat": "An early alleged proof error was withdrawn after reviewers found a PDF extraction mistake. The latest audit does not claim complete independent reconstruction.",
+      "news_sources": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Original proof, Chapter 6",
+          "url": "https://cdn.openai.com/pdf/ten-proofs-oai.pdf#page=158"
+        },
+        {
+          "name": "Lean certificate",
+          "url": "https://github.com/openai/ten-proofs/blob/main/QuantumParallelRepetition.lean"
+        },
+        {
+          "name": "Latest human audit, superseding the withdrawn objection",
+          "url": "https://arxiv.org/abs/2608.14673v3"
+        }
+      ]
+    },
+    {
+      "id": "permanent-complexity-bounds-2026",
+      "name": "Permanent: arithmetic complexity bounds",
+      "date": "2026-08-01",
+      "category": "advance",
+      "status": "New lower bounds; Lean certificate",
+      "system": "OpenAI Astra (internal)",
+      "summary": "Raises proven lower bounds for computing the permanent with arithmetic circuits and formulas, including a formula bound of order n⁴/log n.",
+      "ai_role": "Astra generated the permanent-specific constructions; existing algebraic methods support the proofs.",
+      "caveat": "These polynomial lower bounds do not resolve P versus NP or VP versus VNP. New results need not imply a wholly new general method.",
+      "news_sources": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Original proof, Chapter 5",
+          "url": "https://cdn.openai.com/pdf/ten-proofs-oai.pdf#page=118"
+        },
+        {
+          "name": "Lean certificate",
+          "url": "https://github.com/openai/ten-proofs/blob/main/Permanent.lean"
+        },
+        {
+          "name": "Human review audit, September 9",
+          "url": "https://arxiv.org/abs/2608.14673v3"
+        }
+      ]
+    },
+    {
+      "id": "non-sofic-groups-2026",
+      "name": "Existence of non-sofic groups",
+      "date": "2026-08-01",
+      "category": "resolution",
+      "status": "Construction reported; independent follow-up",
+      "system": "OpenAI Astra (internal)",
+      "summary": "Constructs a group that cannot be approximated by finite permutations, answering the longstanding question of whether every countable group is sofic.",
+      "ai_role": "Astra generated the argument; humans and the model prepared the manuscript and subsequent Lean certificate.",
+      "caveat": "The result concerns non-sofic groups. Independent researchers reused its key criterion for further constructions; this is not a classification of all groups or a resolution of hyperlinearity.",
+      "news_sources": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Original proof, Chapter 3",
+          "url": "https://cdn.openai.com/pdf/ten-proofs-oai.pdf#page=82"
+        },
+        {
+          "name": "Lean certificate",
+          "url": "https://github.com/openai/ten-proofs/blob/main/NonSoficGroup.lean"
+        },
+        {
+          "name": "Fournier-Facio: independent follow-up",
+          "url": "https://arxiv.org/abs/2608.02025"
+        },
+        {
+          "name": "Kun–Thom: independent follow-up",
+          "url": "https://arxiv.org/abs/2608.06222"
+        },
+        {
+          "name": "Andreas Thom: expert explanation, September 11",
+          "url": "https://terrytao.wordpress.com/2026/09/11/on-the-existence-of-non-sofic-groups/"
+        }
+      ]
+    },
+    {
+      "id": "multicolor-triangle-ramsey-2026",
+      "name": "Multicolor triangle Ramsey numbers",
+      "date": "2026-08-01",
+      "category": "resolution",
+      "status": "Reported resolution; Lean certificate",
+      "system": "OpenAI Astra (internal)",
+      "summary": "Establishes superexponential growth in multicolor triangle Ramsey numbers, resolving Erdős problem 183 about their growth as the number of colors increases.",
+      "ai_role": "Astra produced the recursive construction and proof, with subsequent Lean certification.",
+      "caveat": "The result settles the exponential-versus-superexponential question, not exact Ramsey numbers for every fixed number of colors.",
+      "news_sources": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Original proof, Chapter 9",
+          "url": "https://cdn.openai.com/pdf/ten-proofs-oai.pdf#page=233"
+        },
+        {
+          "name": "Lean certificate",
+          "url": "https://github.com/openai/ten-proofs/blob/main/MulticolorTriangleRamsey.lean"
+        },
+        {
+          "name": "Original problem statement, Erdős 183",
+          "url": "https://www.erdosproblems.com/183"
+        }
+      ]
+    },
+    {
+      "id": "erdos-simonovits-compactness-2026",
+      "name": "Erdős–Simonovits compactness conjecture",
+      "date": "2026-08-01",
+      "category": "resolution",
+      "status": "Reported counterexample; Lean certificate",
+      "system": "OpenAI Astra (internal)",
+      "summary": "Finds a finite family of forbidden bipartite graphs whose combined edge restriction is asymptotically stronger than any member alone, refuting the corrected compactness conjecture.",
+      "ai_role": "Astra generated a new counterexample and proof; the result was later formalized in Lean.",
+      "caveat": "This addresses the substantive cyclic-graph version of Erdős problem 180. The unrestricted original statement already had elementary counterexamples.",
+      "news_sources": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Original proof, Chapter 10, Theorem 1.1",
+          "url": "https://cdn.openai.com/pdf/ten-proofs-oai.pdf#page=241"
+        },
+        {
+          "name": "Lean certificate",
+          "url": "https://github.com/openai/ten-proofs/blob/main/CompactnessAndDegeneracy.lean"
+        },
+        {
+          "name": "Original problem and earlier counterexamples, Erdős 180",
+          "url": "https://www.erdosproblems.com/180"
+        }
+      ]
+    },
+    {
+      "id": "erdos-degeneracy-2026",
+      "name": "Erdős degeneracy conjecture",
+      "date": "2026-08-01",
+      "category": "resolution",
+      "status": "Reported counterexample; Lean certificate",
+      "system": "OpenAI Astra (internal)",
+      "summary": "Constructs a bipartite 2-degenerate graph whose extremal number exceeds the conjectured n^(3/2) scale, disproving Erdős problem 146.",
+      "ai_role": "Astra generated a layered-graph counterexample and proof, followed by Lean formalization.",
+      "caveat": "The disproof concerns the general proposed bound. It does not invalidate the bound in special graph classes where it was already proved.",
+      "news_sources": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Original proof, Chapter 10, Theorem 1.2",
+          "url": "https://cdn.openai.com/pdf/ten-proofs-oai.pdf#page=241"
+        },
+        {
+          "name": "Lean certificate",
+          "url": "https://github.com/openai/ten-proofs/blob/main/CompactnessAndDegeneracy.lean"
+        },
+        {
+          "name": "Original problem statement, Erdős 146",
+          "url": "https://www.erdosproblems.com/146"
+        }
+      ]
+    },
+    {
+      "id": "ehrhart-volume-2026",
+      "name": "Ehrhart’s volume conjecture",
+      "date": "2026-08-01",
+      "category": "resolution",
+      "status": "Proof reported; verification incomplete",
+      "system": "OpenAI Astra; Jihao Liu + Danus",
+      "summary": "Reports the sharp volume bound for convex bodies whose centroid is their sole interior lattice point. Liu separately addresses the equality case.",
+      "ai_role": "Astra generated the inequality proof. Liu supplied strategy for an AI-generated equality proof using Danus, GPT-5.6 Sol and Fable 5.",
+      "caveat": "A September audit requests fuller analytic justification for the inequality. The separate equality result does not verify those steps; neither claim is presented as journal-accepted.",
+      "news_sources": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Original inequality proof, Chapter 8",
+          "url": "https://cdn.openai.com/pdf/ten-proofs-oai.pdf#page=223"
+        },
+        {
+          "name": "Lean certificate",
+          "url": "https://github.com/openai/ten-proofs/blob/main/EhrhartVolumeInequality.lean"
+        },
+        {
+          "name": "Liu: equality-case proof and AI disclosure",
+          "url": "https://arxiv.org/abs/2608.01040"
+        },
+        {
+          "name": "Author’s first-publication account",
+          "url": "https://jihaoliu.org/notes.html"
+        },
+        {
+          "name": "Human audit: outstanding verification limits",
+          "url": "https://arxiv.org/abs/2608.14673v3"
+        }
+      ]
+    },
+    {
+      "id": "connes-rigidity-2026",
+      "name": "Connes’s rigidity conjecture",
+      "date": "2026-08-01",
+      "category": "resolution",
+      "status": "Counterexamples reported; separate derivation",
+      "system": "OpenAI Astra; Shuoxing Zhou + GPT-5.6 Sol",
+      "summary": "Constructs non-isomorphic ICC property-(T) groups with isomorphic group von Neumann algebras, disproving the conjectured recovery of these groups from their algebras.",
+      "ai_role": "Astra generated one construction. Zhou independently developed another with GPT-5.6 Sol assistance.",
+      "caveat": "The separate derivation supports the conjecture-level conclusion, not OpenAI’s stronger infinite-family theorem. No journal acceptance is asserted.",
+      "news_sources": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Original proof, Chapter 4",
+          "url": "https://cdn.openai.com/pdf/ten-proofs-oai.pdf#page=100"
+        },
+        {
+          "name": "Lean certificate",
+          "url": "https://github.com/openai/ten-proofs/blob/main/ConnesRigidity.lean"
+        },
+        {
+          "name": "Zhou: independent concurrent proof",
+          "url": "https://arxiv.org/abs/2608.02327"
+        },
+        {
+          "name": "Human review audit, September 9",
+          "url": "https://arxiv.org/abs/2608.14673v3"
+        }
+      ]
+    },
+    {
+      "id": "closest-vector-hardness-2026",
+      "name": "Closest vector: polynomial-factor hardness",
+      "date": "2026-08-01",
+      "category": "advance",
+      "status": "New hardness bound; follow-up research",
+      "system": "OpenAI Astra (internal)",
+      "summary": "Proves that approximating the Euclidean closest-vector problem within n^(1/400) is NP-hard, advancing a central lattice-complexity question.",
+      "ai_role": "Astra generated a reduction from 3SAT, followed by human-assisted exposition and Lean formalization.",
+      "caveat": "This is worst-case computational hardness, not a break of deployed cryptography. Later research strengthens the bound; the card dates the initial AI result.",
+      "news_sources": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Original proof, Chapter 7",
+          "url": "https://cdn.openai.com/pdf/ten-proofs-oai.pdf#page=187"
+        },
+        {
+          "name": "Lean certificate",
+          "url": "https://github.com/openai/ten-proofs/blob/main/GapCVP.lean"
+        },
+        {
+          "name": "Song: stronger hardness theorem",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7248939"
+        }
+      ]
+    },
+    {
+      "id": "binary-spherical-codes-2026",
+      "name": "Binary and spherical coding bounds",
+      "date": "2026-08-01",
+      "category": "advance",
+      "status": "New upper bounds; Lean certificates",
+      "system": "OpenAI Astra (internal)",
+      "summary": "Tightens asymptotic bounds on how many binary codewords or spherical points can coexist at a prescribed minimum separation, improving classical bounds exponentially.",
+      "ai_role": "Astra produced new bounds and proofs, then formalized them with human manuscript support.",
+      "caveat": "These bound families do not give exact optimal code sizes for all lengths and distances. Related sphere-packing consequences are not counted again here.",
+      "news_sources": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Original proof, Chapter 2",
+          "url": "https://cdn.openai.com/pdf/ten-proofs-oai.pdf#page=31"
+        },
+        {
+          "name": "Lean certificates",
+          "url": "https://github.com/openai/ten-proofs/blob/main/MetricCodes.lean"
+        }
+      ]
+    },
+    {
+      "id": "maxwell-counterexample-2026",
+      "name": "Maxwell's electrostatic equilibrium conjecture",
+      "date": "2026-07-29",
+      "category": "resolution",
+      "status": "Author-verified counterexample preprint",
+      "system": "GPT-5.6 Sol + Arathoon, Ball and Kvalheim",
+      "summary": "A configuration of five point charges has at least 24 nondegenerate electrostatic equilibria, exceeding the conjectured maximum of 16.",
+      "ai_role": "GPT-5.6 Sol suggested the construction idea. The mathematicians verified the details and wrote the proof, with computer algebra checking computations.",
+      "caveat": "The preprint disproves the stated equilibrium bound; no journal acceptance is asserted. It does not determine the optimal number for every number of charges.",
+      "news_sources": [
+        {
+          "name": "DeepTech coverage via Sina",
+          "url": "https://finance.sina.com.cn/tech/roll/2026-08-06/doc-inimknaz3002919.shtml"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Paper and AI-use disclosure",
+          "url": "https://arxiv.org/html/2607.27197v1"
+        },
+        {
+          "name": "Author's research page",
+          "url": "https://mdkvalheim.github.io/research/"
+        }
+      ]
+    },
+    {
+      "id": "jacobian-counterexample-2026",
+      "name": "Jacobian conjecture",
+      "date": "2026-07-20",
+      "category": "resolution",
+      "status": "Expert- and computer-checked counterexample",
+      "system": "Claude Fable + Levent Alpöge",
+      "summary": "A reported counterexample disproves the Jacobian conjecture in dimensions three and higher: a polynomial map can have a constant nonzero Jacobian without being invertible.",
+      "ai_role": "After Akhil Mathew suggested the question, Levent Alpöge credited Fable with finding the counterexample. Mathematicians checked and explained it; Paul Lezeau separately formalized the disproof in Lean.",
+      "caveat": "The two-dimensional case over the complex numbers remains open. The Lean check was merged into Formal Conjectures on July 26; that is distinct from journal publication. No journal acceptance is asserted.",
+      "news_sources": [
+        {
+          "name": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/07/21/claude-s-fable-5-just-solved-an-87-year-old-math-problem-and-it-matters-for-bitcoin"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Terence Tao’s derivation",
+          "url": "https://terrytao.wordpress.com/2026/07/21/a-digestion-of-the-jacobian-conjecture-counterexample/"
+        },
+        {
+          "name": "Kevin Buzzard’s first-hand account",
+          "url": "https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/"
+        },
+        {
+          "name": "Merged formal verification",
+          "url": "https://github.com/google-deepmind/formal-conjectures/pull/4474"
+        }
+      ]
+    },
+    {
+      "id": "grothendieck-group-scheme-2026",
+      "name": "Grothendieck's finite group-scheme question",
+      "date": "2026-07-14",
+      "category": "resolution",
+      "status": "Reviewed, formalized counterexample",
+      "system": "OpenAI Sol + Claude Fable + Akhil Mathew",
+      "summary": "A finite free group scheme of order four need not be killed by four, answering Grothendieck's question negatively in the general, noncommutative case.",
+      "ai_role": "Sol found the construction under Akhil Mathew's direction; Claude formalized it in Lean. The contribution was reviewed and merged into Mathlib on August 3.",
+      "caveat": "This is a new counterexample, with formalization used to verify it. The positive results for commutative group schemes and reduced bases are unaffected; the pure-characteristic question remains open.",
+      "news_sources": [
+        {
+          "name": "Kevin Buzzard's firsthand account",
+          "url": "https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Mathlib contribution and review",
+          "url": "https://github.com/leanprover-community/mathlib4/pull/41748"
+        },
+        {
+          "name": "Akhil Mathew interview",
+          "url": "https://antieau.github.io/2026/08/10/akhil-mathew-ai.html"
+        }
+      ]
+    },
+    {
+      "id": "erdos-unit-distance-2026",
+      "name": "Erdős unit-distance conjecture",
+      "date": "2026-05-20",
+      "category": "resolution",
+      "status": "Human-checked disproof",
+      "system": "OpenAI research model",
+      "summary": "An AI-generated construction disproves the conjectured nearly linear bound on the number of unit-distance pairs among points in the plane.",
+      "ai_role": "A general reasoning model found the construction. Independent mathematicians checked the result and published a shorter explanatory account.",
+      "caveat": "This refutes the conjectured bound; it does not determine the exact maximum number of unit distances.",
+      "news_sources": [
+        {
+          "name": "Scientific American",
+          "url": "https://www.scientificamerican.com/article/ai-just-solved-an-80-year-old-erdos-problem-and-mathematicians-are-amazed/"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Human-verified expert paper",
+          "url": "https://arxiv.org/abs/2605.20695"
+        },
+        {
+          "name": "OpenAI research account",
+          "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/"
+        },
+        {
+          "name": "Original proof",
+          "url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf"
+        }
+      ]
+    },
+    {
+      "id": "kissing-number-11d-604-2026",
+      "name": "Kissing number in 11 dimensions: 604 spheres",
+      "date": "2026-04-13",
+      "category": "advance",
+      "status": "Exact construction; improved lower bound",
+      "system": "EinsteinArena collaborative AI agents",
+      "summary": "AI agents on EinsteinArena constructed a configuration of 604 spheres touching a central sphere in 11 dimensions, raising the previous constructive lower bound of 593.",
+      "ai_role": "Agents built on shared submissions, refined numerical candidates and recovered an exact algebraic construction. Together AI supplied the platform and improved its verifier during the search.",
+      "caveat": "This establishes a lower bound, not the exact kissing number. It is a later advance beyond AlphaEvolve's May 2025 result. Subsequent Station constructions also reach 604 and are not counted as another improvement of the bound.",
+      "news_sources": [
+        {
+          "name": "Together AI public research announcement",
+          "url": "https://www.together.ai/blog/einsteinarena"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "EinsteinArena paper and exact construction",
+          "url": "https://arxiv.org/html/2606.10402v1"
+        },
+        {
+          "name": "Station's exact verification and priority discussion",
+          "url": "https://dualverse.ai/station/math/kissing-number-dimension-11/"
+        }
+      ]
+    },
+    {
+      "id": "ramsey-lower-bounds-2026",
+      "name": "Classical Ramsey numbers: stronger lower bounds",
+      "date": "2026-03-10",
+      "category": "advance",
+      "status": "New constructive bounds",
+      "system": "Google DeepMind AlphaEvolve",
+      "summary": "The initial paper improved lower bounds for five classical Ramsey numbers, including R(3,13) from 60 to 61 and R(3,18) from 99 to 100.",
+      "ai_role": "AlphaEvolve evolved code that generated and checked extremal graph constructions.",
+      "caveat": "Lower bounds are not exact Ramsey numbers. This entry groups the related construction results as one research milestone; the April revision expands the family to nine improvements.",
+      "news_sources": [
+        {
+          "name": "DeepMind public research update",
+          "url": "https://deepmind.google/blog/alphaevolve-impact/"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Initial paper, March 10",
+          "url": "https://arxiv.org/abs/2603.09172v1"
+        },
+        {
+          "name": "Expanded paper, April 21",
+          "url": "https://arxiv.org/abs/2603.09172v5"
+        }
+      ]
+    },
+    {
+      "id": "matrix-multiplication-4x4-2025",
+      "name": "4 × 4 complex matrix multiplication",
+      "date": "2025-05-14",
+      "category": "advance",
+      "status": "New algorithmic bound",
+      "system": "Google DeepMind AlphaEvolve",
+      "summary": "AlphaEvolve found a way to multiply two 4 × 4 complex matrices using 48 scalar multiplications, improving the previous 49-multiplication construction from Strassen's method.",
+      "ai_role": "Gemini-driven evolutionary search modified an optimization program that discovered the matrix-multiplication construction.",
+      "caveat": "This is a bound for a specific matrix size and arithmetic setting, not a proof of the optimal general matrix-multiplication exponent or an automatic hardware speedup.",
+      "news_sources": [
+        {
+          "name": "Nature news",
+          "url": "https://www.nature.com/articles/d41586-025-01523-z"
+        },
+        {
+          "name": "IEEE Spectrum",
+          "url": "https://spectrum.ieee.org/deepmind-alphaevolve"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "DeepMind research account",
+          "url": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+        },
+        {
+          "name": "Research paper",
+          "url": "https://arxiv.org/abs/2506.13131"
+        }
+      ]
+    },
+    {
+      "id": "kissing-number-11d-2025",
+      "name": "Kissing number in 11 dimensions",
+      "date": "2025-05-14",
+      "category": "advance",
+      "status": "New lower bound",
+      "system": "Google DeepMind AlphaEvolve",
+      "summary": "AlphaEvolve found a configuration of 593 spheres touching one central sphere, improving the previously known constructive lower bound of 592.",
+      "ai_role": "Gemini-powered evolutionary search generated and tested programs that produced the geometric construction.",
+      "caveat": "A better lower bound is not the exact kissing number. This records the improvement announced in May 2025, not a claim about the latest record.",
+      "news_sources": [
+        {
+          "name": "IEEE Spectrum",
+          "url": "https://spectrum.ieee.org/deepmind-alphaevolve"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Google DeepMind research account",
+          "url": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+        },
+        {
+          "name": "AlphaEvolve white paper",
+          "url": "https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/AlphaEvolve.pdf"
+        }
+      ]
+    },
+    {
+      "id": "cap-set-funsearch-2023",
+      "name": "Cap-set problem: larger constructions",
+      "date": "2023-12-14",
+      "category": "advance",
+      "status": "Published record construction",
+      "system": "Google DeepMind FunSearch",
+      "summary": "FunSearch produced a cap set of 512 points in eight dimensions and improved the asymptotic lower bound for this longstanding extremal-combinatorics problem.",
+      "ai_role": "An LLM generated construction programs inside an evolutionary search; an evaluator checked the resulting sets. Researchers interpreted the discovered construction.",
+      "caveat": "These are improved lower bounds, not an exact solution of the cap-set problem. The result was published in Nature in December 2023.",
+      "news_sources": [
+        {
+          "name": "Nature news",
+          "url": "https://www.nature.com/articles/d41586-023-04043-w"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Peer-reviewed paper",
+          "url": "https://www.nature.com/articles/s41586-023-06924-6"
+        },
+        {
+          "name": "DeepMind announcement",
+          "url": "https://deepmind.google/blog/funsearch-making-new-discoveries-in-mathematical-sciences-using-large-language-models/"
+        }
+      ]
+    },
+    {
+      "id": "alphatensor-matrix-multiplication-2022",
+      "name": "Matrix multiplication over a finite field",
+      "date": "2022-10-05",
+      "category": "advance",
+      "status": "Peer-reviewed algorithmic advance",
+      "system": "Google DeepMind AlphaTensor",
+      "summary": "AlphaTensor found a way to multiply two 4 × 4 matrices over the two-element field using 47 scalar multiplications, improving on the 49 needed by two levels of Strassen’s algorithm.",
+      "ai_role": "A reinforcement-learning agent searched for exact tensor decompositions, producing verifiable multiplication algorithms.",
+      "caveat": "The 47-multiplication result uses arithmetic modulo 2. It is not a 47-step algorithm for arbitrary real matrices, and it does not settle the optimal asymptotic complexity of matrix multiplication.",
+      "news_sources": [
+        {
+          "name": "Nature",
+          "url": "https://www.nature.com/articles/d41586-022-03166-w"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Nature research paper",
+          "url": "https://www.nature.com/articles/s41586-022-05172-4"
+        },
+        {
+          "name": "DeepMind research account",
+          "url": "https://deepmind.google/blog/discovering-novel-algorithms-with-alphatensor/"
+        },
+        {
+          "name": "Exact algorithm data and verification",
+          "url": "https://github.com/google-deepmind/alphatensor"
+        }
+      ]
+    },
+    {
+      "id": "knot-signature-geometry-2021",
+      "name": "Knot theory: linking geometry and signature",
+      "date": "2021-12-01",
+      "category": "advance",
+      "status": "Peer-reviewed theorem",
+      "system": "DeepMind neural networks + Davies, Juhász, Lackenby and Tomašev",
+      "summary": "A new theorem bounds how far a hyperbolic knot’s algebraic signature can differ from its geometric natural slope, using its volume and injectivity radius.",
+      "ai_role": "Supervised learning and feature analysis identified the geometric quantities worth studying. Human mathematicians developed the invariant and proved the relationship.",
+      "caveat": "This is a new connection between knot invariants, not a solution of the volume conjecture or a complete classification of knots. The first, simpler conjectured bound was rejected before the proved theorem was obtained.",
+      "news_sources": [
+        {
+          "name": "Nature",
+          "url": "https://www.nature.com/articles/d41586-021-03593-1"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Nature research paper",
+          "url": "https://www.nature.com/articles/s41586-021-04086-x"
+        },
+        {
+          "name": "Full mathematical proof and journal reference",
+          "url": "https://arxiv.org/abs/2111.15323"
+        },
+        {
+          "name": "DeepMind research account",
+          "url": "https://deepmind.google/blog/exploring-the-beauty-of-pure-mathematics-in-novel-ways/"
+        }
+      ]
+    },
+    {
+      "id": "kazhdan-lusztig-hypercube-2021",
+      "name": "Kazhdan–Lusztig polynomials: a new formula",
+      "date": "2021-12-01",
+      "category": "advance",
+      "status": "Peer-reviewed partial advance",
+      "system": "DeepMind graph neural networks + Geordie Williamson and collaborators",
+      "summary": "Researchers proved a new formula for Kazhdan–Lusztig polynomials of symmetric groups using a canonical hypercube decomposition of a Bruhat interval.",
+      "ai_role": "Graph neural networks predicted polynomial coefficients and highlighted useful substructures. The researchers used those clues to discover and prove the formula.",
+      "caveat": "The 2021 result did not resolve the combinatorial invariance conjecture. Extending the formula to arbitrary hypercube decompositions was a conjectural route to that goal.",
+      "news_sources": [
+        {
+          "name": "Nature",
+          "url": "https://www.nature.com/articles/d41586-021-03593-1"
+        }
+      ],
+      "primary_sources": [
+        {
+          "name": "Mathematical paper and journal reference",
+          "url": "https://arxiv.org/abs/2111.15161"
+        },
+        {
+          "name": "Nature research paper",
+          "url": "https://www.nature.com/articles/s41586-021-04086-x"
+        },
+        {
+          "name": "DeepMind research account",
+          "url": "https://deepmind.google/blog/exploring-the-beauty-of-pure-mathematics-in-novel-ways/"
+        }
+      ]
+    }
+  ]
+}

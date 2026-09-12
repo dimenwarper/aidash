@@ -1,0 +1,17 @@
+{
+  "hitCount": 3,
+  "nextCursorMark": "cursor+page/2=",
+  "resultList": {
+    "result": [
+      {
+        "source": "MED", "id": "900001", "doi": "10.1234/example.a",
+        "title": "Duplicate from preceding page", "firstPublicationDate": "2026-08-01"
+      },
+      {
+        "source": "MED", "id": "900003", "doi": "not a DOI",
+        "title": "Another candidate", "firstPublicationDate": "2026-08-20",
+        "abstractText": "An unreviewed result."
+      }
+    ]
+  }
+}

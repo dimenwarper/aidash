@@ -1,0 +1,320 @@
+{
+  "reviewed_on": "2026-09-12",
+  "methodology": "These eight disjoint HS categories cover raw materials and intermediate goods relevant to chips or EUV machinery. They measure broad material markets, not verified deliveries to chipmakers or ASML. They span successive value-chain stages and must not be summed as an AI-input total. Code and subheading wording were checked in WCO HS 2012, 2017 and 2022; preserve each trade record's reported classification edition. Manufacturer examples establish material applications, not the exact customs code of each branded product.",
+  "commodities": [
+    {
+      "id": "280461",
+      "name": "Silicon ≥99.99%",
+      "hs_code": "280461",
+      "description": "Silicon containing at least 99.99% silicon by weight.",
+      "scope": "Includes solar and electronics feedstock. The customs purity threshold is below semiconductor-grade requirements; these flows do not isolate chip-grade silicon or finished wafers.",
+      "uses": "Refined polysilicon is used to grow wafers for chips and solar cells. Silicon is also used in the alternating coatings of EUV mirrors.",
+      "sources": [
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2012/hs-2012/0628_2012e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2012, chapter 28"
+        },
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2017/2017/0628_2017e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2017, chapter 28"
+        },
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0628_2022e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2022, chapter 28"
+        },
+        {
+          "url": "https://reports.wacker.com/2022/annual-report/sustainable-solutions/purity-is-our-recipe-for-success.html",
+          "type": "application",
+          "title": "WACKER: polysilicon for electronics and solar wafers"
+        },
+        {
+          "url": "https://www.zeiss.com/semiconductor-manufacturing-technology/inspiring-technology/euv-lithography.html",
+          "type": "application",
+          "title": "ZEISS: EUV mirror coatings"
+        }
+      ],
+      "group": "Materials",
+      "hs_editions_verified": [
+        "2012",
+        "2017",
+        "2022"
+      ],
+      "reviewed_on": "2026-09-12",
+      "slug": "silicon"
+    },
+    {
+      "id": "284920",
+      "name": "Silicon carbide",
+      "hs_code": "284920",
+      "description": "Silicon carbides, chemically defined or otherwise.",
+      "scope": "Compound feedstock across industrial grades and applications; not a count of SiC wafers or finished EUV ceramic components.",
+      "uses": "SiC-based ceramics are used for precision wafer positioning. CeramTec reports SiSiC plates that are finished into wafer chucks used in EUV lithography.",
+      "sources": [
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2012/hs-2012/0628_2012e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2012, chapter 28"
+        },
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2017/2017/0628_2017e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2017, chapter 28"
+        },
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0628_2022e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2022, chapter 28"
+        },
+        {
+          "url": "https://www.ceramtec-group.com/en/news-events/news-overview/detail/sisic-plates-for-semiconductor-machinery",
+          "type": "application",
+          "title": "CeramTec: SiSiC plates for semiconductor machinery"
+        }
+      ],
+      "group": "Materials",
+      "hs_editions_verified": [
+        "2012",
+        "2017",
+        "2022"
+      ],
+      "reviewed_on": "2026-09-12",
+      "slug": "silicon-carbide"
+    },
+    {
+      "id": "281820",
+      "name": "Alumina",
+      "hs_code": "281820",
+      "description": "Aluminium oxide excluding artificial corundum.",
+      "scope": "All covered industrial grades, including material for aluminium production and ceramics. Semiconductor purity and final use are not separately identified.",
+      "uses": "Alumina ceramics provide rigid, electrically insulating parts for wafer processing and handling.",
+      "sources": [
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2012/hs-2012/0628_2012e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2012, chapter 28"
+        },
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2017/2017/0628_2017e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2017, chapter 28"
+        },
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0628_2022e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2022, chapter 28"
+        },
+        {
+          "url": "https://www.ceramtec-industrial.com/en/products-applications/semiconductor-industry",
+          "type": "application",
+          "title": "CeramTec: semiconductor ceramics"
+        }
+      ],
+      "group": "Materials",
+      "hs_editions_verified": [
+        "2012",
+        "2017",
+        "2022"
+      ],
+      "reviewed_on": "2026-09-12",
+      "slug": "alumina"
+    },
+    {
+      "id": "690912",
+      "name": "Technical ceramics · Mohs ≥9",
+      "hs_code": "690912",
+      "description": "Laboratory, chemical or technical ceramic wares with hardness of at least 9 on the Mohs scale.",
+      "scope": "Shaped ceramic goods for multiple industries. This is a component/intermediate category, not raw ceramic powder, and does not isolate semiconductor or EUV parts.",
+      "uses": "Hard ceramics support wafer positioning and other semiconductor equipment functions. Taiwan Customs documented a semiconductor-equipment aluminium-nitride ceramic plate within this six-digit category.",
+      "sources": [
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2012/hs-2012/1369_2012e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2012, chapter 69"
+        },
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2017/2017/1369_2017e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2017, chapter 69"
+        },
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1369_2022e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2022, chapter 69"
+        },
+        {
+          "url": "https://www.ceramtec-group.com/en/news-events/news-overview/detail/sisic-plates-for-semiconductor-machinery",
+          "type": "application",
+          "title": "CeramTec: SiSiC plates for semiconductor machinery"
+        },
+        {
+          "url": "https://web.customs.gov.tw/kaohsiung/singlehtml/436?cntId=80d89f87787144e5a9f63a5747f33527",
+          "type": "application",
+          "title": "Taiwan Customs: classification of a semiconductor-equipment ceramic plate, 12 August 2025"
+        }
+      ],
+      "group": "Materials",
+      "hs_editions_verified": [
+        "2012",
+        "2017",
+        "2022"
+      ],
+      "reviewed_on": "2026-09-12",
+      "slug": "technical-ceramics-hard"
+    },
+    {
+      "id": "690919",
+      "name": "Other technical ceramics",
+      "hs_code": "690919",
+      "description": "Other laboratory, chemical or technical ceramic wares outside the porcelain/china and Mohs ≥9 subheadings.",
+      "scope": "A broad residual category across industries, excluding the separately displayed harder wares. Composition and semiconductor end use cannot be inferred.",
+      "uses": "Technical ceramics are used in wafer handling, process chambers and thermal management. The exact customs classification depends on the article.",
+      "sources": [
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2012/hs-2012/1369_2012e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2012, chapter 69"
+        },
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2017/2017/1369_2017e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2017, chapter 69"
+        },
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1369_2022e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2022, chapter 69"
+        },
+        {
+          "url": "https://www.ceramtec-industrial.com/en/products-applications/semiconductor-industry",
+          "type": "application",
+          "title": "CeramTec: semiconductor ceramics"
+        }
+      ],
+      "group": "Materials",
+      "hs_editions_verified": [
+        "2012",
+        "2017",
+        "2022"
+      ],
+      "reviewed_on": "2026-09-12",
+      "slug": "technical-ceramics-other"
+    },
+    {
+      "id": "281122",
+      "name": "Silicon dioxide",
+      "hs_code": "281122",
+      "description": "Silicon dioxide.",
+      "scope": "Chemical silica across grades and uses. It does not represent natural quartz trade, finished quartz glass, or semiconductor-purity material specifically.",
+      "uses": "Selected fumed and colloidal silica products are abrasives in chemical mechanical polishing during chip production.",
+      "sources": [
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2012/hs-2012/0628_2012e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2012, chapter 28"
+        },
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2017/2017/0628_2017e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2017, chapter 28"
+        },
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0628_2022e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2022, chapter 28"
+        },
+        {
+          "url": "https://www.evonik.com/en/company/businesslines/se/special-markets/silica-for-electronics.html",
+          "type": "application",
+          "title": "Evonik: silica for electronics"
+        }
+      ],
+      "group": "Materials",
+      "hs_editions_verified": [
+        "2012",
+        "2017",
+        "2022"
+      ],
+      "reviewed_on": "2026-09-12",
+      "slug": "silica"
+    },
+    {
+      "id": "800110",
+      "name": "Unwrought tin",
+      "hs_code": "800110",
+      "description": "Unwrought tin that is not alloyed.",
+      "scope": "Unalloyed primary metal for all uses; excludes tin alloys and scrap. The code does not identify EUV-quality material or light-source consumption.",
+      "uses": "ASML EUV light sources produce plasma by striking molten tin droplets with laser pulses.",
+      "sources": [
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2012/hs-2012/1580_2012e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2012, chapter 80"
+        },
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2017/2017/1580_2017e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2017, chapter 80"
+        },
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1580_2022e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2022, chapter 80"
+        },
+        {
+          "url": "https://www.asml.com/en/technology/lithography-principles/light-and-lasers",
+          "type": "application",
+          "title": "ASML: creating EUV light from tin droplets"
+        }
+      ],
+      "group": "Materials",
+      "hs_editions_verified": [
+        "2012",
+        "2017",
+        "2022"
+      ],
+      "reviewed_on": "2026-09-12",
+      "slug": "tin"
+    },
+    {
+      "id": "8102",
+      "name": "Molybdenum & articles",
+      "hs_code": "8102",
+      "description": "Molybdenum metal and articles, including waste and scrap.",
+      "scope": "A broad four-digit category covering powders, unwrought metal, worked articles and scrap. It does not isolate mirror coatings or EUV-grade material.",
+      "uses": "ZEISS coats EUV mirrors with alternating nanometre-scale molybdenum and silicon layers.",
+      "sources": [
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2012/hs-2012/1581_2012e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2012, chapter 81"
+        },
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2017/2017/1581_2017e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2017, chapter 81"
+        },
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1581_2022e.pdf?la=en",
+          "type": "classification",
+          "title": "WCO HS 2022, chapter 81"
+        },
+        {
+          "url": "https://www.zeiss.com/semiconductor-manufacturing-technology/inspiring-technology/euv-lithography.html",
+          "type": "application",
+          "title": "ZEISS: EUV mirror coatings"
+        }
+      ],
+      "group": "Materials",
+      "hs_editions_verified": [
+        "2012",
+        "2017",
+        "2022"
+      ],
+      "reviewed_on": "2026-09-12",
+      "slug": "molybdenum"
+    }
+  ]
+}

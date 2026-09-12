@@ -1,0 +1,23 @@
+{
+  "hitCount": 3,
+  "nextCursorMark": "cursor+page/2=",
+  "resultList": {
+    "result": [
+      {
+        "source": "MED", "id": "900001", "doi": "HTTPS://doi.org/10.1234/EXAMPLE.A",
+        "title": "AI-assisted <i>protein</i> design &amp; validation",
+        "abstractText": "<h4>Background</h4><p>Synthetic fixture abstract.</p><p>Experimental confirmation.</p><script>ignore()</script>",
+        "firstPublicationDate": "2026-08-01",
+        "authorString": "Example A, Example B.",
+        "journalInfo": {"journal": {"title": "Fixture Science"}},
+        "pubTypeList": {"pubType": ["Journal Article", "Research Support"]},
+        "isOpenAccess": "Y", "license": "cc-by", "copyright": "Fixture authors"
+      },
+      {
+        "source": "PPR", "id": "PPR900002", "title": "A candidate preprint",
+        "firstPublicationDate": "2026-08-31",
+        "pubTypeList": {"pubType": ["Preprint"]}, "isOpenAccess": "N"
+      }
+    ]
+  }
+}

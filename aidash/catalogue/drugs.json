@@ -1,0 +1,286 @@
+{
+  "version": 2,
+  "reviewed_at": "2026-09-12",
+  "scope": "Reviewed AI contributions to molecular design, target selection, repurposing, recruitment and trial analysis. Non-design cases are limited to explicitly verified registry IDs; overlapping roles do not duplicate trial counts.",
+  "programs": [
+    {
+      "id": "rentosertib",
+      "name": "Rentosertib",
+      "aliases": [
+        "Rentosertib",
+        "INS018_055",
+        "INS018-055",
+        "ISM001-055",
+        "ISM001_055",
+        "INS018_055 tablets"
+      ],
+      "sponsor": "Insilico Medicine",
+      "indication": "Idiopathic pulmonary fibrosis",
+      "ai_role": "Chemistry42 generated and optimized TNIK-inhibitor structures; PandaOmics also prioritized the target.",
+      "evidence_type": "Peer-reviewed design paper",
+      "evidence_url": "https://www.nature.com/articles/s41587-024-02143-0",
+      "evidence_date": "2024-03-08",
+      "trial_ids": [
+        "NCT05154240",
+        "NCT05938920",
+        "NCT05975983",
+        "NCT07687459"
+      ],
+      "ai_categories": [
+        "molecular_design",
+        "target_selection"
+      ]
+    },
+    {
+      "id": "garutadustat",
+      "name": "Garutadustat",
+      "aliases": [
+        "Garutadustat",
+        "ISM5411",
+        "ISM012-042"
+      ],
+      "sponsor": "Insilico Medicine",
+      "indication": "Inflammatory bowel disease",
+      "ai_role": "Chemistry42 generated and optimized a gut-restricted PHD1/2 inhibitor, including scaffold design and predicted pharmacological properties.",
+      "evidence_type": "Peer-reviewed design paper",
+      "evidence_url": "https://www.nature.com/articles/s41587-024-02503-w",
+      "evidence_date": "2024-12-11",
+      "alias_url": "https://insilico.com/news/28ohjfj6u1-insilico-medicine-to-present-3-abstracts",
+      "trial_ids": [
+        "NCT06012578",
+        "NCT07265570"
+      ],
+      "ai_categories": [
+        "molecular_design"
+      ]
+    },
+    {
+      "id": "rec617",
+      "name": "REC-617",
+      "aliases": [
+        "REC-617",
+        "REC617",
+        "GTAEXS617",
+        "EXS617"
+      ],
+      "sponsor": "Recursion / Exscientia",
+      "indication": "Advanced solid tumors",
+      "ai_role": "The developer reports generative AI and active learning for molecular design, binding selectivity and ADME/PK optimization of a CDK7 inhibitor.",
+      "evidence_type": "Sponsor disclosure",
+      "evidence_url": "https://ir.recursion.com/news-releases/news-release-details/recursion-reports-second-quarter-2025-financial-results-and",
+      "evidence_date": "2025-08-06",
+      "trial_ids": [
+        "NCT05985655"
+      ],
+      "ai_categories": [
+        "molecular_design"
+      ]
+    },
+    {
+      "id": "xl309",
+      "name": "XL309",
+      "aliases": [
+        "XL309",
+        "ISM3091"
+      ],
+      "sponsor": "Exelixis / Insilico Medicine",
+      "indication": "Advanced solid tumors",
+      "ai_role": "The developer attributes generation of this USP1-inhibitor structure to Chemistry42.",
+      "evidence_type": "Developer disclosure",
+      "evidence_url": "https://insilico.com/pipeline_target_usp1",
+      "evidence_date": null,
+      "trial_ids": [
+        "NCT05932862"
+      ],
+      "ai_categories": [
+        "molecular_design"
+      ]
+    },
+    {
+      "id": "exs21546",
+      "name": "EXS21546",
+      "aliases": [
+        "EXS21546",
+        "EXS-21546",
+        "EXS21546 Powder for Oral Suspension",
+        "EXS21546 Granule in Capsule"
+      ],
+      "sponsor": "Exscientia / Evotec",
+      "indication": "Oncology",
+      "ai_role": "The developer describes an A2A receptor antagonist whose molecular structure was designed with its AI platform.",
+      "evidence_type": "SEC-filed developer disclosure",
+      "evidence_url": "https://www.sec.gov/Archives/edgar/data/1865408/000186540823000013/aacr2023posters_final.htm",
+      "evidence_date": null,
+      "trial_ids": [
+        "NCT04727138",
+        "NCT05920408"
+      ],
+      "ai_categories": [
+        "molecular_design"
+      ]
+    },
+    {
+      "id": "baricitinib_covid",
+      "name": "Baricitinib (COVID-19)",
+      "aliases": [
+        "Baricitinib",
+        "baricitinib",
+        "Olumiant",
+        "LY3009104",
+        "INCB028050"
+      ],
+      "sponsor": "Eli Lilly / NIAID / University of Oxford",
+      "indication": "Hospitalized adults with COVID-19",
+      "ai_role": "BenevolentAI used a biomedical knowledge graph with machine-learning-extracted relationships to nominate the existing arthritis drug baricitinib for COVID-19. This is AI-assisted repurposing, not AI design of the molecule. Coverage is limited to the named COVID-19 trials.",
+      "ai_categories": [
+        "repurposing"
+      ],
+      "trial_ids": [
+        "NCT04401579",
+        "NCT04421027",
+        "NCT04381936"
+      ],
+      "trial_scope": "explicit",
+      "evidence_type": "Original AI-repurposing report and clinical trial publications",
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7137985/",
+      "evidence_date": "2020-02-04",
+      "evidence": [
+        {
+          "title": "Original baricitinib AI repurposing hypothesis (Lancet, 2020)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7137985/"
+        },
+        {
+          "title": "ACTT-2 trial results (NEJM; NCT04401579)",
+          "url": "https://www.nejm.org/doi/abs/10.1056/NEJMoa2031994"
+        },
+        {
+          "title": "COV-BARRIER trial results (Lancet Respiratory Medicine; NCT04421027)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8409066/"
+        },
+        {
+          "title": "RECOVERY baricitinib comparison (Lancet; NCT04381936)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9333998/"
+        }
+      ],
+      "trial_roles": {
+        "NCT04381936": {
+          "ai_categories": [
+            "repurposing"
+          ],
+          "ai_role": "Only the baricitinib COVID-19 comparison is in scope; other RECOVERY treatment arms are not attributed to AI.",
+          "scope_note": "The registry describes the multi-treatment RECOVERY platform. The baricitinib comparison enrolled February 2–December 29, 2021; platform start and current recruitment status are not baricitinib-specific.",
+          "comparison_start_date": "2021-02-02",
+          "comparison_enrollment_end_date": "2021-12-29",
+          "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9333998/"
+        }
+      }
+    },
+    {
+      "id": "ben8744",
+      "name": "BEN-8744",
+      "aliases": [
+        "BEN-8744",
+        "BEN8744"
+      ],
+      "sponsor": "BenevolentAI Bio",
+      "indication": "Ulcerative colitis; first-in-human study in healthy volunteers",
+      "ai_role": "BenevolentAI reports that its platform identified PDE10 inhibition as a new target hypothesis for ulcerative colitis. Scientists validated the hypothesis ex vivo and developed BEN-8744. The category records the documented target-selection role.",
+      "ai_categories": [
+        "target_selection"
+      ],
+      "trial_ids": [
+        "NCT06118385"
+      ],
+      "trial_scope": "explicit",
+      "evidence_type": "Sponsor disclosure",
+      "evidence_url": "https://www.benevolent.com/news-and-media/press-releases-and-in-media/benevolentai-announces-positive-topline-safety-and-pharmacokinetic-data-phase-ia-clinical-study-ben-8744-healthy-volunteers/",
+      "evidence_date": "2024-03-25",
+      "evidence": [
+        {
+          "title": "BEN-8744 target-selection role and Phase Ia results",
+          "url": "https://www.benevolent.com/news-and-media/press-releases-and-in-media/benevolentai-announces-positive-topline-safety-and-pharmacokinetic-data-phase-ia-clinical-study-ben-8744-healthy-volunteers/"
+        },
+        {
+          "title": "ClinicalTrials.gov NCT06118385",
+          "url": "https://clinicaltrials.gov/study/NCT06118385"
+        }
+      ]
+    },
+    {
+      "id": "resmetirom",
+      "name": "Resmetirom",
+      "aliases": [
+        "Resmetirom",
+        "MGL-3196",
+        "MGL3196",
+        "Rezdiffra"
+      ],
+      "sponsor": "Madrigal Pharmaceuticals",
+      "indication": "MASH / NASH with liver fibrosis",
+      "ai_categories": [
+        "trial_analysis"
+      ],
+      "ai_role": "HistoIndex qFibrosis and PathAI AIM-NASH measured liver-biopsy responses in secondary or exploratory analyses of MAESTRO-NASH. The original primary endpoint readings were by central pathologists.",
+      "ai_use_timing": "secondary_analysis",
+      "prospective_ai_use_verified": false,
+      "timing_note": "AI re-reading of trial biopsies was reported after the original topline results. Evidence does not establish that AI determined primary endpoints or drove trial conduct. Use the AI-analysis disclosure date for AI coverage counts, not the trial start.",
+      "evidence_type": "Sponsor disclosure and investigator conference abstract",
+      "evidence_url": "https://ir.madrigalpharma.com/news-releases/news-release-details/madrigal-pharmaceuticals-presents-new-data-phase-3-maestro-nash",
+      "evidence_date": "2023-11-10",
+      "ai_first_report_date": "2023-11-10",
+      "trial_ids": [
+        "NCT03900429"
+      ],
+      "supporting_sources": [
+        {
+          "url": "https://www.aasld.org/the-liver-meeting/artificial-intelligence-measure-fibrosis-change-liver-biopsy-maestro-mash-phase-3",
+          "supports": "Links NCT03900429 to AI slide-reading exploratory endpoint and 768 paired biopsies."
+        },
+        {
+          "url": "https://www.sciencedirect.com/science/article/pii/S0168827826001479",
+          "date": "2026-03-25",
+          "supports": "qFibrosis described as a secondary analysis of MAESTRO-NASH biopsies."
+        }
+      ],
+      "trial_scope": "explicit"
+    },
+    {
+      "id": "pemvidutide",
+      "name": "Pemvidutide",
+      "aliases": [
+        "Pemvidutide",
+        "ALT-801",
+        "ALT801"
+      ],
+      "sponsor": "Altimmune",
+      "indication": "MASH / NASH with liver fibrosis",
+      "ai_categories": [
+        "trial_analysis"
+      ],
+      "ai_role": "PathAI Liver Explore quantified fibrosis in a supplemental blinded analysis of IMPACT liver biopsies. Conventional pathologist readings assessed the primary biopsy endpoints.",
+      "ai_use_timing": "supplemental_analysis",
+      "prospective_ai_use_verified": false,
+      "timing_note": "The sponsor described a blinded supplemental AI analysis reported alongside 24-week results. Pre-specification of this AI analysis was not established; do not label it a prospective AI primary endpoint.",
+      "evidence_type": "Sponsor SEC filing and trial presentation",
+      "evidence_url": "https://www.sec.gov/Archives/edgar/data/1326190/000132619025000037/alt-20250626x8k.htm",
+      "evidence_date": "2025-06-26",
+      "ai_first_report_date": "2025-06-26",
+      "trial_ids": [
+        "NCT05989711"
+      ],
+      "supporting_sources": [
+        {
+          "url": "https://ir.altimmune.com/static-files/1c5f656f-9846-4115-b4f2-17ff4b6babec",
+          "date": "2025-06-26",
+          "supports": "Slide 6 contrasts primary pathologist reads with supplemental blinded AI; slide 11 identifies PathAI Liver Explore."
+        },
+        {
+          "url": "https://ir.altimmune.com/news-releases/news-release-details/altimmune-presents-ai-based-analysis-liver-fibrosis-reduction",
+          "date": "2025-11-07",
+          "supports": "Names Liver Explore and links analysis explicitly to IMPACT NCT05989711."
+        }
+      ],
+      "trial_scope": "explicit"
+    }
+  ]
+}
