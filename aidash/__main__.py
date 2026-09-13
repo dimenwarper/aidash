@@ -26,6 +26,7 @@ def refresh(store, args):
     from .sources.math_news import refresh_math_news
     from .sources.context import fetch_macro, fetch_supply, validate_snapshot
     from .sources.activity import fetch_us, fetch_taiwan, company_rows, archive_company_catalog, validate_activity
+    from .sources.leading import SOURCES as leading_sources, refresh_leading
 
     start, end = date.fromisoformat(args.start), date.fromisoformat(args.end)
     if start > end:
@@ -33,12 +34,15 @@ def refresh(store, args):
     results = []
     failed = False
     activity_sources = ["activity-us", "activity-taiwan", "activity-companies", "activity-energy", "activity-trade"]
-    sources = (["indeed", "macro", "supply-chain", *activity_sources, "fda", "trials", "math-news"] if args.source == "all" else activity_sources if args.source == "activity" else [args.source])
+    sources = (["indeed", "macro", "supply-chain", *activity_sources, "fda", "trials", "math-news", *leading_sources] if args.source == "all" else activity_sources if args.source == "activity" else leading_sources if args.source == "leading" else [args.source])
     for source in sources:
         run_id = store.start_run(source)
         fetch = archived_fetch(store, run_id)
         try:
-            if source.startswith("activity-"):
+            if source in leading_sources:
+                details = refresh_leading(store, fetch, source, run_id)
+                status = "success"
+            elif source.startswith("activity-"):
                 if source == "activity-companies":
                     archive_company_catalog(store, run_id)
                     observations = company_rows()
@@ -134,7 +138,7 @@ def parser():
     cli.add_argument("--data-dir", default="data", help="Persistent state directory (default: data)")
     commands = cli.add_subparsers(dest="command", required=True)
     job = commands.add_parser("refresh", help="Refresh metrics and registered drug trials; optionally search papers")
-    job.add_argument("--source", choices=["all", "indeed", "macro", "supply-chain", "activity", "activity-us", "activity-taiwan", "activity-companies", "activity-energy", "activity-trade", "fda", "trials", "math-news", "science"], default="all")
+    job.add_argument("--source", choices=["all", "indeed", "macro", "supply-chain", "activity", "activity-us", "activity-taiwan", "activity-companies", "activity-energy", "activity-trade", "fda", "trials", "math-news", "science", "leading", "leading-economy", "leading-btos", "leading-canaries", "leading-metr", "leading-reviewed"], default="all")
     job.add_argument("--from", dest="start", default=(date.today() - timedelta(days=90)).isoformat())
     job.add_argument("--to", dest="end", default=date.today().isoformat())
     job.add_argument("--max-pages", type=positive, default=2)

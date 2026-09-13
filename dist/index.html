@@ -19,7 +19,10 @@
   <script src="globe.js" defer></script>
   <script src="euv-machine.js" defer></script>
   <script src="activity.js" defer></script>
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="leading.css?v=leading-overview-3">
+  <script src="leading.js?v=leading-overview-3" defer></script>
+  <script src="leading-overview.js?v=leading-overview-3" defer></script>
+  <script src="app.js?v=leading-overview-3" defer></script>
 </head>
 <body>
   <a class="skip" href="#main-content">Skip to the data</a>
@@ -30,6 +33,7 @@
     </header>
     <nav class="tabs" role="tablist" aria-label="Dashboard sections">
       <button id="tab-overview" role="tab" aria-controls="panel-overview" aria-selected="true" data-tab="overview">Overview</button>
+      <button id="tab-leading" role="tab" aria-controls="panel-leading" aria-selected="false" tabindex="-1" data-tab="leading">Leading indicators</button>
       <button id="tab-jobs" role="tab" aria-controls="panel-jobs" aria-selected="false" tabindex="-1" data-tab="jobs">Jobs</button>
       <button id="tab-supply-chain" role="tab" aria-controls="panel-supply-chain" aria-selected="false" tabindex="-1" data-tab="supply-chain">Supply chain</button>
       <button id="tab-devices" role="tab" aria-controls="panel-devices" aria-selected="false" tabindex="-1" data-tab="devices">Medical devices</button>
@@ -51,6 +55,24 @@
           <div class="overview-grid"><div><h3>Change this month</h3><div id="monthly-changes" class="changes-list"></div></div><div><h3>Coverage</h3><div id="coverage-list" class="coverage-list"></div></div></div>
         </section>
 
+        <section id="panel-leading" class="tab-panel" role="tabpanel" aria-labelledby="tab-leading" hidden>
+          <div class="section-heading"><h2>Leading indicators</h2><span id="leading-count" class="meta"></span></div>
+          <p class="leading-intro">Track capability, adoption plans and commitments alongside the employment, productivity and scientific outcomes that follow. Each measure has its own coverage and reporting lag.</p>
+          <div class="leading-toolbar"><div class="leading-filters" role="group" aria-label="Indicator categories">
+            <button data-leading-group="all" aria-pressed="true">All</button>
+            <button data-leading-group="capability" aria-pressed="false">Capability &amp; cost</button>
+            <button data-leading-group="adoption" aria-pressed="false">Adoption</button>
+            <button data-leading-group="jobs" aria-pressed="false">Hiring</button>
+            <button data-leading-group="investment" aria-pressed="false">Investment &amp; capacity</button>
+            <button data-leading-group="outcomes" aria-pressed="false">Economic outcomes</button>
+            <button data-leading-group="science" aria-pressed="false">Science &amp; medicine</button>
+          </div><div id="leading-overview-controls" class="leading-overview-controls"><div class="range-buttons" role="group" aria-label="All indicators layout"><button data-leading-overview="trendlines" aria-pressed="true">Trendlines</button><button data-leading-overview="heatmap" aria-pressed="false">Heatmap</button></div></div><label>History <select id="leading-range"><option value="all">All available</option><option value="3">Last 3 years</option><option value="1">Last year</option></select></label></div>
+          <div id="leading-overview-note" class="leading-overview-note"></div>
+          <p id="leading-heat-inspection" class="leading-heat-inspection" role="status" hidden></p>
+          <p id="leading-status" class="leading-refresh" role="status" hidden></p>
+          <div id="leading-content"></div>
+          <details class="leading-method"><summary>How to read these indicators</summary><p>Leading signals describe capabilities, intentions or commitments that could precede wider economic effects. Broad proxies include non-AI activity. Confirmations measure realized outcomes; they can help establish whether earlier signals translated into change. None of these charts alone establishes an effect caused by AI.</p><p>The month selector limits observation dates, using the latest source versions and reviews. This is not a reconstruction of what was known in that month. Chart scales are independent; gaps are not filled and the last observation is not extended into the present. Reviewed snapshots require new source review to advance.</p></details>
+        </section>
         <section id="panel-jobs" class="tab-panel" role="tabpanel" aria-labelledby="tab-jobs" hidden>
           <div class="section-heading"><h2>Jobs &amp; the labor market</h2><div class="range-buttons" role="group" aria-label="Jobs chart view"><button data-job-view="macro" aria-pressed="true">AI &amp; macro trends</button><button data-job-view="share" aria-pressed="false">AI share</button></div></div>
           <div class="jobs-layout"><div class="jobs-main">

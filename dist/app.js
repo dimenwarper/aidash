@@ -524,6 +524,7 @@ function drawMathematics() {
 function drawActivePanel() {
   if(typeof syncSupplyGlobe === "function") syncSupplyGlobe();
   if (state.active === "overview") drawOverview();
+  if (state.active === "leading" && typeof drawLeading === "function") drawLeading();
   if (state.active === "jobs") { drawJobs(); drawCountries(); }
   if (state.active === "supply-chain") drawSupply();
   if (state.active === "devices") drawHealth();
@@ -583,6 +584,7 @@ async function init() {
     document.querySelectorAll("[data-open-tab]").forEach((button) => button.addEventListener("click", () => { switchTab(button.dataset.openTab); $("tab-" + button.dataset.openTab).focus(); }));
     $("math-filter").addEventListener("change", (event) => { state.mathFilter = event.target.value; drawMathematics(); });
     document.querySelectorAll("[data-supply-view]").forEach(button=>button.addEventListener("click",()=>setSupplyView(button.dataset.supplyView)));
+    if(typeof bindLeadingControls === "function") bindLeadingControls();
     if(typeof bindSupplyControls === "function") bindSupplyControls();
     const tabFromHash = () => { const name = location.hash.slice(1); if (name === "main-content") return; switchTab(({work:"jobs",health:"devices",research:"trials","math-breakthroughs":"theorems",supply:"supply-chain"})[name] || name || "overview", false); };
     window.addEventListener("hashchange", tabFromHash);

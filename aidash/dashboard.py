@@ -9,6 +9,7 @@ from .sources.trials import dashboard_trials
 from .sources.math_news import load_math_results
 from .sources.context import macro_spec, SUPPLY
 from .sources.activity import catalog
+from .sources.leading import dashboard_leading
 
 COUNTRIES = {"US": "United States", "GB": "United Kingdom", "CA": "Canada", "AU": "Australia",
              "DE": "Germany", "FR": "France", "IE": "Ireland", "IT": "Italy", "NL": "Netherlands"}
@@ -72,6 +73,7 @@ def build_dashboard(store, output="dist/data"):
                "research_discovery_count": len(store.documents()),
                "trials": dashboard_trials(store),
                "math_news": load_math_results()}
+    payload["leading_indicators"] = dashboard_leading(store, payload)
     target = Path(output)
     target.mkdir(parents=True, exist_ok=True)
     path = target / "dashboard.json"

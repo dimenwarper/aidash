@@ -1,9 +1,17 @@
 # AI: A Macro View
 
 A shared “What happened this month?” dashboard of AI's effects on jobs,
-supply chains, medical devices, drug trials and mathematics. There are no
+supply chains, leading indicators, medical devices, drug trials and mathematics. There are no
 accounts or visitor state. The frontend is plain HTML, CSS and JavaScript;
 the Python pipeline produces the data it displays.
+
+The served site is **static**: `dist/` contains HTML, CSS, JavaScript, map assets
+and the generated `data/dashboard.json`. It needs a static HTTP host, with no
+running Python application, API server or database connection. Python and SQLite
+are used separately to collect, review and export data; optional OpenRouter
+calls run in that pipeline, never in the browser. To publish an updated site,
+prepare the JSON first and upload the complete `dist/` directory, including that
+generated snapshot (which is not tracked in Git).
 
 ## Start locally
 
@@ -49,7 +57,7 @@ prepared `dist/data/dashboard.json`; opening the page does not fetch source
 feeds or trigger ingestion.
 
 - `refresh` updates every default source, including all five activity sources,
-  the trial registry and the mathematical-news discovery queue.
+  the trial registry, mathematical-news discovery queue and five leading-indicator sources.
 - `export` defaults to the current calendar month and rewrites previously
   exported months with the latest corrections. To add a specific month, use
   `python3 -m aidash export --month 2026-09` before `build-dashboard`.
@@ -84,6 +92,9 @@ is discovered or approved automatically. **Scheduling is not enabled.**
 | Drug trial dates, phases and registry status | `refresh --source trials` | [ClinicalTrials.gov](https://clinicaltrials.gov/data-api/api) searches for reviewed programs | New drugs, eligible NCT IDs and AI-role categories require primary evidence and catalogue review. |
 | Drug trial successes / outcomes | `build-dashboard` | Loads reviewed outcomes matching the current trial snapshot | Endpoint results and success labels are manually reviewed; registry completion never implies success. |
 | Math breakthroughs | `refresh --source math-news`, then review and build | Searches Google News RSS and archives candidates | New entries, novelty, AI role and proof status require primary-source review; headlines never become counts automatically. |
+| Leading indicators: public feeds | `refresh --source leading` (also in default refresh) | FRED macro indicators, Census BTOS, Stanford/ADP rolling employment indexes and METR task horizons | Methodology changes need review; these are signals and broad proxies, not causal AI estimates. |
+| Leading indicators: reviewed releases | `refresh --source leading-reviewed` | Imports the reviewed price, delegation, robotics, ASML and Virginia power histories | **New reports require review**; the import does not discover new disclosures. Charts label historical/discontinued coverage. |
+| Leading indicators: activity and science context | Existing activity, supply-chain and trial sources, then `build-dashboard` | Reuses existing snapshots and derives trial counts | Outcome evidence and eligible trial coverage remain reviewed; no representative phase-transition success rate. |
 | Overview | `build-dashboard` | Derives summaries from the same datasets | Has no separate discovery pipeline. |
 | Optional paper discovery and OpenRouter extraction | `refresh --source science`, then `extract` / `review` | Europe PMC search and optional paid structured extraction | Separate from the displayed math/trial catalogues; excluded from default refresh. |
 
@@ -98,6 +109,7 @@ These examples are run from the project directory:
 python3 -m aidash status
 python3 -m aidash refresh --source indeed
 python3 -m aidash refresh --source macro
+python3 -m aidash refresh --source leading
 python3 -m aidash refresh --source supply-chain
 python3 -m aidash refresh --source activity
 python3 -m aidash refresh --source fda
@@ -108,6 +120,11 @@ python3 -m aidash refresh --source math-news --from 2026-08-01 --to 2026-09-12
 `activity` is a group of five sources, also individually selectable:
 `activity-us`, `activity-taiwan`, `activity-energy`, `activity-trade`, and
 `activity-companies`. All five already run in the default refresh.
+
+The `leading` group contains `leading-economy`, `leading-btos`,
+`leading-canaries`, `leading-metr`, and `leading-reviewed`. For exact feeds,
+reviewed-release instructions and interpretation limits, see
+[Leading indicators](docs/leading-indicators.md).
 
 `refresh` records each source's success/failure and returns nonzero if any fails
 or is partial. Other sources can still finish, and a rejected source snapshot
@@ -402,6 +419,8 @@ Run the offline checks from a clean clone (no API key or network required):
 python3 -m unittest discover -s tests
 node tests/dashboard_ui.mjs
 node tests/globe.mjs
+node tests/leading_ui.mjs
+node tests/leading_overview_ui.mjs
 ```
 
 After initial data preparation, also run the snapshot integration checks:

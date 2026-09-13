@@ -1,0 +1,1968 @@
+{
+  "reviewed_at": "2026-09-12",
+  "feed_definitions": [
+    {
+      "id": "btos_current",
+      "group": "adoption",
+      "unit": "% of businesses",
+      "frequency": "biweekly",
+      "geography": "United States",
+      "note": "Share of surveyed businesses reporting AI use in any business function. Broader wording began with collection on 2025-11-17 and the first release on 2025-12-04; do not splice with the earlier producing-goods-or-services series. Dates are collection-period ends, matching the Census dashboard, not publication dates. Expected use is a response about the next six months, not realized adoption or a model forecast.",
+      "date_basis": "collection_period_end",
+      "scope": "national",
+      "facet": "All businesses",
+      "status": "current",
+      "definition_period": "any_business_function",
+      "break_date": "2025-11-17",
+      "name": "Current AI use — all US businesses",
+      "source_name": "U.S. Census Bureau — Business Trends and Outlook Survey",
+      "url": "https://www.census.gov/hfp/btos/ai_national.json",
+      "data_url": "https://www.census.gov/hfp/btos/ai_national.json",
+      "kind": "Leading signal",
+      "mode": "Public feed",
+      "chart_id": "adoption_All businesses",
+      "chart_title": "AI adoption · all businesses",
+      "legend": "Current use"
+    },
+    {
+      "id": "btos_expected",
+      "group": "adoption",
+      "unit": "% of businesses",
+      "frequency": "biweekly",
+      "geography": "United States",
+      "note": "Share of surveyed businesses reporting AI use in any business function. Broader wording began with collection on 2025-11-17 and the first release on 2025-12-04; do not splice with the earlier producing-goods-or-services series. Dates are collection-period ends, matching the Census dashboard, not publication dates. Expected use is a response about the next six months, not realized adoption or a model forecast.",
+      "date_basis": "collection_period_end",
+      "scope": "national",
+      "facet": "All businesses",
+      "status": "expected",
+      "definition_period": "any_business_function",
+      "break_date": "2025-11-17",
+      "name": "Expected AI use — all US businesses",
+      "source_name": "U.S. Census Bureau — Business Trends and Outlook Survey",
+      "url": "https://www.census.gov/hfp/btos/ai_national.json",
+      "data_url": "https://www.census.gov/hfp/btos/ai_national.json",
+      "kind": "Leading signal",
+      "mode": "Public feed",
+      "chart_id": "adoption_All businesses",
+      "chart_title": "AI adoption · all businesses",
+      "legend": "Expected in six months"
+    },
+    {
+      "id": "btos_current_manufacturing",
+      "group": "adoption",
+      "unit": "% of businesses",
+      "frequency": "biweekly",
+      "geography": "United States",
+      "note": "Share of surveyed businesses reporting AI use in any business function. Broader wording began with collection on 2025-11-17 and the first release on 2025-12-04; do not splice with the earlier producing-goods-or-services series. Dates are collection-period ends, matching the Census dashboard, not publication dates. Expected use is a response about the next six months, not realized adoption or a model forecast.",
+      "date_basis": "collection_period_end",
+      "scope": "sector",
+      "facet": "Manufacturing",
+      "status": "current",
+      "definition_period": "any_business_function",
+      "break_date": "2025-11-17",
+      "name": "Current AI use — Manufacturing",
+      "source_name": "U.S. Census Bureau — Business Trends and Outlook Survey",
+      "url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "data_url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "kind": "Leading signal",
+      "mode": "Public feed",
+      "chart_id": "adoption_Manufacturing",
+      "chart_title": "AI adoption · manufacturing",
+      "legend": "Current use"
+    },
+    {
+      "id": "btos_current_retail_trade",
+      "group": "adoption",
+      "unit": "% of businesses",
+      "frequency": "biweekly",
+      "geography": "United States",
+      "note": "Share of surveyed businesses reporting AI use in any business function. Broader wording began with collection on 2025-11-17 and the first release on 2025-12-04; do not splice with the earlier producing-goods-or-services series. Dates are collection-period ends, matching the Census dashboard, not publication dates. Expected use is a response about the next six months, not realized adoption or a model forecast.",
+      "date_basis": "collection_period_end",
+      "scope": "sector",
+      "facet": "Retail Trade",
+      "status": "current",
+      "definition_period": "any_business_function",
+      "break_date": "2025-11-17",
+      "name": "Current AI use — Retail Trade",
+      "source_name": "U.S. Census Bureau — Business Trends and Outlook Survey",
+      "url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "data_url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "kind": "Leading signal",
+      "mode": "Public feed",
+      "chart_id": "adoption_Retail Trade",
+      "chart_title": "AI adoption · retail trade",
+      "legend": "Current use"
+    },
+    {
+      "id": "btos_current_information",
+      "group": "adoption",
+      "unit": "% of businesses",
+      "frequency": "biweekly",
+      "geography": "United States",
+      "note": "Share of surveyed businesses reporting AI use in any business function. Broader wording began with collection on 2025-11-17 and the first release on 2025-12-04; do not splice with the earlier producing-goods-or-services series. Dates are collection-period ends, matching the Census dashboard, not publication dates. Expected use is a response about the next six months, not realized adoption or a model forecast.",
+      "date_basis": "collection_period_end",
+      "scope": "sector",
+      "facet": "Information",
+      "status": "current",
+      "definition_period": "any_business_function",
+      "break_date": "2025-11-17",
+      "name": "Current AI use — Information",
+      "source_name": "U.S. Census Bureau — Business Trends and Outlook Survey",
+      "url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "data_url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "kind": "Leading signal",
+      "mode": "Public feed",
+      "chart_id": "adoption_Information",
+      "chart_title": "AI adoption · information",
+      "legend": "Current use"
+    },
+    {
+      "id": "btos_current_finance_and_insurance",
+      "group": "adoption",
+      "unit": "% of businesses",
+      "frequency": "biweekly",
+      "geography": "United States",
+      "note": "Share of surveyed businesses reporting AI use in any business function. Broader wording began with collection on 2025-11-17 and the first release on 2025-12-04; do not splice with the earlier producing-goods-or-services series. Dates are collection-period ends, matching the Census dashboard, not publication dates. Expected use is a response about the next six months, not realized adoption or a model forecast.",
+      "date_basis": "collection_period_end",
+      "scope": "sector",
+      "facet": "Finance and Insurance",
+      "status": "current",
+      "definition_period": "any_business_function",
+      "break_date": "2025-11-17",
+      "name": "Current AI use — Finance and Insurance",
+      "source_name": "U.S. Census Bureau — Business Trends and Outlook Survey",
+      "url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "data_url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "kind": "Leading signal",
+      "mode": "Public feed",
+      "chart_id": "adoption_Finance and Insurance",
+      "chart_title": "AI adoption · finance and insurance",
+      "legend": "Current use"
+    },
+    {
+      "id": "btos_current_professional_scientific_and_technical_services",
+      "group": "adoption",
+      "unit": "% of businesses",
+      "frequency": "biweekly",
+      "geography": "United States",
+      "note": "Share of surveyed businesses reporting AI use in any business function. Broader wording began with collection on 2025-11-17 and the first release on 2025-12-04; do not splice with the earlier producing-goods-or-services series. Dates are collection-period ends, matching the Census dashboard, not publication dates. Expected use is a response about the next six months, not realized adoption or a model forecast.",
+      "date_basis": "collection_period_end",
+      "scope": "sector",
+      "facet": "Professional, Scientific, and Technical Services",
+      "status": "current",
+      "definition_period": "any_business_function",
+      "break_date": "2025-11-17",
+      "name": "Current AI use — Professional, Scientific, and Technical Services",
+      "source_name": "U.S. Census Bureau — Business Trends and Outlook Survey",
+      "url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "data_url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "kind": "Leading signal",
+      "mode": "Public feed",
+      "chart_id": "adoption_Professional, Scientific, and Technical Services",
+      "chart_title": "AI adoption · professional, scientific, and technical services",
+      "legend": "Current use"
+    },
+    {
+      "id": "btos_current_educational_services",
+      "group": "adoption",
+      "unit": "% of businesses",
+      "frequency": "biweekly",
+      "geography": "United States",
+      "note": "Share of surveyed businesses reporting AI use in any business function. Broader wording began with collection on 2025-11-17 and the first release on 2025-12-04; do not splice with the earlier producing-goods-or-services series. Dates are collection-period ends, matching the Census dashboard, not publication dates. Expected use is a response about the next six months, not realized adoption or a model forecast.",
+      "date_basis": "collection_period_end",
+      "scope": "sector",
+      "facet": "Educational Services",
+      "status": "current",
+      "definition_period": "any_business_function",
+      "break_date": "2025-11-17",
+      "name": "Current AI use — Educational Services",
+      "source_name": "U.S. Census Bureau — Business Trends and Outlook Survey",
+      "url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "data_url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "kind": "Leading signal",
+      "mode": "Public feed",
+      "chart_id": "adoption_Educational Services",
+      "chart_title": "AI adoption · educational services",
+      "legend": "Current use"
+    },
+    {
+      "id": "btos_expected_manufacturing",
+      "group": "adoption",
+      "unit": "% of businesses",
+      "frequency": "biweekly",
+      "geography": "United States",
+      "note": "Share of surveyed businesses reporting AI use in any business function. Broader wording began with collection on 2025-11-17 and the first release on 2025-12-04; do not splice with the earlier producing-goods-or-services series. Dates are collection-period ends, matching the Census dashboard, not publication dates. Expected use is a response about the next six months, not realized adoption or a model forecast.",
+      "date_basis": "collection_period_end",
+      "scope": "sector",
+      "facet": "Manufacturing",
+      "status": "expected",
+      "definition_period": "any_business_function",
+      "break_date": "2025-11-17",
+      "name": "Expected AI use — Manufacturing",
+      "source_name": "U.S. Census Bureau — Business Trends and Outlook Survey",
+      "url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "data_url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "kind": "Leading signal",
+      "mode": "Public feed",
+      "chart_id": "adoption_Manufacturing",
+      "chart_title": "AI adoption · manufacturing",
+      "legend": "Expected in six months"
+    },
+    {
+      "id": "btos_expected_retail_trade",
+      "group": "adoption",
+      "unit": "% of businesses",
+      "frequency": "biweekly",
+      "geography": "United States",
+      "note": "Share of surveyed businesses reporting AI use in any business function. Broader wording began with collection on 2025-11-17 and the first release on 2025-12-04; do not splice with the earlier producing-goods-or-services series. Dates are collection-period ends, matching the Census dashboard, not publication dates. Expected use is a response about the next six months, not realized adoption or a model forecast.",
+      "date_basis": "collection_period_end",
+      "scope": "sector",
+      "facet": "Retail Trade",
+      "status": "expected",
+      "definition_period": "any_business_function",
+      "break_date": "2025-11-17",
+      "name": "Expected AI use — Retail Trade",
+      "source_name": "U.S. Census Bureau — Business Trends and Outlook Survey",
+      "url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "data_url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "kind": "Leading signal",
+      "mode": "Public feed",
+      "chart_id": "adoption_Retail Trade",
+      "chart_title": "AI adoption · retail trade",
+      "legend": "Expected in six months"
+    },
+    {
+      "id": "btos_expected_information",
+      "group": "adoption",
+      "unit": "% of businesses",
+      "frequency": "biweekly",
+      "geography": "United States",
+      "note": "Share of surveyed businesses reporting AI use in any business function. Broader wording began with collection on 2025-11-17 and the first release on 2025-12-04; do not splice with the earlier producing-goods-or-services series. Dates are collection-period ends, matching the Census dashboard, not publication dates. Expected use is a response about the next six months, not realized adoption or a model forecast.",
+      "date_basis": "collection_period_end",
+      "scope": "sector",
+      "facet": "Information",
+      "status": "expected",
+      "definition_period": "any_business_function",
+      "break_date": "2025-11-17",
+      "name": "Expected AI use — Information",
+      "source_name": "U.S. Census Bureau — Business Trends and Outlook Survey",
+      "url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "data_url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "kind": "Leading signal",
+      "mode": "Public feed",
+      "chart_id": "adoption_Information",
+      "chart_title": "AI adoption · information",
+      "legend": "Expected in six months"
+    },
+    {
+      "id": "btos_expected_finance_and_insurance",
+      "group": "adoption",
+      "unit": "% of businesses",
+      "frequency": "biweekly",
+      "geography": "United States",
+      "note": "Share of surveyed businesses reporting AI use in any business function. Broader wording began with collection on 2025-11-17 and the first release on 2025-12-04; do not splice with the earlier producing-goods-or-services series. Dates are collection-period ends, matching the Census dashboard, not publication dates. Expected use is a response about the next six months, not realized adoption or a model forecast.",
+      "date_basis": "collection_period_end",
+      "scope": "sector",
+      "facet": "Finance and Insurance",
+      "status": "expected",
+      "definition_period": "any_business_function",
+      "break_date": "2025-11-17",
+      "name": "Expected AI use — Finance and Insurance",
+      "source_name": "U.S. Census Bureau — Business Trends and Outlook Survey",
+      "url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "data_url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "kind": "Leading signal",
+      "mode": "Public feed",
+      "chart_id": "adoption_Finance and Insurance",
+      "chart_title": "AI adoption · finance and insurance",
+      "legend": "Expected in six months"
+    },
+    {
+      "id": "btos_expected_professional_scientific_and_technical_services",
+      "group": "adoption",
+      "unit": "% of businesses",
+      "frequency": "biweekly",
+      "geography": "United States",
+      "note": "Share of surveyed businesses reporting AI use in any business function. Broader wording began with collection on 2025-11-17 and the first release on 2025-12-04; do not splice with the earlier producing-goods-or-services series. Dates are collection-period ends, matching the Census dashboard, not publication dates. Expected use is a response about the next six months, not realized adoption or a model forecast.",
+      "date_basis": "collection_period_end",
+      "scope": "sector",
+      "facet": "Professional, Scientific, and Technical Services",
+      "status": "expected",
+      "definition_period": "any_business_function",
+      "break_date": "2025-11-17",
+      "name": "Expected AI use — Professional, Scientific, and Technical Services",
+      "source_name": "U.S. Census Bureau — Business Trends and Outlook Survey",
+      "url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "data_url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "kind": "Leading signal",
+      "mode": "Public feed",
+      "chart_id": "adoption_Professional, Scientific, and Technical Services",
+      "chart_title": "AI adoption · professional, scientific, and technical services",
+      "legend": "Expected in six months"
+    },
+    {
+      "id": "btos_expected_educational_services",
+      "group": "adoption",
+      "unit": "% of businesses",
+      "frequency": "biweekly",
+      "geography": "United States",
+      "note": "Share of surveyed businesses reporting AI use in any business function. Broader wording began with collection on 2025-11-17 and the first release on 2025-12-04; do not splice with the earlier producing-goods-or-services series. Dates are collection-period ends, matching the Census dashboard, not publication dates. Expected use is a response about the next six months, not realized adoption or a model forecast.",
+      "date_basis": "collection_period_end",
+      "scope": "sector",
+      "facet": "Educational Services",
+      "status": "expected",
+      "definition_period": "any_business_function",
+      "break_date": "2025-11-17",
+      "name": "Expected AI use — Educational Services",
+      "source_name": "U.S. Census Bureau — Business Trends and Outlook Survey",
+      "url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "data_url": "https://www.census.gov/hfp/btos/AI_sector.json",
+      "kind": "Leading signal",
+      "mode": "Public feed",
+      "chart_id": "adoption_Educational Services",
+      "chart_title": "AI adoption · educational services",
+      "legend": "Expected in six months"
+    },
+    {
+      "id": "btos_current_1_4_employees",
+      "group": "adoption",
+      "unit": "% of businesses",
+      "frequency": "biweekly",
+      "geography": "United States",
+      "note": "Share of surveyed businesses reporting AI use in any business function. Broader wording began with collection on 2025-11-17 and the first release on 2025-12-04; do not splice with the earlier producing-goods-or-services series. Dates are collection-period ends, matching the Census dashboard, not publication dates. Expected use is a response about the next six months, not realized adoption or a model forecast.",
+      "date_basis": "collection_period_end",
+      "scope": "size",
+      "facet": "1-4 Employees",
+      "status": "current",
+      "definition_period": "any_business_function",
+      "break_date": "2025-11-17",
+      "name": "Current AI use — 1-4 Employees",
+      "source_name": "U.S. Census Bureau — Business Trends and Outlook Survey",
+      "url": "https://www.census.gov/hfp/btos/AI_empsize.json",
+      "data_url": "https://www.census.gov/hfp/btos/AI_empsize.json",
+      "kind": "Leading signal",
+      "mode": "Public feed",
+      "chart_id": "adoption_size",
+      "chart_title": "AI adoption · business size",
+      "legend": "1-4 Employees"
+    },
+    {
+      "id": "btos_current_250_employees",
+      "group": "adoption",
+      "unit": "% of businesses",
+      "frequency": "biweekly",
+      "geography": "United States",
+      "note": "Share of surveyed businesses reporting AI use in any business function. Broader wording began with collection on 2025-11-17 and the first release on 2025-12-04; do not splice with the earlier producing-goods-or-services series. Dates are collection-period ends, matching the Census dashboard, not publication dates. Expected use is a response about the next six months, not realized adoption or a model forecast.",
+      "date_basis": "collection_period_end",
+      "scope": "size",
+      "facet": "250+ Employees",
+      "status": "current",
+      "definition_period": "any_business_function",
+      "break_date": "2025-11-17",
+      "name": "Current AI use — 250+ Employees",
+      "source_name": "U.S. Census Bureau — Business Trends and Outlook Survey",
+      "url": "https://www.census.gov/hfp/btos/AI_empsize.json",
+      "data_url": "https://www.census.gov/hfp/btos/AI_empsize.json",
+      "kind": "Leading signal",
+      "mode": "Public feed",
+      "chart_id": "adoption_size",
+      "chart_title": "AI adoption · business size",
+      "legend": "250+ Employees"
+    },
+    {
+      "id": "canaries_22_25_q1",
+      "group": "jobs",
+      "unit": "index",
+      "frequency": "monthly",
+      "geography": "United States",
+      "note": "Employment among occupation-matched workers in a rolling five-year balanced sample of ADP firms. Exposure quintiles weight occupations equally, not workers. This sample is not representative of all US employment, excludes firm entry and exit, and measures correlation rather than causal AI job losses. Historical values may be revised with each rolling sample. Index is supplied by source, already normalized to November 2022 = 100.",
+      "date_basis": "observation_month_end",
+      "age_group": "22-25",
+      "age_column": "Early Career 1 (22-25)",
+      "exposure_quintile": 1,
+      "csv_member": "canaries_age_by_exposure.csv",
+      "name": "Employment ages 22-25 — quintile 1 (least exposed)",
+      "source_name": "Stanford Digital Economy Lab and ADP Research — Canaries",
+      "url": "https://storage.googleapis.com/aviary-del-public/release_memos/latest/downloads/canaries_age_by_exposure_results.zip",
+      "data_url": "https://storage.googleapis.com/aviary-del-public/release_memos/latest/downloads/canaries_age_by_exposure_results.zip",
+      "kind": "Broad proxy",
+      "mode": "Public feed",
+      "chart_id": "exposure_22-25",
+      "chart_title": "Employment · ages 22-25",
+      "legend": "Lowest AI exposure",
+      "unit_label": "Index · Nov 2022 = 100"
+    },
+    {
+      "id": "canaries_22_25_q5",
+      "group": "jobs",
+      "unit": "index",
+      "frequency": "monthly",
+      "geography": "United States",
+      "note": "Employment among occupation-matched workers in a rolling five-year balanced sample of ADP firms. Exposure quintiles weight occupations equally, not workers. This sample is not representative of all US employment, excludes firm entry and exit, and measures correlation rather than causal AI job losses. Historical values may be revised with each rolling sample. Index is supplied by source, already normalized to November 2022 = 100.",
+      "date_basis": "observation_month_end",
+      "age_group": "22-25",
+      "age_column": "Early Career 1 (22-25)",
+      "exposure_quintile": 5,
+      "csv_member": "canaries_age_by_exposure.csv",
+      "name": "Employment ages 22-25 — quintile 5 (most exposed)",
+      "source_name": "Stanford Digital Economy Lab and ADP Research — Canaries",
+      "url": "https://storage.googleapis.com/aviary-del-public/release_memos/latest/downloads/canaries_age_by_exposure_results.zip",
+      "data_url": "https://storage.googleapis.com/aviary-del-public/release_memos/latest/downloads/canaries_age_by_exposure_results.zip",
+      "kind": "Broad proxy",
+      "mode": "Public feed",
+      "chart_id": "exposure_22-25",
+      "chart_title": "Employment · ages 22-25",
+      "legend": "Highest AI exposure",
+      "unit_label": "Index · Nov 2022 = 100"
+    },
+    {
+      "id": "canaries_35_40_q1",
+      "group": "jobs",
+      "unit": "index",
+      "frequency": "monthly",
+      "geography": "United States",
+      "note": "Employment among occupation-matched workers in a rolling five-year balanced sample of ADP firms. Exposure quintiles weight occupations equally, not workers. This sample is not representative of all US employment, excludes firm entry and exit, and measures correlation rather than causal AI job losses. Historical values may be revised with each rolling sample. Index is supplied by source, already normalized to November 2022 = 100.",
+      "date_basis": "observation_month_end",
+      "age_group": "35-40",
+      "age_column": "Mid-Career 1 (35-40)",
+      "exposure_quintile": 1,
+      "csv_member": "canaries_age_by_exposure.csv",
+      "name": "Employment ages 35-40 — quintile 1 (least exposed)",
+      "source_name": "Stanford Digital Economy Lab and ADP Research — Canaries",
+      "url": "https://storage.googleapis.com/aviary-del-public/release_memos/latest/downloads/canaries_age_by_exposure_results.zip",
+      "data_url": "https://storage.googleapis.com/aviary-del-public/release_memos/latest/downloads/canaries_age_by_exposure_results.zip",
+      "kind": "Broad proxy",
+      "mode": "Public feed",
+      "chart_id": "exposure_35-40",
+      "chart_title": "Employment · ages 35-40",
+      "legend": "Lowest AI exposure",
+      "unit_label": "Index · Nov 2022 = 100"
+    },
+    {
+      "id": "canaries_35_40_q5",
+      "group": "jobs",
+      "unit": "index",
+      "frequency": "monthly",
+      "geography": "United States",
+      "note": "Employment among occupation-matched workers in a rolling five-year balanced sample of ADP firms. Exposure quintiles weight occupations equally, not workers. This sample is not representative of all US employment, excludes firm entry and exit, and measures correlation rather than causal AI job losses. Historical values may be revised with each rolling sample. Index is supplied by source, already normalized to November 2022 = 100.",
+      "date_basis": "observation_month_end",
+      "age_group": "35-40",
+      "age_column": "Mid-Career 1 (35-40)",
+      "exposure_quintile": 5,
+      "csv_member": "canaries_age_by_exposure.csv",
+      "name": "Employment ages 35-40 — quintile 5 (most exposed)",
+      "source_name": "Stanford Digital Economy Lab and ADP Research — Canaries",
+      "url": "https://storage.googleapis.com/aviary-del-public/release_memos/latest/downloads/canaries_age_by_exposure_results.zip",
+      "data_url": "https://storage.googleapis.com/aviary-del-public/release_memos/latest/downloads/canaries_age_by_exposure_results.zip",
+      "kind": "Broad proxy",
+      "mode": "Public feed",
+      "chart_id": "exposure_35-40",
+      "chart_title": "Employment · ages 35-40",
+      "legend": "Highest AI exposure",
+      "unit_label": "Index · Nov 2022 = 100"
+    },
+    {
+      "id": "metr_horizon_p50_v1_1",
+      "group": "capability",
+      "unit": "human-expert minutes",
+      "frequency": "event",
+      "geography": "Global model benchmark",
+      "publication_date_note": "Latest page update; individual observation publication dates are not present in the feed.",
+      "note": "Difficulty measured in human-expert task time, not elapsed AI runtime. Software, ML and cybersecurity tasks. Only models evaluated on v1.1 are included. Frontier is the cumulative maximum central estimate among tested models released on or before each date; only record-setting dates are emitted, with ties resolved by the highest estimate on that date. Each reliability threshold has its own frontier. Model coverage is incomplete. Above 960 minutes (16 hours), METR says estimates are unreliable with the current task suite. Confidence intervals are source model intervals, not uncertainty intervals for the selected frontier.",
+      "confidence_interval_level": 0.95,
+      "display": "step",
+      "name": "METR 50% task horizon — observed release frontier",
+      "source_name": "METR Time Horizons 1.1",
+      "url": "https://metr.org/time-horizons/",
+      "data_url": "https://metr.org/assets/benchmark_results_1_1.yaml",
+      "kind": "Leading signal",
+      "mode": "Public feed",
+      "chart_id": "metr",
+      "chart_title": "Length of tasks AI can complete",
+      "legend": "50% reliability",
+      "alert": "Software-task benchmark only. Horizon estimates above 16 hours are unreliable."
+    },
+    {
+      "id": "metr_horizon_p80_v1_1",
+      "group": "capability",
+      "unit": "human-expert minutes",
+      "frequency": "event",
+      "geography": "Global model benchmark",
+      "publication_date_note": "Latest page update; individual observation publication dates are not present in the feed.",
+      "note": "Difficulty measured in human-expert task time, not elapsed AI runtime. Software, ML and cybersecurity tasks. Only models evaluated on v1.1 are included. Frontier is the cumulative maximum central estimate among tested models released on or before each date; only record-setting dates are emitted, with ties resolved by the highest estimate on that date. Each reliability threshold has its own frontier. Model coverage is incomplete. Above 960 minutes (16 hours), METR says estimates are unreliable with the current task suite. Confidence intervals are source model intervals, not uncertainty intervals for the selected frontier.",
+      "confidence_interval_level": 0.95,
+      "display": "step",
+      "name": "METR 80% task horizon — observed release frontier",
+      "source_name": "METR Time Horizons 1.1",
+      "url": "https://metr.org/time-horizons/",
+      "data_url": "https://metr.org/assets/benchmark_results_1_1.yaml",
+      "kind": "Leading signal",
+      "mode": "Public feed",
+      "chart_id": "metr",
+      "chart_title": "Length of tasks AI can complete",
+      "legend": "80% reliability",
+      "alert": "Software-task benchmark only. Horizon estimates above 16 hours are unreliable."
+    }
+  ],
+  "series": [
+    {
+      "id": "epoch_fixed_performance_mmlu_86",
+      "group": "capability",
+      "unit": "USD per million tokens at fixed benchmark threshold",
+      "frequency": "event",
+      "geography": "Global model API market",
+      "published_at": "2025-03-12",
+      "source_updated_at": "2025-11-20",
+      "note": "Fixed MMLU performance floor of 86%; threshold model GPT-4-0314. Published cheapest qualifying models, with 3:1 input/output token price weighting. Non-reasoning models only. First-party API price where available, otherwise median provider price; shortest context tier. These are benchmark-qualified token prices, not cost per successful task, dollars per work hour, or raw unqualified token prices. No reasoning/non-reasoning comparison or benchmark splice. A model price change is a new dated observation; latest observation can substantially predate file update.",
+      "points": [
+        [
+          "2023-03-14",
+          37.5
+        ],
+        [
+          "2023-11-06",
+          15.0
+        ],
+        [
+          "2024-05-13",
+          7.5
+        ],
+        [
+          "2024-05-23",
+          2.19
+        ],
+        [
+          "2025-02-05",
+          0.175
+        ]
+      ],
+      "point_details": [
+        {
+          "date": "2023-03-14",
+          "model": "GPT-4-0314",
+          "benchmark_score": 86.0,
+          "threshold_percent": 86.0
+        },
+        {
+          "date": "2023-11-06",
+          "model": "GPT-4 Turbo",
+          "benchmark_score": 87.0,
+          "threshold_percent": 86.0
+        },
+        {
+          "date": "2024-05-13",
+          "model": "GPT-4o-2024-05",
+          "benchmark_score": 87.0,
+          "threshold_percent": 86.0
+        },
+        {
+          "date": "2024-05-23",
+          "model": "Gemini-1.5-Pro-2024-05",
+          "benchmark_score": 86.0,
+          "threshold_percent": 86.0
+        },
+        {
+          "date": "2025-02-05",
+          "model": "Gemini 2.0 Flash",
+          "benchmark_score": 88.0,
+          "threshold_percent": 86.0
+        }
+      ],
+      "display": "step",
+      "name": "Lowest inference price at MMLU ≥86%",
+      "source_name": "Epoch AI fixed-performance inference prices",
+      "url": "https://epoch.ai/data-insights/llm-inference-price-trends",
+      "data_url": "https://epoch.ai/data/charts/llm-inference-price-trends/lowest_price_models_data.csv",
+      "kind": "Leading signal",
+      "mode": "Reviewed snapshot",
+      "alert": "Historical cost benchmark: last observation February 2025; excludes reasoning models."
+    },
+    {
+      "id": "anthropic_chat_cowork_automation_monthly_v6",
+      "group": "adoption",
+      "unit": "% of classified records",
+      "frequency": "monthly",
+      "geography": "Global observed product traffic",
+      "published_at": "2026-06-26",
+      "note": "Reviewed release snapshot, not an automatically advancing endpoint. New monthly cohort begins April 2026; do not splice earlier seven-day releases. Chat + Cowork covers Free/Pro/Max; first-party API explicitly excludes Claude Code and third-party platforms. Higher-frequency sampling and expanded transcript context changed with this release. Automation buckets exclude unclassified conversations, while directive and none percentages use all conversations; directive means task execution with minimal interaction. Product traffic is not population-representative workplace adoption. Missing published cells mean unavailable, never zero. Chart dates use calendar month ends; source date_end is exclusive.",
+      "points": [
+        [
+          "2026-04-30",
+          48.98
+        ],
+        [
+          "2026-05-31",
+          48.62
+        ]
+      ],
+      "point_details": [
+        {
+          "date": "2026-04-30",
+          "period_start": "2026-04-01",
+          "period_end_exclusive": "2026-05-01",
+          "published_at": "2026-06-26"
+        },
+        {
+          "date": "2026-05-31",
+          "period_start": "2026-05-01",
+          "period_end_exclusive": "2026-06-01",
+          "published_at": "2026-06-26"
+        }
+      ],
+      "methodology_version": "AEI release_2026_06_26",
+      "denominator": "classified_conversations_excluding_none",
+      "display": "line",
+      "name": "Claude chat + Cowork: Automation share",
+      "source_name": "Anthropic Economic Index June 2026 release",
+      "url": "https://www.anthropic.com/research/economic-index-june-2026-report",
+      "data_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/resolve/main/release_2026_06_26/data/aei_claude_ai_2026-06-26.csv",
+      "kind": "Leading signal",
+      "mode": "Reviewed snapshot",
+      "chart_id": "delegation_automation",
+      "chart_title": "Automation share in observed AI use",
+      "legend": "Chat + Cowork",
+      "alert": "Two monthly observations; a new sample beginning April 2026."
+    },
+    {
+      "id": "anthropic_chat_cowork_directive_monthly_v6",
+      "group": "adoption",
+      "unit": "% of all sampled records",
+      "frequency": "monthly",
+      "geography": "Global observed product traffic",
+      "published_at": "2026-06-26",
+      "note": "Reviewed release snapshot, not an automatically advancing endpoint. New monthly cohort begins April 2026; do not splice earlier seven-day releases. Chat + Cowork covers Free/Pro/Max; first-party API explicitly excludes Claude Code and third-party platforms. Higher-frequency sampling and expanded transcript context changed with this release. Automation buckets exclude unclassified conversations, while directive and none percentages use all conversations; directive means task execution with minimal interaction. Product traffic is not population-representative workplace adoption. Missing published cells mean unavailable, never zero. Chart dates use calendar month ends; source date_end is exclusive.",
+      "points": [
+        [
+          "2026-04-30",
+          31.72
+        ],
+        [
+          "2026-05-31",
+          31.38
+        ]
+      ],
+      "point_details": [
+        {
+          "date": "2026-04-30",
+          "period_start": "2026-04-01",
+          "period_end_exclusive": "2026-05-01",
+          "published_at": "2026-06-26"
+        },
+        {
+          "date": "2026-05-31",
+          "period_start": "2026-05-01",
+          "period_end_exclusive": "2026-06-01",
+          "published_at": "2026-06-26"
+        }
+      ],
+      "methodology_version": "AEI release_2026_06_26",
+      "denominator": "all_sampled_conversations",
+      "display": "line",
+      "name": "Claude chat + Cowork: Full-task directive share",
+      "source_name": "Anthropic Economic Index June 2026 release",
+      "url": "https://www.anthropic.com/research/economic-index-june-2026-report",
+      "data_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/resolve/main/release_2026_06_26/data/aei_claude_ai_2026-06-26.csv",
+      "kind": "Leading signal",
+      "mode": "Reviewed snapshot",
+      "chart_id": "delegation_directive",
+      "chart_title": "Delegated task execution",
+      "legend": "Chat + Cowork",
+      "alert": "Two monthly observations; a new sample beginning April 2026."
+    },
+    {
+      "id": "anthropic_api_excluding_code_automation_monthly_v6",
+      "group": "adoption",
+      "unit": "% of classified records",
+      "frequency": "monthly",
+      "geography": "Global observed product traffic",
+      "published_at": "2026-06-26",
+      "note": "Reviewed release snapshot, not an automatically advancing endpoint. New monthly cohort begins April 2026; do not splice earlier seven-day releases. Chat + Cowork covers Free/Pro/Max; first-party API explicitly excludes Claude Code and third-party platforms. Higher-frequency sampling and expanded transcript context changed with this release. Automation buckets exclude unclassified conversations, while directive and none percentages use all conversations; directive means task execution with minimal interaction. Product traffic is not population-representative workplace adoption. Missing published cells mean unavailable, never zero. Chart dates use calendar month ends; source date_end is exclusive. API observations are sampled API traffic records, not complete consumer chat sessions.",
+      "points": [
+        [
+          "2026-04-30",
+          93.66
+        ],
+        [
+          "2026-05-31",
+          94.22
+        ]
+      ],
+      "point_details": [
+        {
+          "date": "2026-04-30",
+          "period_start": "2026-04-01",
+          "period_end_exclusive": "2026-05-01",
+          "published_at": "2026-06-26"
+        },
+        {
+          "date": "2026-05-31",
+          "period_start": "2026-05-01",
+          "period_end_exclusive": "2026-06-01",
+          "published_at": "2026-06-26"
+        }
+      ],
+      "methodology_version": "AEI release_2026_06_26",
+      "denominator": "classified_conversations_excluding_none",
+      "display": "line",
+      "name": "Anthropic API excluding Claude Code: Automation share",
+      "source_name": "Anthropic Economic Index June 2026 release",
+      "url": "https://www.anthropic.com/research/economic-index-june-2026-report",
+      "data_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/resolve/main/release_2026_06_26/data/aei_1p_api_2026-06-26.csv",
+      "kind": "Leading signal",
+      "mode": "Reviewed snapshot",
+      "chart_id": "delegation_automation",
+      "chart_title": "Automation share in observed AI use",
+      "legend": "API (excluding Claude Code)",
+      "alert": "Two monthly observations; a new sample beginning April 2026."
+    },
+    {
+      "id": "anthropic_api_excluding_code_directive_monthly_v6",
+      "group": "adoption",
+      "unit": "% of all sampled records",
+      "frequency": "monthly",
+      "geography": "Global observed product traffic",
+      "published_at": "2026-06-26",
+      "note": "Reviewed release snapshot, not an automatically advancing endpoint. New monthly cohort begins April 2026; do not splice earlier seven-day releases. Chat + Cowork covers Free/Pro/Max; first-party API explicitly excludes Claude Code and third-party platforms. Higher-frequency sampling and expanded transcript context changed with this release. Automation buckets exclude unclassified conversations, while directive and none percentages use all conversations; directive means task execution with minimal interaction. Product traffic is not population-representative workplace adoption. Missing published cells mean unavailable, never zero. Chart dates use calendar month ends; source date_end is exclusive. API observations are sampled API traffic records, not complete consumer chat sessions.",
+      "points": [
+        [
+          "2026-04-30",
+          80.88
+        ],
+        [
+          "2026-05-31",
+          82.75
+        ]
+      ],
+      "point_details": [
+        {
+          "date": "2026-04-30",
+          "period_start": "2026-04-01",
+          "period_end_exclusive": "2026-05-01",
+          "published_at": "2026-06-26"
+        },
+        {
+          "date": "2026-05-31",
+          "period_start": "2026-05-01",
+          "period_end_exclusive": "2026-06-01",
+          "published_at": "2026-06-26"
+        }
+      ],
+      "methodology_version": "AEI release_2026_06_26",
+      "denominator": "all_sampled_conversations",
+      "display": "line",
+      "name": "Anthropic API excluding Claude Code: Full-task directive share",
+      "source_name": "Anthropic Economic Index June 2026 release",
+      "url": "https://www.anthropic.com/research/economic-index-june-2026-report",
+      "data_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/resolve/main/release_2026_06_26/data/aei_1p_api_2026-06-26.csv",
+      "kind": "Leading signal",
+      "mode": "Reviewed snapshot",
+      "chart_id": "delegation_directive",
+      "chart_title": "Delegated task execution",
+      "legend": "API (excluding Claude Code)",
+      "alert": "Two monthly observations; a new sample beginning April 2026."
+    },
+    {
+      "id": "a3-robot-orders-units",
+      "group": "investment",
+      "unit": "robots",
+      "frequency": "quarterly",
+      "geography": "North America",
+      "note": "Standalone quarterly orders, not installations or year-to-date totals. Public release totals are reported in nominal USD. A3 uses matched reporting-company cohorts for its published growth rates; raw-total changes can differ from those rates because reporting coverage changes. Do not derive a purported A3 like-for-like growth rate from this graph. Orders cover industrial automation generally, not specifically AI-enabled robots.",
+      "points": [
+        [
+          "2024-12-31",
+          8277
+        ],
+        [
+          "2025-03-31",
+          9064
+        ],
+        [
+          "2025-06-30",
+          8571
+        ],
+        [
+          "2025-09-30",
+          8806
+        ],
+        [
+          "2025-12-31",
+          10325
+        ],
+        [
+          "2026-03-31",
+          9055
+        ],
+        [
+          "2026-06-30",
+          8940
+        ]
+      ],
+      "reviewedAt": "2026-09-12",
+      "status": "reviewed_public_snapshot",
+      "refresh": "Monitor the A3 robotics industry-statistics index for new releases. Parse the paragraph explicitly marked Qn or standalone quarter. Do not treat six/nine/full-year totals as quarterly points. Direct curl returned HTTP 403 in this session; web browsing could read all cited releases.",
+      "name": "North American robot orders",
+      "source_name": "Association for Advancing Automation (A3)",
+      "url": "https://www.automate.org/robotics/industry-statistics",
+      "mode": "Reviewed snapshot",
+      "kind": "Broad proxy",
+      "published_at": "2026-08-11",
+      "point_details": [
+        {
+          "date": "2024-12-31",
+          "value": 8277,
+          "url": "https://www.automate.org/robotics/industry-statistics/a3-reports-north-american-robotics-market-holds-steady-in-2024-amid-sectoral-variability",
+          "publicationDate": "2025-02-17",
+          "period": "2024-q4",
+          "location": "Public release paragraph explicitly reporting the standalone quarter",
+          "reviewedValue": "8,277 robots; USD 506 million",
+          "method": "directly reported, no YTD subtraction"
+        },
+        {
+          "date": "2025-03-31",
+          "value": 9064,
+          "url": "https://www.automate.org/robotics/news/north-american-robot-orders-hold-steady-in-q1-2025-as-a3-launches-first-ever-collaborative-robot-tracking",
+          "publicationDate": "2025-05-22",
+          "period": "2025-q1",
+          "location": "Public release paragraph explicitly reporting the standalone quarter",
+          "reviewedValue": "9,064 robots; USD 580.7 million",
+          "method": "directly reported, no YTD subtraction"
+        },
+        {
+          "date": "2025-06-30",
+          "value": 8571,
+          "url": "https://www.automate.org/robotics/news/new-a3-report-signals-steady-automation-investment-in-first-half-of-2025",
+          "publicationDate": "2025-08-12",
+          "period": "2025-q2",
+          "location": "Public release paragraph explicitly reporting the standalone quarter",
+          "reviewedValue": "8,571 robots; USD 513 million",
+          "method": "directly reported, no YTD subtraction"
+        },
+        {
+          "date": "2025-09-30",
+          "value": 8806,
+          "url": "https://www.automate.org/robotics/news/robot-orders-accelerate-in-q3-as-automation-becomes-a-strategic-imperative",
+          "publicationDate": "2025-12-09",
+          "period": "2025-q3",
+          "location": "Public release paragraph explicitly reporting the standalone quarter",
+          "reviewedValue": "8,806 robots; USD 574 million",
+          "method": "directly reported, no YTD subtraction"
+        },
+        {
+          "date": "2025-12-31",
+          "value": 10325,
+          "url": "https://www.automate.org/robotics/industry-statistics/robot-orders-grow-6-6-in-2025-as-general-industries-drive-broader-automation-adoption",
+          "publicationDate": "2026-02-06",
+          "period": "2025-q4",
+          "location": "Public release paragraph explicitly reporting the standalone quarter",
+          "reviewedValue": "10,325 robots; USD 579 million",
+          "method": "directly reported, no YTD subtraction"
+        },
+        {
+          "date": "2026-03-31",
+          "value": 9055,
+          "url": "https://www.automate.org/robotics/industry-statistics/robot-orders-hold-steady-in-q1-2026-as-demand-broadens-across-non-automotive-industries",
+          "publicationDate": "2026-05-13",
+          "period": "2026-q1",
+          "location": "Public release paragraph explicitly reporting the standalone quarter",
+          "reviewedValue": "9,055 robots; USD 543 million",
+          "method": "directly reported, no YTD subtraction"
+        },
+        {
+          "date": "2026-06-30",
+          "value": 8940,
+          "url": "https://www.automate.org/robotics/industry-statistics/robot-orders-increase-in-q2-as-automation-demand-broadens-across-industries",
+          "publicationDate": "2026-08-11",
+          "period": "2026-q2",
+          "location": "Public release paragraph explicitly reporting the standalone quarter",
+          "reviewedValue": "8,940 robots; USD 622 million",
+          "method": "directly reported, no YTD subtraction"
+        }
+      ]
+    },
+    {
+      "id": "a3-robot-order-value",
+      "group": "investment",
+      "unit": "USD million",
+      "frequency": "quarterly",
+      "geography": "North America",
+      "note": "Standalone quarterly orders, not installations or year-to-date totals. Public release totals are reported in nominal USD. A3 uses matched reporting-company cohorts for its published growth rates; raw-total changes can differ from those rates because reporting coverage changes. Do not derive a purported A3 like-for-like growth rate from this graph. Orders cover industrial automation generally, not specifically AI-enabled robots.",
+      "points": [
+        [
+          "2024-12-31",
+          506
+        ],
+        [
+          "2025-03-31",
+          580.7
+        ],
+        [
+          "2025-06-30",
+          513
+        ],
+        [
+          "2025-09-30",
+          574
+        ],
+        [
+          "2025-12-31",
+          579
+        ],
+        [
+          "2026-03-31",
+          543
+        ],
+        [
+          "2026-06-30",
+          622
+        ]
+      ],
+      "reviewedAt": "2026-09-12",
+      "status": "reviewed_public_snapshot",
+      "refresh": "Monitor the A3 robotics industry-statistics index for new releases. Parse the paragraph explicitly marked Qn or standalone quarter. Do not treat six/nine/full-year totals as quarterly points. Direct curl returned HTTP 403 in this session; web browsing could read all cited releases.",
+      "name": "North American robot order value",
+      "source_name": "Association for Advancing Automation (A3)",
+      "url": "https://www.automate.org/robotics/industry-statistics",
+      "mode": "Reviewed snapshot",
+      "kind": "Broad proxy",
+      "published_at": "2026-08-11",
+      "point_details": [
+        {
+          "date": "2024-12-31",
+          "value": 506,
+          "url": "https://www.automate.org/robotics/industry-statistics/a3-reports-north-american-robotics-market-holds-steady-in-2024-amid-sectoral-variability",
+          "publicationDate": "2025-02-17",
+          "period": "2024-q4",
+          "location": "Public release paragraph explicitly reporting the standalone quarter",
+          "reviewedValue": "8,277 robots; USD 506 million",
+          "method": "directly reported, no YTD subtraction"
+        },
+        {
+          "date": "2025-03-31",
+          "value": 580.7,
+          "url": "https://www.automate.org/robotics/news/north-american-robot-orders-hold-steady-in-q1-2025-as-a3-launches-first-ever-collaborative-robot-tracking",
+          "publicationDate": "2025-05-22",
+          "period": "2025-q1",
+          "location": "Public release paragraph explicitly reporting the standalone quarter",
+          "reviewedValue": "9,064 robots; USD 580.7 million",
+          "method": "directly reported, no YTD subtraction"
+        },
+        {
+          "date": "2025-06-30",
+          "value": 513,
+          "url": "https://www.automate.org/robotics/news/new-a3-report-signals-steady-automation-investment-in-first-half-of-2025",
+          "publicationDate": "2025-08-12",
+          "period": "2025-q2",
+          "location": "Public release paragraph explicitly reporting the standalone quarter",
+          "reviewedValue": "8,571 robots; USD 513 million",
+          "method": "directly reported, no YTD subtraction"
+        },
+        {
+          "date": "2025-09-30",
+          "value": 574,
+          "url": "https://www.automate.org/robotics/news/robot-orders-accelerate-in-q3-as-automation-becomes-a-strategic-imperative",
+          "publicationDate": "2025-12-09",
+          "period": "2025-q3",
+          "location": "Public release paragraph explicitly reporting the standalone quarter",
+          "reviewedValue": "8,806 robots; USD 574 million",
+          "method": "directly reported, no YTD subtraction"
+        },
+        {
+          "date": "2025-12-31",
+          "value": 579,
+          "url": "https://www.automate.org/robotics/industry-statistics/robot-orders-grow-6-6-in-2025-as-general-industries-drive-broader-automation-adoption",
+          "publicationDate": "2026-02-06",
+          "period": "2025-q4",
+          "location": "Public release paragraph explicitly reporting the standalone quarter",
+          "reviewedValue": "10,325 robots; USD 579 million",
+          "method": "directly reported, no YTD subtraction"
+        },
+        {
+          "date": "2026-03-31",
+          "value": 543,
+          "url": "https://www.automate.org/robotics/industry-statistics/robot-orders-hold-steady-in-q1-2026-as-demand-broadens-across-non-automotive-industries",
+          "publicationDate": "2026-05-13",
+          "period": "2026-q1",
+          "location": "Public release paragraph explicitly reporting the standalone quarter",
+          "reviewedValue": "9,055 robots; USD 543 million",
+          "method": "directly reported, no YTD subtraction"
+        },
+        {
+          "date": "2026-06-30",
+          "value": 622,
+          "url": "https://www.automate.org/robotics/industry-statistics/robot-orders-increase-in-q2-as-automation-demand-broadens-across-industries",
+          "publicationDate": "2026-08-11",
+          "period": "2026-q2",
+          "location": "Public release paragraph explicitly reporting the standalone quarter",
+          "reviewedValue": "8,940 robots; USD 622 million",
+          "method": "directly reported, no YTD subtraction"
+        }
+      ]
+    },
+    {
+      "id": "asml-net-bookings",
+      "group": "investment",
+      "unit": "EUR million",
+      "frequency": "quarterly",
+      "geography": "Global (ASML)",
+      "note": "ASML global company figures. Calendar-quarter end labels are used for chart alignment; the company fiscal quarter can end a few days earlier. Accepted written authorizations for system orders, including inflation adjustments. Bookings are lumpy, can be delayed or cancelled, and do not measure chip output. ASML discontinued quarterly bookings disclosure after Q4 2025 and moved total systems backlog to annual disclosure; do not forward-fill into 2026.",
+      "points": [
+        [
+          "2023-12-31",
+          9186
+        ],
+        [
+          "2024-03-31",
+          3611
+        ],
+        [
+          "2024-06-30",
+          5567
+        ],
+        [
+          "2024-09-30",
+          2633
+        ],
+        [
+          "2024-12-31",
+          7088
+        ],
+        [
+          "2025-03-31",
+          3936
+        ],
+        [
+          "2025-06-30",
+          5541
+        ],
+        [
+          "2025-09-30",
+          5399
+        ],
+        [
+          "2025-12-31",
+          13158
+        ]
+      ],
+      "reviewedAt": "2026-09-12",
+      "status": "discontinued_after_2025",
+      "refresh": "Read the quarterly press-release HTML comparison table. Require exact row and quarter header. For bookings, do not interpret omission in 2026 releases as zero. Annual backlog remains available.",
+      "disclosurePolicyEvidence": {
+        "url": "https://media.asml.com/asmlnetherlaaea-asmlcom-prd-5369/media/project/asmlcom/asmlcom/asml/files/investors/financial-results/q-results/2024/q4/20250129-asml-transcript-investor-call-q4--fy-2024.pdf",
+        "publicationDate": "2025-01-29",
+        "location": "Page 2, reporting policy paragraph",
+        "summary": "Quarterly bookings end after 2025; total systems backlog is reported annually from 2026."
+      },
+      "name": "ASML net system bookings",
+      "source_name": "ASML quarterly financial results",
+      "url": "https://www.asml.com/en/investors/financial-results",
+      "mode": "Reviewed snapshot",
+      "kind": "Leading signal",
+      "published_at": "2026-01-28",
+      "point_details": [
+        {
+          "date": "2023-12-31",
+          "value": 9186,
+          "url": "https://www.asml.com/en/news/press-releases/2024/q1-2024-financial-results",
+          "publicationDate": "2024-04-17",
+          "period": "Q4 2023",
+          "location": "Quarterly comparison table, row Net bookings 2",
+          "reviewedValue": "9,186 EUR million",
+          "method": "directly reported table cell"
+        },
+        {
+          "date": "2024-03-31",
+          "value": 3611,
+          "url": "https://www.asml.com/en/news/press-releases/2024/q2-2024-financial-results",
+          "publicationDate": "2024-07-17",
+          "period": "Q1 2024",
+          "location": "Quarterly comparison table, row Net bookings 2",
+          "reviewedValue": "3,611 EUR million",
+          "method": "directly reported table cell"
+        },
+        {
+          "date": "2024-06-30",
+          "value": 5567,
+          "url": "https://www.asml.com/en/news/press-releases/2024/q2-2024-financial-results",
+          "publicationDate": "2024-07-17",
+          "period": "Q2 2024",
+          "location": "Quarterly comparison table, row Net bookings 2",
+          "reviewedValue": "5,567 EUR million",
+          "method": "directly reported table cell"
+        },
+        {
+          "date": "2024-09-30",
+          "value": 2633,
+          "url": "https://www.asml.com/en/news/press-releases/2025/q4-2024-financial-results",
+          "publicationDate": "2025-01-29",
+          "period": "Q3 2024",
+          "location": "Quarterly comparison table, row Net bookings 2",
+          "reviewedValue": "2,633 EUR million",
+          "method": "directly reported table cell"
+        },
+        {
+          "date": "2024-12-31",
+          "value": 7088,
+          "url": "https://www.asml.com/en/news/press-releases/2025/q1-2025-financial-results",
+          "publicationDate": "2025-04-16",
+          "period": "Q4 2024",
+          "location": "Quarterly comparison table, row Net bookings 2",
+          "reviewedValue": "7,088 EUR million",
+          "method": "directly reported table cell"
+        },
+        {
+          "date": "2025-03-31",
+          "value": 3936,
+          "url": "https://www.asml.com/en/news/press-releases/2025/q2-2025-financial-results",
+          "publicationDate": "2025-07-16",
+          "period": "Q1 2025",
+          "location": "Quarterly comparison table, row Net bookings 2",
+          "reviewedValue": "3,936 EUR million",
+          "method": "directly reported table cell"
+        },
+        {
+          "date": "2025-06-30",
+          "value": 5541,
+          "url": "https://www.asml.com/en/news/press-releases/2025/q3-2025-financial-results",
+          "publicationDate": "2025-10-15",
+          "period": "Q2 2025",
+          "location": "Quarterly comparison table, row Net bookings 2",
+          "reviewedValue": "5,541 EUR million",
+          "method": "directly reported table cell"
+        },
+        {
+          "date": "2025-09-30",
+          "value": 5399,
+          "url": "https://www.asml.com/en/news/press-releases/2026/q4-2025-financial-results",
+          "publicationDate": "2026-01-28",
+          "period": "Q3 2025",
+          "location": "Quarterly comparison table, row Net bookings 2",
+          "reviewedValue": "5,399 EUR million",
+          "method": "directly reported table cell"
+        },
+        {
+          "date": "2025-12-31",
+          "value": 13158,
+          "url": "https://www.asml.com/en/news/press-releases/2026/q4-2025-financial-results",
+          "publicationDate": "2026-01-28",
+          "period": "Q4 2025",
+          "location": "Quarterly comparison table, row Net bookings 2",
+          "reviewedValue": "13,158 EUR million",
+          "method": "directly reported table cell"
+        }
+      ],
+      "alert": "Quarterly reporting ended after Q4 2025. A flat extension would be misleading."
+    },
+    {
+      "id": "asml-new-lithography-systems-sold",
+      "group": "investment",
+      "unit": "systems",
+      "frequency": "quarterly",
+      "geography": "Global (ASML)",
+      "note": "ASML global company figures. Calendar-quarter end labels are used for chart alignment; the company fiscal quarter can end a few days earlier. These are reported systems sold, a companion measure of realized equipment demand. They are not a pure physical-shipment count and are not semiconductor output or AI-only equipment.",
+      "points": [
+        [
+          "2023-12-31",
+          113
+        ],
+        [
+          "2024-03-31",
+          66
+        ],
+        [
+          "2024-06-30",
+          89
+        ],
+        [
+          "2024-09-30",
+          106
+        ],
+        [
+          "2024-12-31",
+          119
+        ],
+        [
+          "2025-03-31",
+          73
+        ],
+        [
+          "2025-06-30",
+          67
+        ],
+        [
+          "2025-09-30",
+          66
+        ],
+        [
+          "2025-12-31",
+          94
+        ],
+        [
+          "2026-03-31",
+          67
+        ],
+        [
+          "2026-06-30",
+          86
+        ]
+      ],
+      "reviewedAt": "2026-09-12",
+      "status": "reviewed_public_snapshot",
+      "refresh": "Read the quarterly press-release HTML comparison table. Require exact row and quarter header. For bookings, do not interpret omission in 2026 releases as zero. Annual backlog remains available.",
+      "disclosurePolicyEvidence": {
+        "url": "https://media.asml.com/asmlnetherlaaea-asmlcom-prd-5369/media/project/asmlcom/asmlcom/asml/files/investors/financial-results/q-results/2024/q4/20250129-asml-transcript-investor-call-q4--fy-2024.pdf",
+        "publicationDate": "2025-01-29",
+        "location": "Page 2, reporting policy paragraph",
+        "summary": "Quarterly bookings end after 2025; total systems backlog is reported annually from 2026."
+      },
+      "name": "ASML new lithography systems sold",
+      "source_name": "ASML quarterly financial results",
+      "url": "https://www.asml.com/en/investors/financial-results",
+      "mode": "Reviewed snapshot",
+      "kind": "Confirmation",
+      "published_at": "2026-07-15",
+      "point_details": [
+        {
+          "date": "2023-12-31",
+          "value": 113,
+          "url": "https://www.asml.com/en/news/press-releases/2024/q1-2024-financial-results",
+          "publicationDate": "2024-04-17",
+          "period": "Q4 2023",
+          "location": "Quarterly comparison table, row New lithography systems sold (units)",
+          "reviewedValue": "113 systems",
+          "method": "directly reported table cell"
+        },
+        {
+          "date": "2024-03-31",
+          "value": 66,
+          "url": "https://www.asml.com/en/news/press-releases/2024/q2-2024-financial-results",
+          "publicationDate": "2024-07-17",
+          "period": "Q1 2024",
+          "location": "Quarterly comparison table, row New lithography systems sold (units)",
+          "reviewedValue": "66 systems",
+          "method": "directly reported table cell"
+        },
+        {
+          "date": "2024-06-30",
+          "value": 89,
+          "url": "https://www.asml.com/en/news/press-releases/2024/q2-2024-financial-results",
+          "publicationDate": "2024-07-17",
+          "period": "Q2 2024",
+          "location": "Quarterly comparison table, row New lithography systems sold (units)",
+          "reviewedValue": "89 systems",
+          "method": "directly reported table cell"
+        },
+        {
+          "date": "2024-09-30",
+          "value": 106,
+          "url": "https://www.asml.com/en/news/press-releases/2025/q4-2024-financial-results",
+          "publicationDate": "2025-01-29",
+          "period": "Q3 2024",
+          "location": "Quarterly comparison table, row New lithography systems sold (units)",
+          "reviewedValue": "106 systems",
+          "method": "directly reported table cell"
+        },
+        {
+          "date": "2024-12-31",
+          "value": 119,
+          "url": "https://www.asml.com/en/news/press-releases/2025/q1-2025-financial-results",
+          "publicationDate": "2025-04-16",
+          "period": "Q4 2024",
+          "location": "Quarterly comparison table, row New lithography systems sold (units)",
+          "reviewedValue": "119 systems",
+          "method": "directly reported table cell"
+        },
+        {
+          "date": "2025-03-31",
+          "value": 73,
+          "url": "https://www.asml.com/en/news/press-releases/2025/q2-2025-financial-results",
+          "publicationDate": "2025-07-16",
+          "period": "Q1 2025",
+          "location": "Quarterly comparison table, row New lithography systems sold (units)",
+          "reviewedValue": "73 systems",
+          "method": "directly reported table cell"
+        },
+        {
+          "date": "2025-06-30",
+          "value": 67,
+          "url": "https://www.asml.com/en/news/press-releases/2025/q3-2025-financial-results",
+          "publicationDate": "2025-10-15",
+          "period": "Q2 2025",
+          "location": "Quarterly comparison table, row New lithography systems sold (units)",
+          "reviewedValue": "67 systems",
+          "method": "directly reported table cell"
+        },
+        {
+          "date": "2025-09-30",
+          "value": 66,
+          "url": "https://www.asml.com/en/news/press-releases/2026/q4-2025-financial-results",
+          "publicationDate": "2026-01-28",
+          "period": "Q3 2025",
+          "location": "Quarterly comparison table, row New lithography systems sold (units)",
+          "reviewedValue": "66 systems",
+          "method": "directly reported table cell"
+        },
+        {
+          "date": "2025-12-31",
+          "value": 94,
+          "url": "https://www.asml.com/en/news/press-releases/2026/q1-2026-financial-results",
+          "publicationDate": "2026-04-15",
+          "period": "Q4 2025",
+          "location": "Quarterly comparison table, row New lithography systems sold (units)",
+          "reviewedValue": "94 systems",
+          "method": "directly reported table cell"
+        },
+        {
+          "date": "2026-03-31",
+          "value": 67,
+          "url": "https://www.asml.com/en/news/press-releases/2026/q2-2026-financial-results",
+          "publicationDate": "2026-07-15",
+          "period": "Q1 2026",
+          "location": "Quarterly comparison table, row New lithography systems sold (units)",
+          "reviewedValue": "67 systems",
+          "method": "directly reported table cell"
+        },
+        {
+          "date": "2026-06-30",
+          "value": 86,
+          "url": "https://www.asml.com/en/news/press-releases/2026/q2-2026-financial-results",
+          "publicationDate": "2026-07-15",
+          "period": "Q2 2026",
+          "location": "Quarterly comparison table, row New lithography systems sold (units)",
+          "reviewedValue": "86 systems",
+          "method": "directly reported table cell"
+        }
+      ]
+    },
+    {
+      "id": "asml-system-backlog",
+      "group": "investment",
+      "unit": "EUR million",
+      "frequency": "annual",
+      "geography": "Global (ASML)",
+      "note": "Accepted system orders and inflation adjustments not yet recognized as total net sales. Annual stock, not quarterly order flow or shipped systems. Only two reviewed annual points; do not interpolate quarterly values.",
+      "points": [
+        [
+          "2024-12-31",
+          35938
+        ],
+        [
+          "2025-12-31",
+          38797
+        ]
+      ],
+      "reviewedAt": "2026-09-12",
+      "status": "reviewed_public_snapshot",
+      "name": "ASML system order backlog",
+      "source_name": "ASML Q4 and full-year 2025 financial results",
+      "url": "https://www.asml.com/en/news/press-releases/2026/q4-2025-financial-results",
+      "mode": "Reviewed snapshot",
+      "kind": "Leading signal",
+      "published_at": "2026-01-28",
+      "point_details": [
+        {
+          "date": "2024-12-31",
+          "value": 35938,
+          "url": "https://www.asml.com/en/news/press-releases/2026/q4-2025-financial-results",
+          "publicationDate": "2026-01-28",
+          "location": "Comparison table, Backlog row, FY 2024 or FY 2025 column",
+          "method": "directly reported table cell"
+        },
+        {
+          "date": "2025-12-31",
+          "value": 38797,
+          "url": "https://www.asml.com/en/news/press-releases/2026/q4-2025-financial-results",
+          "publicationDate": "2026-01-28",
+          "location": "Comparison table, Backlog row, FY 2024 or FY 2025 column",
+          "method": "directly reported table cell"
+        }
+      ]
+    },
+    {
+      "id": "dominion-va-datacenter-connected-capacity-additions",
+      "group": "investment",
+      "unit": "MW",
+      "frequency": "annual",
+      "geography": "Dominion Energy Virginia service region, United States",
+      "note": "Annual new grid connections and their capacity. MW is capacity of newly connected data-centre sites; customer load can ramp over later years. It is not measured electrical draw, current utilization, an announced project, or AI-specific capacity. Annual flows must not be mixed with YTD connection updates. Use the revised 2023 chart label 935 MW, not the earlier IRP estimate 933 MW. One utility territory; not a global AI power series. Contract-stage capacity is not measured electricity demand.",
+      "points": [
+        [
+          "2015-12-31",
+          148
+        ],
+        [
+          "2016-12-31",
+          255
+        ],
+        [
+          "2017-12-31",
+          379
+        ],
+        [
+          "2018-12-31",
+          465
+        ],
+        [
+          "2019-12-31",
+          857
+        ],
+        [
+          "2020-12-31",
+          567
+        ],
+        [
+          "2021-12-31",
+          562
+        ],
+        [
+          "2022-12-31",
+          1006
+        ],
+        [
+          "2023-12-31",
+          935
+        ],
+        [
+          "2024-12-31",
+          977
+        ],
+        [
+          "2025-12-31",
+          744
+        ]
+      ],
+      "reviewedAt": "2026-09-12",
+      "status": "reviewed_public_snapshot",
+      "refresh": "Find the annual connects/capacity-additions chart in the annual earnings deck or shareholder letter. Keep actual full-year observations only and capture revisions from the same source vintage.",
+      "name": "Virginia data-centre connection capacity added",
+      "source_name": "Dominion Energy Virginia investor reports",
+      "url": "https://investors.dominionenergy.com/financials-and-reports/quarterly-materials/default.aspx",
+      "mode": "Reviewed snapshot",
+      "kind": "Confirmation",
+      "published_at": "2025-02-12",
+      "point_details": [
+        {
+          "date": "2015-12-31",
+          "value": 148,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2024/q4/2025-02-12-DE-IR-4Q-2024-earnings-call-slides-vTCII.pdf",
+          "publicationDate": "2025-02-12",
+          "publicationYear": 2025,
+          "location": "Slide 45: annual connects and capacity-additions charts",
+          "method": "directly reported labels, visually reviewed chart for 2015-2024",
+          "sourceVintageNote": null
+        },
+        {
+          "date": "2016-12-31",
+          "value": 255,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2024/q4/2025-02-12-DE-IR-4Q-2024-earnings-call-slides-vTCII.pdf",
+          "publicationDate": "2025-02-12",
+          "publicationYear": 2025,
+          "location": "Slide 45: annual connects and capacity-additions charts",
+          "method": "directly reported labels, visually reviewed chart for 2015-2024",
+          "sourceVintageNote": null
+        },
+        {
+          "date": "2017-12-31",
+          "value": 379,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2024/q4/2025-02-12-DE-IR-4Q-2024-earnings-call-slides-vTCII.pdf",
+          "publicationDate": "2025-02-12",
+          "publicationYear": 2025,
+          "location": "Slide 45: annual connects and capacity-additions charts",
+          "method": "directly reported labels, visually reviewed chart for 2015-2024",
+          "sourceVintageNote": null
+        },
+        {
+          "date": "2018-12-31",
+          "value": 465,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2024/q4/2025-02-12-DE-IR-4Q-2024-earnings-call-slides-vTCII.pdf",
+          "publicationDate": "2025-02-12",
+          "publicationYear": 2025,
+          "location": "Slide 45: annual connects and capacity-additions charts",
+          "method": "directly reported labels, visually reviewed chart for 2015-2024",
+          "sourceVintageNote": null
+        },
+        {
+          "date": "2019-12-31",
+          "value": 857,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2024/q4/2025-02-12-DE-IR-4Q-2024-earnings-call-slides-vTCII.pdf",
+          "publicationDate": "2025-02-12",
+          "publicationYear": 2025,
+          "location": "Slide 45: annual connects and capacity-additions charts",
+          "method": "directly reported labels, visually reviewed chart for 2015-2024",
+          "sourceVintageNote": null
+        },
+        {
+          "date": "2020-12-31",
+          "value": 567,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2024/q4/2025-02-12-DE-IR-4Q-2024-earnings-call-slides-vTCII.pdf",
+          "publicationDate": "2025-02-12",
+          "publicationYear": 2025,
+          "location": "Slide 45: annual connects and capacity-additions charts",
+          "method": "directly reported labels, visually reviewed chart for 2015-2024",
+          "sourceVintageNote": null
+        },
+        {
+          "date": "2021-12-31",
+          "value": 562,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2024/q4/2025-02-12-DE-IR-4Q-2024-earnings-call-slides-vTCII.pdf",
+          "publicationDate": "2025-02-12",
+          "publicationYear": 2025,
+          "location": "Slide 45: annual connects and capacity-additions charts",
+          "method": "directly reported labels, visually reviewed chart for 2015-2024",
+          "sourceVintageNote": null
+        },
+        {
+          "date": "2022-12-31",
+          "value": 1006,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2024/q4/2025-02-12-DE-IR-4Q-2024-earnings-call-slides-vTCII.pdf",
+          "publicationDate": "2025-02-12",
+          "publicationYear": 2025,
+          "location": "Slide 45: annual connects and capacity-additions charts",
+          "method": "directly reported labels, visually reviewed chart for 2015-2024",
+          "sourceVintageNote": null
+        },
+        {
+          "date": "2023-12-31",
+          "value": 935,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2024/q4/2025-02-12-DE-IR-4Q-2024-earnings-call-slides-vTCII.pdf",
+          "publicationDate": "2025-02-12",
+          "publicationYear": 2025,
+          "location": "Slide 45: annual connects and capacity-additions charts",
+          "method": "directly reported labels, visually reviewed chart for 2015-2024",
+          "sourceVintageNote": "The 2025 presentation reports 2023 as 935 MW, superseding the earlier 2024 IRP snapshot of 933 MW."
+        },
+        {
+          "date": "2024-12-31",
+          "value": 977,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2024/q4/2025-02-12-DE-IR-4Q-2024-earnings-call-slides-vTCII.pdf",
+          "publicationDate": "2025-02-12",
+          "publicationYear": 2025,
+          "location": "Slide 45: annual connects and capacity-additions charts",
+          "method": "directly reported labels, visually reviewed chart for 2015-2024",
+          "sourceVintageNote": null
+        },
+        {
+          "date": "2025-12-31",
+          "value": 744,
+          "url": "https://www.sec.gov/Archives/edgar/data/715957/000119312526115192/dei-ars-12312025.pdf",
+          "publicationDate": null,
+          "publicationYear": 2026,
+          "location": "Annual report printed page 3: 2025 connected 11 data centres with 744 MW combined capacity",
+          "method": "directly reported labels, visually reviewed chart for 2015-2024",
+          "sourceVintageNote": null
+        }
+      ],
+      "alert": "Ultimate capacity of connected sites, not actual power draw."
+    },
+    {
+      "id": "dominion-va-datacenter-esa-capacity",
+      "group": "investment",
+      "unit": "GW",
+      "frequency": "event",
+      "geography": "Dominion Energy Virginia service region, United States",
+      "note": "Electric Service Agreement (ESA): contract defines service and cost recovery, including a revenue obligation whether the customer takes service or not. These are capacity commitments at different stages of the utility request process, not operational load or a pure waiting queue. ESA capacity can include service commitments with future ramps; do not call all this power energized or guaranteed on a date. The source provides observation months only, anchored to the first day for charting. Component values and totals are rounded separately (e.g. December 2025 components sum to 48.6 but reported total is 48.5 GW). One utility territory; not a global AI power series. Contract-stage capacity is not measured electricity demand.",
+      "points": [
+        [
+          "2023-07-01",
+          5.8
+        ],
+        [
+          "2024-07-01",
+          8.0
+        ],
+        [
+          "2024-12-01",
+          8.8
+        ],
+        [
+          "2025-09-01",
+          9.8
+        ],
+        [
+          "2025-12-01",
+          10.2
+        ],
+        [
+          "2026-03-01",
+          10.4
+        ],
+        [
+          "2026-07-01",
+          12.0
+        ]
+      ],
+      "reviewedAt": "2026-09-12",
+      "status": "reviewed_public_snapshot",
+      "refresh": "Review the Data center contracted capacity slide from each earnings deck; retain its dated stage snapshots. Store ESA, CLOA and SELOA separately. Update only disclosed months, without interpolating missing quarters.",
+      "name": "Virginia data-centre electric service agreements",
+      "source_name": "Dominion Energy Virginia investor reports",
+      "url": "https://investors.dominionenergy.com/financials-and-reports/quarterly-materials/default.aspx",
+      "mode": "Reviewed snapshot",
+      "kind": "Leading signal",
+      "published_at": "2026-07-31",
+      "point_details": [
+        {
+          "date": "2023-07-01",
+          "datePrecision": "month",
+          "value": 5.8,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2026/q1/2026-05-01-DE-IR-1Q-2026-earnings-call-slides-vTC.pdf",
+          "publicationDate": "2026-05-01",
+          "location": "Slide 4: Data center contracted capacity; directly labelled stack or reported total",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        },
+        {
+          "date": "2024-07-01",
+          "datePrecision": "month",
+          "value": 8.0,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2024/q4/2025-02-12-DE-IR-4Q-2024-earnings-call-slides-vTCII.pdf",
+          "publicationDate": "2025-02-12",
+          "location": "Slide 18: Data center contracted capacity; directly labelled stack or reported total",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        },
+        {
+          "date": "2024-12-01",
+          "datePrecision": "month",
+          "value": 8.8,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2024/q4/2025-02-12-DE-IR-4Q-2024-earnings-call-slides-vTCII.pdf",
+          "publicationDate": "2025-02-12",
+          "location": "Slide 18: Data center contracted capacity; directly labelled stack or reported total",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        },
+        {
+          "date": "2025-09-01",
+          "datePrecision": "month",
+          "value": 9.8,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2025/q3/2025-10-31-DE-IR-3Q-2025-earnings-call-slides-vTCI.pdf",
+          "publicationDate": "2025-10-31",
+          "location": "Slide 14: Data center contracted capacity; directly labelled stack or reported total",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        },
+        {
+          "date": "2025-12-01",
+          "datePrecision": "month",
+          "value": 10.2,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2026/q1/2026-05-01-DE-IR-1Q-2026-earnings-call-slides-vTC.pdf",
+          "publicationDate": "2026-05-01",
+          "location": "Slide 4: Data center contracted capacity; directly labelled stack or reported total",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        },
+        {
+          "date": "2026-03-01",
+          "datePrecision": "month",
+          "value": 10.4,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2026/q1/2026-05-01-DE-IR-1Q-2026-earnings-call-slides-vTC.pdf",
+          "publicationDate": "2026-05-01",
+          "location": "Slide 4: Data center contracted capacity; directly labelled stack or reported total",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        },
+        {
+          "date": "2026-07-01",
+          "datePrecision": "month",
+          "value": 12.0,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2026/q2/2026-07-31-DE-IR-2Q-2026-earnings-call-slides-vTCII.pdf",
+          "publicationDate": "2026-07-31",
+          "location": "Slide 5: Data center contracted capacity; July 2026 labels",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        }
+      ],
+      "display": "scatter",
+      "chart_id": "power_contracts",
+      "chart_title": "Virginia data-center power commitments",
+      "legend": "Service agreements",
+      "date_precision": "month"
+    },
+    {
+      "id": "dominion-va-datacenter-construction-authorized-capacity",
+      "group": "investment",
+      "unit": "GW",
+      "frequency": "event",
+      "geography": "Dominion Energy Virginia service region, United States",
+      "note": "Construction Letter of Authorization (CLOA): authorizes utility construction with customer reimbursement of expenditure if the project exits. These are capacity commitments at different stages of the utility request process, not operational load or a pure waiting queue. ESA capacity can include service commitments with future ramps; do not call all this power energized or guaranteed on a date. The source provides observation months only, anchored to the first day for charting. Component values and totals are rounded separately (e.g. December 2025 components sum to 48.6 but reported total is 48.5 GW). One utility territory; not a global AI power series. Contract-stage capacity is not measured electricity demand.",
+      "points": [
+        [
+          "2023-07-01",
+          2.0
+        ],
+        [
+          "2024-07-01",
+          5.8
+        ],
+        [
+          "2024-12-01",
+          5.2
+        ],
+        [
+          "2025-09-01",
+          9.0
+        ],
+        [
+          "2025-12-01",
+          11.0
+        ],
+        [
+          "2026-03-01",
+          11.1
+        ],
+        [
+          "2026-07-01",
+          9.4
+        ]
+      ],
+      "reviewedAt": "2026-09-12",
+      "status": "reviewed_public_snapshot",
+      "refresh": "Review the Data center contracted capacity slide from each earnings deck; retain its dated stage snapshots. Store ESA, CLOA and SELOA separately. Update only disclosed months, without interpolating missing quarters.",
+      "name": "Virginia data-centre construction authorizations",
+      "source_name": "Dominion Energy Virginia investor reports",
+      "url": "https://investors.dominionenergy.com/financials-and-reports/quarterly-materials/default.aspx",
+      "mode": "Reviewed snapshot",
+      "kind": "Leading signal",
+      "published_at": "2026-07-31",
+      "point_details": [
+        {
+          "date": "2023-07-01",
+          "datePrecision": "month",
+          "value": 2.0,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2026/q1/2026-05-01-DE-IR-1Q-2026-earnings-call-slides-vTC.pdf",
+          "publicationDate": "2026-05-01",
+          "location": "Slide 4: Data center contracted capacity; directly labelled stack or reported total",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        },
+        {
+          "date": "2024-07-01",
+          "datePrecision": "month",
+          "value": 5.8,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2024/q4/2025-02-12-DE-IR-4Q-2024-earnings-call-slides-vTCII.pdf",
+          "publicationDate": "2025-02-12",
+          "location": "Slide 18: Data center contracted capacity; directly labelled stack or reported total",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        },
+        {
+          "date": "2024-12-01",
+          "datePrecision": "month",
+          "value": 5.2,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2024/q4/2025-02-12-DE-IR-4Q-2024-earnings-call-slides-vTCII.pdf",
+          "publicationDate": "2025-02-12",
+          "location": "Slide 18: Data center contracted capacity; directly labelled stack or reported total",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        },
+        {
+          "date": "2025-09-01",
+          "datePrecision": "month",
+          "value": 9.0,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2025/q3/2025-10-31-DE-IR-3Q-2025-earnings-call-slides-vTCI.pdf",
+          "publicationDate": "2025-10-31",
+          "location": "Slide 14: Data center contracted capacity; directly labelled stack or reported total",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        },
+        {
+          "date": "2025-12-01",
+          "datePrecision": "month",
+          "value": 11.0,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2026/q1/2026-05-01-DE-IR-1Q-2026-earnings-call-slides-vTC.pdf",
+          "publicationDate": "2026-05-01",
+          "location": "Slide 4: Data center contracted capacity; directly labelled stack or reported total",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        },
+        {
+          "date": "2026-03-01",
+          "datePrecision": "month",
+          "value": 11.1,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2026/q1/2026-05-01-DE-IR-1Q-2026-earnings-call-slides-vTC.pdf",
+          "publicationDate": "2026-05-01",
+          "location": "Slide 4: Data center contracted capacity; directly labelled stack or reported total",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        },
+        {
+          "date": "2026-07-01",
+          "datePrecision": "month",
+          "value": 9.4,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2026/q2/2026-07-31-DE-IR-2Q-2026-earnings-call-slides-vTCII.pdf",
+          "publicationDate": "2026-07-31",
+          "location": "Slide 5: Data center contracted capacity; July 2026 labels",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        }
+      ],
+      "display": "scatter",
+      "chart_id": "power_contracts",
+      "chart_title": "Virginia data-center power commitments",
+      "legend": "Construction authorizations",
+      "date_precision": "month"
+    },
+    {
+      "id": "dominion-va-datacenter-engineering-authorized-capacity",
+      "group": "investment",
+      "unit": "GW",
+      "frequency": "event",
+      "geography": "Dominion Energy Virginia service region, United States",
+      "note": "Substation Engineering Letter of Authorization (SELOA): detailed engineering authorization, with engineering cost reimbursement. These are capacity commitments at different stages of the utility request process, not operational load or a pure waiting queue. ESA capacity can include service commitments with future ramps; do not call all this power energized or guaranteed on a date. The source provides observation months only, anchored to the first day for charting. Component values and totals are rounded separately (e.g. December 2025 components sum to 48.6 but reported total is 48.5 GW). One utility territory; not a global AI power series. Contract-stage capacity is not measured electricity demand.",
+      "points": [
+        [
+          "2023-07-01",
+          8.7
+        ],
+        [
+          "2024-07-01",
+          7.6
+        ],
+        [
+          "2024-12-01",
+          26.2
+        ],
+        [
+          "2025-09-01",
+          28.2
+        ],
+        [
+          "2025-12-01",
+          27.4
+        ],
+        [
+          "2026-03-01",
+          29.5
+        ],
+        [
+          "2026-07-01",
+          32.4
+        ]
+      ],
+      "reviewedAt": "2026-09-12",
+      "status": "reviewed_public_snapshot",
+      "refresh": "Review the Data center contracted capacity slide from each earnings deck; retain its dated stage snapshots. Store ESA, CLOA and SELOA separately. Update only disclosed months, without interpolating missing quarters.",
+      "name": "Virginia data-centre engineering authorizations",
+      "source_name": "Dominion Energy Virginia investor reports",
+      "url": "https://investors.dominionenergy.com/financials-and-reports/quarterly-materials/default.aspx",
+      "mode": "Reviewed snapshot",
+      "kind": "Leading signal",
+      "published_at": "2026-07-31",
+      "point_details": [
+        {
+          "date": "2023-07-01",
+          "datePrecision": "month",
+          "value": 8.7,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2026/q1/2026-05-01-DE-IR-1Q-2026-earnings-call-slides-vTC.pdf",
+          "publicationDate": "2026-05-01",
+          "location": "Slide 4: Data center contracted capacity; directly labelled stack or reported total",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        },
+        {
+          "date": "2024-07-01",
+          "datePrecision": "month",
+          "value": 7.6,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2024/q4/2025-02-12-DE-IR-4Q-2024-earnings-call-slides-vTCII.pdf",
+          "publicationDate": "2025-02-12",
+          "location": "Slide 18: Data center contracted capacity; directly labelled stack or reported total",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        },
+        {
+          "date": "2024-12-01",
+          "datePrecision": "month",
+          "value": 26.2,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2024/q4/2025-02-12-DE-IR-4Q-2024-earnings-call-slides-vTCII.pdf",
+          "publicationDate": "2025-02-12",
+          "location": "Slide 18: Data center contracted capacity; directly labelled stack or reported total",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        },
+        {
+          "date": "2025-09-01",
+          "datePrecision": "month",
+          "value": 28.2,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2025/q3/2025-10-31-DE-IR-3Q-2025-earnings-call-slides-vTCI.pdf",
+          "publicationDate": "2025-10-31",
+          "location": "Slide 14: Data center contracted capacity; directly labelled stack or reported total",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        },
+        {
+          "date": "2025-12-01",
+          "datePrecision": "month",
+          "value": 27.4,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2026/q1/2026-05-01-DE-IR-1Q-2026-earnings-call-slides-vTC.pdf",
+          "publicationDate": "2026-05-01",
+          "location": "Slide 4: Data center contracted capacity; directly labelled stack or reported total",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        },
+        {
+          "date": "2026-03-01",
+          "datePrecision": "month",
+          "value": 29.5,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2026/q1/2026-05-01-DE-IR-1Q-2026-earnings-call-slides-vTC.pdf",
+          "publicationDate": "2026-05-01",
+          "location": "Slide 4: Data center contracted capacity; directly labelled stack or reported total",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        },
+        {
+          "date": "2026-07-01",
+          "datePrecision": "month",
+          "value": 32.4,
+          "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2026/q2/2026-07-31-DE-IR-2Q-2026-earnings-call-slides-vTCII.pdf",
+          "publicationDate": "2026-07-31",
+          "location": "Slide 5: Data center contracted capacity; July 2026 labels",
+          "method": "visually reviewed report label",
+          "valuePrecision": "approximately 0.1 GW"
+        }
+      ],
+      "display": "scatter",
+      "chart_id": "power_contracts",
+      "chart_title": "Virginia data-center power commitments",
+      "legend": "Engineering authorizations",
+      "date_precision": "month"
+    }
+  ],
+  "gaps": [
+    {
+      "id": "task_cost",
+      "group": "capability",
+      "name": "Cost per successful business task",
+      "note": "Benchmark-qualified token prices omit retries, tools, human review and error costs. No comparable public end-to-end series is connected."
+    },
+    {
+      "id": "intervention",
+      "group": "adoption",
+      "name": "Human intervention and repeat production use",
+      "note": "Conversation classifications are a proxy for delegation. A representative series of interventions per completed task, retained deployments and workflow coverage is still missing."
+    },
+    {
+      "id": "bottlenecks",
+      "group": "investment",
+      "name": "Component lead times and cancellations",
+      "note": "Packaging, HBM, optics and power equipment need comparable supplier disclosures. Broad electronics backlog does not identify an AI bottleneck or canceled AI orders."
+    },
+    {
+      "id": "distribution",
+      "group": "outcomes",
+      "name": "AI-service prices, quality and access",
+      "note": "Broad productivity and consumer prices provide context. Comparable quality-adjusted prices and sector margins for AI-delivered services are not yet connected."
+    },
+    {
+      "id": "validation",
+      "group": "science",
+      "name": "Discovery → independent validation → deployment",
+      "note": "The reviewed trial catalogue can show starts and reported outcomes. Representative phase-transition rates, time saved and independently validated science require longitudinal cohorts and failure coverage."
+    },
+    {
+      "id": "power_time",
+      "group": "investment",
+      "name": "Time from power application to operation",
+      "note": "Utility contract stages and connected-site capacity are shown separately. They do not yet provide a matched cohort of applications and energization dates."
+    }
+  ]
+}
