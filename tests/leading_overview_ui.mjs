@@ -4,7 +4,7 @@ import vm from 'node:vm';
 const elements=new Map();
 const make=(dataset={})=>({dataset,attrs:{},handlers:{},setAttribute(k,v){this.attrs[k]=v;},addEventListener(k,v){this.handlers[k]=v;},focus(){this.focused=true;},scrollIntoView(){}});
 const element=id=>{if(!elements.has(id))elements.set(id,{...make(),innerHTML:'',textContent:'',hidden:false});return elements.get(id);};
-const groups=['all','capability','adoption','jobs','investment','outcomes','science'].map(leadingGroup=>make({leadingGroup}));
+const groups=['all','capability','adoption','jobs','investment','outcomes','science','sentiment'].map(leadingGroup=>make({leadingGroup}));
 const layouts=['trendlines','heatmap'].map(leadingOverview=>make({leadingOverview}));
 const context=vm.createContext({URL,document:{getElementById:element,querySelectorAll:s=>s==='[data-leading-group]'?groups:s==='[data-leading-overview]'?layouts:[],querySelector:()=>make()}});
 for(const file of ['leading.js','leading-overview.js','app.js'])vm.runInContext(fs.readFileSync('dist/'+file,'utf8').replace(/init\(\);\s*$/,''),context);

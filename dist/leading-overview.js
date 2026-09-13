@@ -73,7 +73,7 @@ function leadingMiniChart(item,model){
   const start=Date.parse(model.start+'T00:00:00Z'),end=Date.parse(model.end+'T00:00:00Z');
   const x=p=>m+(Date.parse(p[0]+'T00:00:00Z')-start)/Math.max(1,end-start)*(w-2*m);
   const y=v=>stats.min===stats.max?h/2:h-m-(v-stats.min)/(stats.max-stats.min)*(h-2*m);
-  const gap={monthly:45,quarterly:110,annual:400,biweekly:22}[item.frequency]||Infinity;
+  const gap=item.max_gap_days ?? ({monthly:45,quarterly:110,annual:400,biweekly:22}[item.frequency]||Infinity);
   let path='',prev=null,dots='';
   item.points.forEach(p=>{
     if(!Number.isFinite(p[1])){prev=null;return;}

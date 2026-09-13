@@ -19,10 +19,12 @@
   <script src="globe.js" defer></script>
   <script src="euv-machine.js" defer></script>
   <script src="activity.js" defer></script>
-  <link rel="stylesheet" href="leading.css?v=leading-overview-3">
-  <script src="leading.js?v=leading-overview-3" defer></script>
-  <script src="leading-overview.js?v=leading-overview-3" defer></script>
-  <script src="app.js?v=leading-overview-3" defer></script>
+  <link rel="stylesheet" href="leading.css?v=datacenter-sentiment-2">
+  <script src="leading.js?v=datacenter-sentiment-2" defer></script>
+  <script src="leading-overview.js?v=datacenter-sentiment-2" defer></script>
+  <link rel="stylesheet" href="sentiment.css?v=datacenter-sentiment-2">
+  <script src="sentiment.js?v=datacenter-sentiment-2" defer></script>
+  <script src="app.js?v=datacenter-sentiment-2" defer></script>
 </head>
 <body>
   <a class="skip" href="#main-content">Skip to the data</a>
@@ -34,6 +36,7 @@
     <nav class="tabs" role="tablist" aria-label="Dashboard sections">
       <button id="tab-overview" role="tab" aria-controls="panel-overview" aria-selected="true" data-tab="overview">Overview</button>
       <button id="tab-leading" role="tab" aria-controls="panel-leading" aria-selected="false" tabindex="-1" data-tab="leading">Leading indicators</button>
+      <button id="tab-sentiment" role="tab" aria-controls="panel-sentiment" aria-selected="false" tabindex="-1" data-tab="sentiment">Sentiment</button>
       <button id="tab-jobs" role="tab" aria-controls="panel-jobs" aria-selected="false" tabindex="-1" data-tab="jobs">Jobs</button>
       <button id="tab-supply-chain" role="tab" aria-controls="panel-supply-chain" aria-selected="false" tabindex="-1" data-tab="supply-chain">Supply chain</button>
       <button id="tab-devices" role="tab" aria-controls="panel-devices" aria-selected="false" tabindex="-1" data-tab="devices">Medical devices</button>
@@ -66,12 +69,31 @@
             <button data-leading-group="investment" aria-pressed="false">Investment &amp; capacity</button>
             <button data-leading-group="outcomes" aria-pressed="false">Economic outcomes</button>
             <button data-leading-group="science" aria-pressed="false">Science &amp; medicine</button>
+            <button data-leading-group="sentiment" aria-pressed="false">Sentiment</button>
           </div><div id="leading-overview-controls" class="leading-overview-controls"><div class="range-buttons" role="group" aria-label="All indicators layout"><button data-leading-overview="trendlines" aria-pressed="true">Trendlines</button><button data-leading-overview="heatmap" aria-pressed="false">Heatmap</button></div></div><label>History <select id="leading-range"><option value="all">All available</option><option value="3">Last 3 years</option><option value="1">Last year</option></select></label></div>
           <div id="leading-overview-note" class="leading-overview-note"></div>
           <p id="leading-heat-inspection" class="leading-heat-inspection" role="status" hidden></p>
           <p id="leading-status" class="leading-refresh" role="status" hidden></p>
           <div id="leading-content"></div>
-          <details class="leading-method"><summary>How to read these indicators</summary><p>Leading signals describe capabilities, intentions or commitments that could precede wider economic effects. Broad proxies include non-AI activity. Confirmations measure realized outcomes; they can help establish whether earlier signals translated into change. None of these charts alone establishes an effect caused by AI.</p><p>The month selector limits observation dates, using the latest source versions and reviews. This is not a reconstruction of what was known in that month. Chart scales are independent; gaps are not filled and the last observation is not extended into the present. Reviewed snapshots require new source review to advance.</p></details>
+          <details class="leading-method"><summary>How to read these indicators</summary><p>Leading signals describe capabilities, intentions or commitments that could precede wider economic effects. Broad proxies include non-AI activity. Confirmations measure realized outcomes; they can help establish whether earlier signals translated into change. Public sentiment measures stated views and expectations. None of these charts alone establishes an effect caused by AI.</p><p>The month selector limits observation dates, using the latest source versions and reviews. This is not a reconstruction of what was known in that month. Chart scales are independent; gaps are not filled and the last observation is not extended into the present. Reviewed snapshots require new source review to advance.</p></details>
+        </section>
+        <section id="panel-sentiment" class="tab-panel" role="tabpanel" aria-labelledby="tab-sentiment" hidden>
+          <div class="section-heading"><h2>AI sentiment</h2><span id="sentiment-coverage" class="meta"></span></div>
+          <p class="sentiment-intro">Public opinion surveys on AI, jobs and data centers. Dates show when people were surveyed.</p>
+          <p id="sentiment-status" class="leading-refresh" role="status" hidden></p>
+          <div class="leading-filters sentiment-views" role="group" aria-label="Sentiment topics"><button data-sentiment-view="attitudes" aria-pressed="true" aria-controls="sentiment-view-attitudes">AI attitudes</button><button data-sentiment-view="data-centers" aria-pressed="false" aria-controls="sentiment-view-data-centers">Data centers</button></div>
+          <div id="sentiment-view-attitudes">
+          <div class="sentiment-heading"><h3>United States</h3><span class="meta">Pew Research Center · U.S. adults</span></div>
+          <div id="sentiment-us" class="sentiment-chart-grid"></div>
+          <div class="sentiment-heading"><h3>Across countries</h3><label>Compare <select id="sentiment-market" aria-label="International sentiment market"><option value="all">All selected countries</option></select></label></div>
+          <p class="sentiment-intro" id="sentiment-international-note">Ipsos AI Monitor · agreement with each statement. Excitement and nervousness are separate questions; people can agree with both.</p>
+          <div id="sentiment-international" class="sentiment-chart-grid"></div>
+          </div>
+          <div id="sentiment-view-data-centers" hidden>
+            <p class="sentiment-intro">Public views on local construction, energy, the environment and economic benefits. Surveys have different questions and samples; results remain separate.</p>
+            <div id="sentiment-data-centers" class="sentiment-chart-grid"></div>
+          </div>
+          <details class="leading-method"><summary>Survey coverage &amp; updates</summary><p>Surveys measure stated attitudes, not adoption, actual job losses or the tone of news coverage. Pew and Ipsos ask different questions and use different samples, so their percentages are not combined into a single sentiment score. Cross-country sample and age coverage also differ.</p><p>Each point links to a primary survey report, fieldwork dates and publication date. Charts use a fixed 0–100% scale. Missing waves remain missing. New survey releases require review before they are added; refreshing imports the reviewed catalogue. The month filter uses fieldwork dates with the latest reviewed evidence.</p></details>
         </section>
         <section id="panel-jobs" class="tab-panel" role="tabpanel" aria-labelledby="tab-jobs" hidden>
           <div class="section-heading"><h2>Jobs &amp; the labor market</h2><div class="range-buttons" role="group" aria-label="Jobs chart view"><button data-job-view="macro" aria-pressed="true">AI &amp; macro trends</button><button data-job-view="share" aria-pressed="false">AI share</button></div></div>
@@ -154,6 +176,7 @@
         <section id="panel-sources" class="tab-panel" role="tabpanel" aria-labelledby="tab-sources" hidden>
           <div class="section-heading"><h2>Sources &amp; definitions</h2></div>
           <div class="source-grid">
+            <article><h3>AI sentiment</h3><p>Pew tracks U.S. concern, excitement and expectations about jobs. Ipsos tracks attitudes across selected countries. Data-center surveys from Pew, Gallup, Ipsos and Annenberg cover local construction and perceived effects on communities. Each series retains its survey question, population, fieldwork dates and source report.</p><p>Charts use fieldwork dates and the latest reviewed evidence. Pew and Ipsos use different questions and samples; percentages remain separate. Ipsos history uses its 2026 report vintage. Missing survey waves remain gaps, and new releases require review.</p><a href="https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/" target="_blank" rel="noopener noreferrer">Pew Research Center ↗</a> · <a href="https://www.ipsos.com/sites/default/files/ct/news/documents/2026-06/Ipsos-AI-Monitor-2026.pdf" target="_blank" rel="noopener noreferrer">Ipsos AI Monitor ↗</a></article>
             <article><h3>Jobs</h3><p>Indeed’s share of postings mentioning AI-related terms, reported as a seven-day trailing average. Monthly changes compare the last observation in adjacent months, in percentage points.</p><a href="https://github.com/hiring-lab/ai-tracker" target="_blank" rel="noopener noreferrer">Indeed methodology ↗</a></article>
             <article><h3>Labor-market context</h3><p>The overlay offers a common starting index of 100 or normalization to each series’ own 0–100 range over the same time window. Flat series normalize to 50; original values remain available on hover. Indeed daily series use their last observation in each completed month; BLS and OECD series use their reference month. Gaps are preserved. The chart compares relative changes in different quantities, not job counts attributable to AI.</p><p>U.S. payrolls, unemployment, participation, openings, earnings, quits and layoffs come from BLS via FRED. Other countries include Indeed total postings and OECD harmonized unemployment via FRED. Age definitions and reporting lags differ.</p><a href="https://github.com/hiring-lab/job_postings_tracker" target="_blank" rel="noopener noreferrer">Indeed total postings ↗</a> · <a href="https://fred.stlouisfed.org/" target="_blank" rel="noopener noreferrer">FRED ↗</a></article>
             <article><h3>Supply chain</h3><p>Federal Reserve, BLS and IMF series track chip output, transformer prices and copper. The Fed’s July 2026 compilation supplies memory prices, equipment investment, construction and selected cloud-firm capex. Ireland’s CSO supplies metered data-center power; Eurostat supplies EU enterprise AI adoption.</p><p>Geographies, units and frequencies stay separate. The Fed workbook is a dated compilation; other feeds refresh from their source. Annual adoption surveys have no 2022 observation, and the 2025 AI definition expanded. There is no additive total or estimate of AI’s causal contribution.</p><a href="https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html" target="_blank" rel="noopener noreferrer">Fed data &amp; definitions ↗</a></article>

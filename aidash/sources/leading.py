@@ -11,8 +11,8 @@ from urllib.parse import urlencode
 from ..store import now
 
 CATALOGUE = Path(__file__).resolve().parents[1] / 'catalogue' / 'leading-indicators.json'
-SOURCES = ['leading-economy', 'leading-btos', 'leading-canaries', 'leading-metr', 'leading-reviewed']
-GROUPS = ['capability', 'adoption', 'jobs', 'investment', 'outcomes', 'science']
+SOURCES = ['leading-economy', 'leading-btos', 'leading-canaries', 'leading-metr', 'leading-reviewed', 'leading-sentiment']
+GROUPS = ['capability', 'adoption', 'jobs', 'investment', 'outcomes', 'science', 'sentiment']
 
 
 def definition(key, name, group, unit, frequency, fred_id, note, kind='Leading signal'):
@@ -103,15 +103,19 @@ def validate_series(series, previous=None):
 
 def refresh_leading(store, fetch, source, run_id=None):
     if source=='leading-economy': series=fetch_economy(fetch)
-    elif source=='leading-reviewed':
-        body=CATALOGUE.read_bytes()
+    elif source in ('leading-reviewed','leading-sentiment'):
+        source_catalogue=CATALOGUE if source=='leading-reviewed' else CATALOGUE.with_name('sentiment.json')
+        body=source_catalogue.read_bytes()
         if run_id is not None:
             # Reuse archival format; the URL is a local reviewed-input identifier.
             import hashlib
             digest=hashlib.sha256(body).hexdigest();raw=store.root/'raw'/(digest+'.blob')
             raw.parent.mkdir(parents=True,exist_ok=True);raw.write_bytes(body)
-            store.record_fetch(run_id,'catalog:leading-indicators',digest,str(raw.relative_to(store.root)))
+            store.record_fetch(run_id,'catalog:'+source_catalogue.stem,digest,str(raw.relative_to(store.root)))
         series=json.loads(body)['series']
+        if source=='leading-sentiment':
+            from .sentiment import validate_surveys
+            validate_surveys(series)
     else:
         from .leading_feeds import fetch_btos, fetch_canaries, fetch_metr
         series={'leading-btos':fetch_btos,'leading-canaries':fetch_canaries,'leading-metr':fetch_metr}[source](fetch)
@@ -122,7 +126,7 @@ def refresh_leading(store, fetch, source, run_id=None):
     temporary=target.with_suffix('.tmp');temporary.write_text(json.dumps(payload,ensure_ascii=False,allow_nan=False)+'\n')
     temporary.replace(target)
     return {'series':len(series),'observations':sum(len(s['points']) for s in series),
-            'mode':'Reviewed catalogue import; new reports require review' if source=='leading-reviewed' else 'Public source snapshot'}
+            'mode':'Reviewed catalogue import; new reports require review' if source in ('leading-reviewed','leading-sentiment') else 'Public source snapshot'}
 
 
 def dashboard_leading(store, context=None):

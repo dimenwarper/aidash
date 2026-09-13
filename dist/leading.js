@@ -1,6 +1,6 @@
 "use strict";
-const leadingGroups={capability:'Capability & cost',adoption:'Adoption & delegation',jobs:'Hiring & employment',investment:'Investment & capacity',outcomes:'Economic outcomes',science:'Science & medicine'};
-const leadingColors=['#315b72','#98714f','#52705a'];
+const leadingGroups={capability:'Capability & cost',adoption:'Adoption & delegation',jobs:'Hiring & employment',investment:'Investment & capacity',outcomes:'Economic outcomes',science:'Science & medicine',sentiment:'Public sentiment'};
+const leadingColors=['#315b72','#98714f','#52705a','#7b6181'];
 const leadingState={group:'all',range:'all',overviewRange:'3',overview:'trendlines'};
 const leadingPairs={
   hires_total:['hires','Hiring rates','All industries'],hires_professional:['hires','Hiring rates','Professional & business services'],
@@ -38,7 +38,7 @@ function leadingDate(date,frequency){
 }
 function leadingTooltip(item,point){
   const detail=(item.point_details||[]).find(d=>d.date===point[0]);
-  return `${item.legend||item.name}: ${leadingNumber(point[1])} ${leadingUnit(item.unit)} · ${leadingDate(point[0],item.date_precision==='month'?'monthly':item.frequency)}`+(detail?.model?` · ${detail.model}`:'')+
+  return `${item.legend||item.name}: ${leadingNumber(point[1])} ${leadingUnit(item.unit)} · ${leadingDate(point[0],item.date_precision==='month'?'monthly':item.frequency)}`+(detail?.model?` · ${detail.model}`:'')+(detail?.fieldwork_start?` · Surveyed ${detail.fieldwork_start}–${detail.fieldwork_end}; published ${detail.published_at}`:'')+
     (detail?.ci_low!=null && detail?.ci_high!=null?` · Source 95% CI ${leadingNumber(detail.ci_low)}–${leadingNumber(detail.ci_high)}`:'');
 }
 function leadingChart(card){
@@ -48,6 +48,7 @@ function leadingChart(card){
   const times=all.map(p=>Date.parse(p[0]+'T00:00:00Z'));let t0=Math.min(...times),t1=Math.max(...times);
   const values=all.map(p=>p[1]);let low=Math.min(...values),high=Math.max(...values);
   const pad=(high-low)*.12||Math.max(Math.abs(high)*.06,1);low-=pad;high+=pad;
+  if(card.series.every(s=>s.group==='sentiment')){low=0;high=100;}
   if(Math.min(...values)>=0)low=Math.max(0,low);
   const x=p=>t1===t0?(m.l+w-m.r)/2:m.l+(Date.parse(p[0]+'T00:00:00Z')-t0)/(t1-t0)*(w-m.l-m.r);
   const y=v=>h-m.b-(v-low)/(high-low)*(h-m.t-m.b);
@@ -59,14 +60,14 @@ function leadingChart(card){
   }
   card.series.forEach((s,i)=>{
     let path='';let prev=null;
-    const gap={monthly:45,quarterly:110,annual:400,biweekly:22}[s.frequency]||Infinity;
+    const gap=s.max_gap_days ?? ({monthly:45,quarterly:110,annual:400,biweekly:22}[s.frequency]||Infinity);
     s.points.forEach(p=>{
       if(!Number.isFinite(p[1])){prev=null;return;}
       const discontinuity=!prev || (Date.parse(p[0])-Date.parse(prev[0]))/86400000>gap;
       path+=discontinuity?`M${x(p)},${y(p[1])}`:s.display==='step'?`H${x(p)}V${y(p[1])}`:`L${x(p)},${y(p[1])}`;prev=p;
     });
-    if(s.display!=='scatter')markup+=`<path d="${path}" fill="none" stroke="${leadingColors[i%3]}" stroke-width="2" vector-effect="non-scaling-stroke"/>`;
-    s.points.filter(p=>Number.isFinite(p[1])).forEach(p=>markup+=`<circle cx="${x(p)}" cy="${y(p[1])}" r="${s.points.length>35?2:3}" fill="${leadingColors[i%3]}"><title>${escapeHTML(leadingTooltip(s,p))}</title></circle>`);
+    if(s.display!=='scatter')markup+=`<path d="${path}" fill="none" stroke="${leadingColors[i%leadingColors.length]}" stroke-width="2" vector-effect="non-scaling-stroke"/>`;
+    s.points.filter(p=>Number.isFinite(p[1])).forEach(p=>markup+=`<circle cx="${x(p)}" cy="${y(p[1])}" r="${s.points.length>35?2:3}" fill="${leadingColors[i%leadingColors.length]}"><title>${escapeHTML(leadingTooltip(s,p))}</title></circle>`);
   });
   const dates=all.map(p=>p[0]).sort();
   const label=d=>formatDate(d,{month:'short',year:'2-digit'});
@@ -74,22 +75,29 @@ function leadingChart(card){
   if(t1!==t0)markup+=`<text x="${w-m.r}" y="${h-4}" text-anchor="end">${escapeHTML(label(dates.at(-1)))}</text>`;
   return `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${escapeHTML(card.title+'; '+leadingUnit(card.series[0].unit_label||card.series[0].unit)+'. Exact values in Data and sources below.')}" class="leading-chart">${markup}</svg>`;
 }
+function leadingSurveyEvidence(entry){
+  if(!entry?.fieldwork_start)return '';
+  const sample=entry.sample_size?'n = '+leadingNumber(entry.sample_size):entry.sample_size_approx?'n ≈ '+leadingNumber(entry.sample_size_approx):'';
+  const uncertainty=entry.margin_of_error_pp_95!=null?'95% margin of error ±'+entry.margin_of_error_pp_95+' pp':entry.credibility_interval_pp_95!=null?'95% credibility interval ≈ ±'+entry.credibility_interval_pp_95+' pp':'';
+  return '<br><span class="survey-wave-date">'+escapeHTML('Fielded '+entry.fieldwork_start+'–'+entry.fieldwork_end+'; published '+entry.published_at)+'</span><br>'+escapeHTML([entry.population,sample,uncertainty].filter(Boolean).join(' · '))+(entry.methodology_url?'<br>'+externalLink(entry.methodology_url,'Methodology'):'');
+}
 function leadingSourceDetails(card){
   return `<details class="leading-details"><summary>Data &amp; sources</summary>${card.series.map(s=>{
     const evidence=Array.isArray(s.point_details)?s.point_details:[];
     return `<div class="leading-definition"><strong>${escapeHTML(s.legend||s.name)}</strong><p>${escapeHTML(s.note)}</p><p>${externalLink(s.url,s.source_name)} · ${escapeHTML(s.mode||'Stored observations')}${s.published_at?' · Source version '+escapeHTML(s.published_at):''}${s.fetched_at?' · Retrieved '+escapeHTML(s.fetched_at.slice(0,10)):''}</p>${s.detail_tab?'<a href="#'+escapeHTML(s.detail_tab)+'">View trial evidence ↗</a>':''}
       <div class="leading-table-wrap"><table><caption class="sr-only">${escapeHTML(s.name)} observations</caption><thead><tr><th scope="col">Period</th><th scope="col">Value</th><th scope="col">Evidence</th></tr></thead><tbody>${[...s.points].reverse().map(p=>{
         const e=evidence.find(e=>e.date===p[0]);
-        return `<tr><td>${escapeHTML(leadingDate(p[0],s.date_precision==='month'?'monthly':s.frequency))}</td><td>${escapeHTML(leadingNumber(p[1]))}</td><td>${e?.url?externalLink(e.url,'Report'):e?.model?escapeHTML(e.model)+(e.ci_low!=null && e.ci_high!=null?` · 95% CI ${leadingNumber(e.ci_low)}–${leadingNumber(e.ci_high)}`:''):'—'}</td></tr>`;
+        return `<tr><td>${escapeHTML(leadingDate(p[0],s.date_precision==='month'?'monthly':s.frequency))}</td><td>${escapeHTML(leadingNumber(p[1]))}</td><td>${e?.url?externalLink(e.url,'Report')+leadingSurveyEvidence(e):e?.model?escapeHTML(e.model)+(e.ci_low!=null && e.ci_high!=null?` · 95% CI ${leadingNumber(e.ci_low)}–${leadingNumber(e.ci_high)}`:''):'—'}</td></tr>`;
       }).join('')}</tbody></table></div></div>`;
   }).join('')}</details>`;
 }
-function leadingCardHTML(card){
+function leadingCardHTML(card,idPrefix='leading-detail-'){
+  if(card.series.every(s=>s.topic==='data-centers') && typeof sentimentDataCenterCard==='function')return sentimentDataCenterCard(card,idPrefix);
   const alerts=[...new Set(card.series.map(s=>s.alert).filter(Boolean))];
-  return `<article class="leading-card" id="leading-detail-${escapeHTML(card.series[0].id)}" tabindex="-1"><div class="leading-card-top"><span>${escapeHTML(card.series[0].kind)}</span><span>${escapeHTML(card.series[0].frequency==='event'?'Dated observations':card.series[0].frequency)}</span></div><h4>${escapeHTML(card.title)}</h4><p class="leading-units">${escapeHTML(leadingUnit(card.series[0].unit_label||card.series[0].unit))} · ${escapeHTML(card.series[0].geography||'')}</p>
+  return `<article class="leading-card" id="${escapeHTML(idPrefix+card.series[0].id)}" tabindex="-1"><div class="leading-card-top"><span>${escapeHTML(card.series[0].kind)}</span><span>${escapeHTML(card.series[0].frequency==='event'?'Dated observations':card.series[0].frequency)}</span></div><h4>${escapeHTML(card.title)}</h4><p class="leading-units">${escapeHTML(leadingUnit(card.series[0].unit_label||card.series[0].unit))} · ${escapeHTML([...new Set(card.series.map(s=>s.geography).filter(Boolean))].join(' · '))}</p>
     <div class="leading-values">${card.series.map((s,i)=>{
       const p=s.points.at(-1);
-      return `<div><span class="leading-key"><i style="background:${leadingColors[i%3]}"></i>${escapeHTML(s.legend||'Latest observation')}</span><strong>${p?escapeHTML(leadingNumber(p[1])):'—'}${s.unit==='percent'?'%':''}</strong><span class="leading-value-date">${p?escapeHTML(leadingDate(p[0],s.date_precision==='month'?'monthly':s.frequency)):'Unavailable in range'}</span></div>`;
+      return `<div><span class="leading-key"><i style="background:${leadingColors[i%leadingColors.length]}"></i>${escapeHTML(s.legend||'Latest observation')}</span><strong>${p?escapeHTML(leadingNumber(p[1])):'—'}${s.unit==='percent'?'%':''}</strong><span class="leading-value-date">${p?escapeHTML(leadingDate(p[0],s.date_precision==='month'?'monthly':s.frequency)):'Unavailable in range'}</span></div>`;
     }).join('')}</div>${leadingChart(card)}${alerts.map(a=>`<p class="leading-alert">${escapeHTML(a)}</p>`).join('')}${leadingSourceDetails(card)}</article>`;
 }
 function drawLeading(){
@@ -111,7 +119,7 @@ function drawLeading(){
   $('leading-content').innerHTML=Object.entries(leadingGroups).filter(([key])=>leadingState.group==='all'||key===leadingState.group).map(([key,label])=>{
     const groupCards=cards.filter(c=>c.group===key);
     const gaps=(data.gaps||[]).filter(g=>g.group===key);
-    return `<section class="leading-section"><h3>${escapeHTML(label)}</h3><div class="leading-chart-grid">${groupCards.map(leadingCardHTML).join('')||'<p class="leading-empty">No stored observations for this category.</p>'}</div>${gaps.length?`<details class="leading-gaps"><summary>Not yet measured · ${gaps.length}</summary>${gaps.map(g=>`<p><strong>${escapeHTML(g.name)}.</strong> ${escapeHTML(g.note)}</p>`).join('')}</details>`:''}</section>`;
+    return `<section class="leading-section"><h3>${escapeHTML(label)}</h3><div class="leading-chart-grid">${groupCards.map(card=>leadingCardHTML(card)).join('')||'<p class="leading-empty">No stored observations for this category.</p>'}</div>${gaps.length?`<details class="leading-gaps"><summary>Not yet measured · ${gaps.length}</summary>${gaps.map(g=>`<p><strong>${escapeHTML(g.name)}.</strong> ${escapeHTML(g.note)}</p>`).join('')}</details>`:''}</section>`;
   }).join('');
 }
 function bindLeadingControls(){

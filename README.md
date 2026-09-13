@@ -1,7 +1,7 @@
 # AI: A Macro View
 
 A shared “What happened this month?” dashboard of AI's effects on jobs,
-supply chains, leading indicators, medical devices, drug trials and mathematics. There are no
+supply chains, leading indicators, public AI sentiment, medical devices, drug trials and mathematics. There are no
 accounts or visitor state. The frontend is plain HTML, CSS and JavaScript;
 the Python pipeline produces the data it displays.
 
@@ -57,7 +57,7 @@ prepared `dist/data/dashboard.json`; opening the page does not fetch source
 feeds or trigger ingestion.
 
 - `refresh` updates every default source, including all five activity sources,
-  the trial registry, mathematical-news discovery queue and five leading-indicator sources.
+  the trial registry, mathematical-news discovery queue and six leading-indicator sources.
 - `export` defaults to the current calendar month and rewrites previously
   exported months with the latest corrections. To add a specific month, use
   `python3 -m aidash export --month 2026-09` before `build-dashboard`.
@@ -94,6 +94,7 @@ is discovered or approved automatically. **Scheduling is not enabled.**
 | Math breakthroughs | `refresh --source math-news`, then review and build | Searches Google News RSS and archives candidates | New entries, novelty, AI role and proof status require primary-source review; headlines never become counts automatically. |
 | Leading indicators: public feeds | `refresh --source leading` (also in default refresh) | FRED macro indicators, Census BTOS, Stanford/ADP rolling employment indexes and METR task horizons | Methodology changes need review; these are signals and broad proxies, not causal AI estimates. |
 | Leading indicators: reviewed releases | `refresh --source leading-reviewed` | Imports the reviewed price, delegation, robotics, ASML and Virginia power histories | **New reports require review**; the import does not discover new disclosures. Charts label historical/discontinued coverage. |
+| Sentiment and leading-indicator sentiment charts | `refresh --source leading-sentiment` (also in `leading` and default refresh) | Imports reviewed Pew, Ipsos, Gallup and Annenberg survey waves, including data-center attitudes, from the sentiment catalogue | **New survey waves require review**; no automatic poll discovery, news/social-media sentiment scoring or OpenRouter calls. Fieldwork and publication dates remain separate. |
 | Leading indicators: activity and science context | Existing activity, supply-chain and trial sources, then `build-dashboard` | Reuses existing snapshots and derives trial counts | Outcome evidence and eligible trial coverage remain reviewed; no representative phase-transition success rate. |
 | Overview | `build-dashboard` | Derives summaries from the same datasets | Has no separate discovery pipeline. |
 | Optional paper discovery and OpenRouter extraction | `refresh --source science`, then `extract` / `review` | Europe PMC search and optional paid structured extraction | Separate from the displayed math/trial catalogues; excluded from default refresh. |
@@ -110,6 +111,7 @@ python3 -m aidash status
 python3 -m aidash refresh --source indeed
 python3 -m aidash refresh --source macro
 python3 -m aidash refresh --source leading
+python3 -m aidash refresh --source leading-sentiment
 python3 -m aidash refresh --source supply-chain
 python3 -m aidash refresh --source activity
 python3 -m aidash refresh --source fda
@@ -122,9 +124,9 @@ python3 -m aidash refresh --source math-news --from 2026-08-01 --to 2026-09-12
 `activity-companies`. All five already run in the default refresh.
 
 The `leading` group contains `leading-economy`, `leading-btos`,
-`leading-canaries`, `leading-metr`, and `leading-reviewed`. For exact feeds,
+`leading-canaries`, `leading-metr`, `leading-reviewed`, and `leading-sentiment`. For exact feeds,
 reviewed-release instructions and interpretation limits, see
-[Leading indicators](docs/leading-indicators.md).
+[Leading indicators](docs/leading-indicators.md) and [AI sentiment](docs/sentiment.md).
 
 `refresh` records each source's success/failure and returns nonzero if any fails
 or is partial. Other sources can still finish, and a rejected source snapshot
@@ -158,6 +160,7 @@ be served; database, raw responses, abstracts and API keys remain outside it.
 | New drug, eligible trial or AI-use category | [`aidash/catalogue/drugs.json`](aidash/catalogue/drugs.json) | `refresh --source trials`, then `export` and `build-dashboard` |
 | Trial endpoint/success report | [`aidash/catalogue/trial-outcomes.json`](aidash/catalogue/trial-outcomes.json); use a matching program/NCT ID, result date and evidence | `export`, then `build-dashboard`; refresh trials first if adding a study |
 | New company filing or EUV supplier history | [`aidash/catalogs/company-activity.json`](aidash/catalogs/company-activity.json); retain units, fiscal periods and per-point sources | `refresh --source activity-companies`, then `export` and `build-dashboard` |
+| New public AI sentiment survey or revision | [`aidash/catalogue/sentiment.json`](aidash/catalogue/sentiment.json); retain question, population, fieldwork dates, publication date, methodology and per-point evidence | `refresh --source leading-sentiment`, then `export` and `build-dashboard`; see [survey review instructions](docs/sentiment.md) |
 | EUV supplier relationship or project event | Nodes, edges and milestones in the company catalogue; drawing in `dist/euv-machine.js` if needed | `export`, then `build-dashboard` and reload |
 | Trade product or material scope | `aidash/sources/trade.py`, `aidash/catalogs/material-commodities.json` and `aidash/catalogs/trade-activity.json`, as applicable | Validate request sizes/HS definitions, refresh `activity-trade`, export and build |
 
@@ -421,6 +424,7 @@ node tests/dashboard_ui.mjs
 node tests/globe.mjs
 node tests/leading_ui.mjs
 node tests/leading_overview_ui.mjs
+node tests/sentiment_ui.mjs
 ```
 
 After initial data preparation, also run the snapshot integration checks:

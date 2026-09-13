@@ -138,7 +138,7 @@ def parser():
     cli.add_argument("--data-dir", default="data", help="Persistent state directory (default: data)")
     commands = cli.add_subparsers(dest="command", required=True)
     job = commands.add_parser("refresh", help="Refresh metrics and registered drug trials; optionally search papers")
-    job.add_argument("--source", choices=["all", "indeed", "macro", "supply-chain", "activity", "activity-us", "activity-taiwan", "activity-companies", "activity-energy", "activity-trade", "fda", "trials", "math-news", "science", "leading", "leading-economy", "leading-btos", "leading-canaries", "leading-metr", "leading-reviewed"], default="all")
+    job.add_argument("--source", choices=["all", "indeed", "macro", "supply-chain", "activity", "activity-us", "activity-taiwan", "activity-companies", "activity-energy", "activity-trade", "fda", "trials", "math-news", "science", "leading", "leading-economy", "leading-btos", "leading-canaries", "leading-metr", "leading-reviewed", "leading-sentiment"], default="all")
     job.add_argument("--from", dest="start", default=(date.today() - timedelta(days=90)).isoformat())
     job.add_argument("--to", dest="end", default=date.today().isoformat())
     job.add_argument("--max-pages", type=positive, default=2)

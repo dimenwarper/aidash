@@ -1,0 +1,83 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+
+const elements=new Map();
+const element=id=>{
+  if(!elements.has(id))elements.set(id,{innerHTML:'',textContent:'',hidden:false,value:'',addEventListener(type,fn){this.handler=fn;}});
+  return elements.get(id);
+};
+const topics=['attitudes','data-centers'].map(view=>({dataset:{sentimentView:view},attrs:{},setAttribute(k,v){this.attrs[k]=v;},addEventListener(type,fn){this.handler=fn;}}));
+const context=vm.createContext({URL,document:{getElementById:element,querySelectorAll:selector=>selector==='[data-sentiment-view]'?topics:[]}});
+for(const file of ['leading.js','leading-overview.js','sentiment.js','app.js']){
+  vm.runInContext(fs.readFileSync('dist/'+file,'utf8').replace(/init\(\);\s*$/,''),context);
+}
+const run=code=>vm.runInContext(code,context);
+context.catalogue=JSON.parse(fs.readFileSync('aidash/catalogue/sentiment.json','utf8'));
+run(`state.month='2026-09';state.data={leading_indicators:{sources:[{source:'leading-sentiment',status:'success'}],series:Object.fromEntries(catalogue.series.map(s=>[s.id,s]))}};drawSentiment();bindSentimentControls();`);
+assert.equal(element('sentiment-status').hidden,true);
+assert.match(element('sentiment-coverage').textContent,/10 survey waves/);
+assert.equal(element('sentiment-view-data-centers').hidden,true);
+assert.equal(element('sentiment-view-attitudes').hidden,false);
+assert.doesNotMatch(element('sentiment-us').innerHTML,/data centers|data-center/);
+assert.equal((element('sentiment-us').innerHTML.match(/class="leading-card"/g)||[]).length,2);
+assert.equal((element('sentiment-international').innerHTML.match(/class="leading-card"/g)||[]).length,4);
+assert.match(element('sentiment-us').innerHTML,/52%|52<\/strong>%/);
+assert.match(element('sentiment-us').innerHTML,/Fielded 2026-06-22–2026-06-28; published 2026-08-18/);
+assert.match(element('sentiment-us').innerHTML,/Methodology|3,488|margin of error/);
+assert.doesNotMatch(element('sentiment-us').innerHTML,/Ipsos AI Monitor/,'Survey families cannot be spliced');
+assert.doesNotMatch(element('sentiment-international').innerHTML,/Pew Research Center|NaN|Infinity|undefined/);
+
+const chart=run(`leadingChart(sentimentCards(sentimentSeries().filter(s=>s.chart_id==='ipsos_excited'))[0])`);
+assert.match(chart,/>100<\/text>/,'All sentiment charts share a full 0–100% scale');
+assert.match(chart,/>0<\/text>/);
+assert.equal(new Set([...chart.matchAll(/<path[^>]*stroke="([^"]+)"/g)].map(m=>m[1])).size,4,'Four countries have distinct colors');
+const chinaPath=[...chart.matchAll(/<path d="([^"]+)"/g)].at(-1)[1];
+assert.equal((chinaPath.match(/M/g)||[]).length,2,'China has separate 2024 and 2026 observations');
+assert.doesNotMatch(chinaPath,/L|H|V/,'Do not connect across China’s missing 2025 wave');
+const mini=run(`leadingMiniChart(sentimentSeries().find(s=>s.id==='ipsos_cn_excited'),{start:'2023-01-01',end:'2026-09-30'})`);
+assert.doesNotMatch(mini.match(/<path d="([^"]+)"/)[1],/L|H|V/,'The compact trendline preserves the same gap');
+assert.equal(run(`leadingHeatValue(sentimentSeries().find(s=>s.id==='ipsos_cn_excited'),{start:'2025-01-01',end:'2025-12-31'}).state`),'missing','Empty survey waves stay empty in the heatmap');
+
+element('sentiment-market').handler({target:{value:'CN'}});
+assert.equal(element('sentiment-market').value,'CN');
+assert.match(element('sentiment-international').innerHTML,/China/);
+assert.doesNotMatch(element('sentiment-international').innerHTML,/Great Britain|United States/);
+assert.equal((element('sentiment-international').innerHTML.match(/<circle /g)||[]).length,8);
+run(`leadingState.group='sentiment';drawLeading();`);
+const rendered=element('leading-content').innerHTML+element('sentiment-us').innerHTML+element('sentiment-international').innerHTML;
+const ids=[...rendered.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
+assert.equal(new Set(ids).size,ids.length,'Main and leading panels use distinct chart IDs');
+run(`leadingState.group='all';drawLeading();`);
+assert.match(element('leading-count').textContent,new RegExp(context.catalogue.series.length+' variables'));
+assert.match(element('leading-content').innerHTML,/Public sentiment/);
+
+topics[1].handler();
+assert.equal(topics.filter(b=>b.attrs['aria-pressed']==='true').length,1);
+assert.equal(element('sentiment-view-data-centers').hidden,false);
+assert.equal(element('sentiment-view-attitudes').hidden,true);
+assert.match(element('sentiment-data-centers').innerHTML,/Local AI data-center construction/);
+assert.match(element('sentiment-data-centers').innerHTML,/Survey snapshot/);
+assert.match(element('sentiment-data-centers').innerHTML,/38%/);
+assert.match(element('sentiment-data-centers').innerHTML,/71%/);
+assert.match(element('sentiment-data-centers').innerHTML,/77%/);
+assert.match(element('sentiment-coverage').textContent,/6 survey waves/);
+assert.equal((element('sentiment-data-centers').innerHTML.match(/class="leading-chart"/g)||[]).length,1,'Only Annenberg has a verified repeated question');
+assert.equal(run(`sentimentCards(sentimentSeries().filter(s=>s.topic==='data-centers')).length`),6,'Different survey families retain separate charts');
+assert.match(element('sentiment-data-centers').innerHTML,/US citizens age 18/,'The citizen survey population stays explicit');
+assert.match(element('sentiment-data-centers').innerHTML,/One survey wave; no time trend yet/);
+assert.doesNotMatch(element('sentiment-data-centers').innerHTML,/NaN|Infinity|undefined/);
+run(`sentimentState.view='attitudes';state.month='2024-08';drawSentiment();`);
+assert.match(element('sentiment-us').innerHTML,/51%<\/strong>/,'Month limits fieldwork, retaining the later publication date');
+assert.doesNotMatch(element('sentiment-us').innerHTML,/Jun 28, 2026/);
+assert.match(element('sentiment-us').innerHTML,/published 2025-04-03/,'Fieldwork and release dates remain separate');
+run(`state.month='2020-01';drawSentiment();`);
+assert.match(element('sentiment-coverage').textContent,/0 survey waves/);
+assert.match(element('sentiment-us').innerHTML,/No observations in this date range/);
+run(`state.month='2026-09';state.data.leading_indicators.sources[0].status='failed';drawSentiment();`);
+assert.equal(element('sentiment-status').hidden,false);
+assert.match(element('sentiment-status').textContent,/last reviewed snapshot/);
+assert.match(element('sentiment-us').innerHTML,/52%<\/strong>/);
+run(`state.data.leading_indicators.series={};drawSentiment();`);
+assert.match(element('sentiment-us').innerHTML,/No reviewed survey observations/);
+console.log('Sentiment: survey dates, provenance, country comparisons, missing waves, shared scales, leading integration and failure states passed.');

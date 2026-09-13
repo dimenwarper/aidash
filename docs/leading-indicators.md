@@ -2,7 +2,7 @@
 
 The main `#leading` tab groups source observations into capability/cost,
 adoption/delegation, hiring/employment, investment/capacity, economic outcomes,
-and science/medicine. The **All** category has two compact layouts showing every
+science/medicine, and public sentiment. The **All** category has two compact layouts showing every
 underlying variable: **Trendlines** and **Heatmap**. Category buttons open the
 original detailed charts. Select a variable in either overview to open and focus
 its detailed chart, including definitions and source evidence.
@@ -46,6 +46,7 @@ its reused activity and trial feeds. To update only those reused feeds, run
 | `leading-canaries` | Stanford Digital Economy Lab/ADP employment indexes, ages 22–25 and 35–40, highest/lowest AI exposure quintiles | Reads the public ZIP/CSV. Replaces the whole rolling sample with a coherent source vintage, retaining its publication date. Does not append an old-sample prefix. |
 | `leading-metr` | METR v1.1 50% and 80% task horizons | Downloads the YAML; filters each model's benchmark version, then derives a separate record frontier at each reliability level. Raw model coverage is checked independently of frontier revisions. |
 | `leading-reviewed` | Epoch fixed-performance price history, Anthropic delegation shares, A3 robot orders, ASML equipment history and Dominion Virginia power commitments/connections | Imports the checked-in reviewed catalogue. **Does not discover new releases or scrape new report values.** |
+| `leading-sentiment` | Pew U.S. concern/excitement and jobs expectations; Ipsos cross-country attitudes; Pew, Gallup, Ipsos and Annenberg data-center surveys | Imports `aidash/catalogue/sentiment.json`. **New survey waves require primary-source review.** Shared with the main Sentiment tab; no automatic discovery or text sentiment scoring. |
 | Existing activity sources | U.S. computer/electronic product orders, shipments, inventories/backlog; Irish data-center electricity; cloud capex and computing-equipment investment | Reuses the supply-chain snapshot, without another download or separate copy of the source history. Capex/equipment use the dated July 2026 Federal Reserve compilation; a new compilation requires adapter review. |
 | Existing trial sources | Included phase 2/3 trials and latest positive primary efficacy results | Recomputed from registry snapshots and reviewed outcome evidence. Registry phase is current, not historical transitions. |
 
@@ -73,6 +74,12 @@ For a new reviewed point:
    change needs a separate series, not a splice.
 4. Run `refresh --source leading-reviewed`, then `export`, `build-dashboard`
    and the checks below. Importing the catalogue archives the exact input file.
+
+Public sentiment has its own catalogue and source: update
+`aidash/catalogue/sentiment.json`, then use `refresh --source leading-sentiment`.
+The full `leading` refresh imports both catalogues. See [AI sentiment](sentiment.md)
+for wave coverage, methodology changes, publication lags and the complete command
+sequence.
 
 Primary endpoints and current limitations:
 
@@ -114,6 +121,12 @@ outcome, not a forward predictor. There is no composite AI score or causal GDP
 estimate. Gaps include human intervention, task-level cost, component lead times,
 power time-to-operation, quality-adjusted AI service prices and independently
 validated discovery-to-deployment cohorts.
+
+Sentiment records what survey respondents believe. Job-loss expectations are not
+measured job losses, and opinion changes are not validated forecasts of adoption.
+Pew and Ipsos ask different questions of different populations; their percentages
+are not pooled into a single score. Sparse survey waves stay sparse in the compact
+overview, and heatmap colors retain their within-variable meaning.
 
 The shared month selector uses the latest available source versions and reviews;
 it is **not** a point-in-time backtest. Exact dates and raw values remain in the

@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
-const elements=new Map();const buttons=['all','capability','adoption','jobs','investment','outcomes','science'].map(group=>({dataset:{leadingGroup:group},attrs:{},setAttribute(k,v){this.attrs[k]=v;},addEventListener(type,fn){this.handler=fn;}}));
+const elements=new Map();const buttons=['all','capability','adoption','jobs','investment','outcomes','science','sentiment'].map(group=>({dataset:{leadingGroup:group},attrs:{},setAttribute(k,v){this.attrs[k]=v;},addEventListener(type,fn){this.handler=fn;}}));
 const element=id=>{if(!elements.has(id))elements.set(id,{innerHTML:'',textContent:'',hidden:false,addEventListener(type,fn){this.handler=fn;}});return elements.get(id);};
 const context=vm.createContext({URL,document:{getElementById:element,querySelectorAll:()=>buttons}});
 vm.runInContext(fs.readFileSync('dist/leading.js','utf8'),context);

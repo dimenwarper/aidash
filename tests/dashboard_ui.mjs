@@ -54,7 +54,7 @@ assert.equal(run('countedMathResults(false).length'), 2, 'Overview ignores secti
 run(`state.month='2026-09'; state.mathFilter='all';`);
 assert.equal(run('countedMathResults().length'), 3, 'Report dates limit historical counts');
 
-const tabs = ['overview','leading','jobs','supply-chain','devices','trials','theorems','sources'].map(name => ({
+const tabs = ['overview','leading','sentiment','jobs','supply-chain','devices','trials','theorems','sources'].map(name => ({
   dataset:{tab:name}, attrs:{}, setAttribute(name,value){this.attrs[name]=value;}, tabIndex:0
 }));
 const panels = tabs.map(tab => ({id:'panel-'+tab.dataset.tab,hidden:false}));
@@ -69,6 +69,8 @@ assert.equal(tabs.filter(tab=>tab.tabIndex===0).length,1);
 assert.equal(context.location.hash,'#trials');
 run('switchTab("leading");');
 assert.deepEqual(panels.filter(panel=>!panel.hidden).map(panel=>panel.id), ['panel-leading']);
+run('switchTab("sentiment");');
+assert.deepEqual(panels.filter(panel=>!panel.hidden).map(panel=>panel.id), ['panel-sentiment']);
 run('switchTab("unknown",false);');
 assert.deepEqual(panels.filter(panel=>!panel.hidden).map(panel=>panel.id), ['panel-overview']);
 
